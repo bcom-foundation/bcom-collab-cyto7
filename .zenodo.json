@@ -1,0 +1,52 @@
+{
+  "title": "cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex",
+  "upload_type": "dataset",
+  "description": "<p>cyto7 is an open, vertex-level, seven-type cytoarchitectural atlas of the human cerebral cortex, hand-painted on the FreeSurfer fsaverage surface following the Garcia-Cabezas protocol and revised by the protocol's authors. This deposition contains the atlas products only: the released v9 annotation files on fsaverage, nearest-neighbour resamples to fs_LR 32k, the per-vertex support map and its components, the crossed parcellation with per-node tables and colour tables, and the full provenance record (as-painted map, superseded versions, per-vertex change logs).</p><p>No third-party data is redistributed. The analysis code is on GitHub; see the repository README.</p>",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Salvador, R.",
+      "affiliation": "Research Department, Neuroelectrics Barcelona, Barcelona, Spain",
+      "orcid": "TODO(ORCID)"
+    },
+    {
+      "name": "Mercadal, B.",
+      "affiliation": "Research Department, Neuroelectrics Barcelona, Barcelona, Spain",
+      "orcid": "TODO(ORCID)"
+    },
+    {
+      "name": "Castaldo, F.",
+      "affiliation": "Research Department, Neuroelectrics Barcelona, Barcelona, Spain",
+      "orcid": "TODO(ORCID)"
+    },
+    {
+      "name": "Garcia-Cabezas, M. A.",
+      "affiliation": "Department of Anatomy, Histology and Neuroscience, School of Medicine, Universidad Autonoma de Madrid, Madrid, Spain",
+      "orcid": "TODO(ORCID)"
+    },
+    {
+      "name": "Ruffini, G.",
+      "affiliation": "Research Department, Neuroelectrics Barcelona, Barcelona, Spain",
+      "orcid": "TODO(ORCID)"
+    }
+  ],
+  "keywords": [
+    "cytoarchitecture",
+    "cortical type",
+    "Structural Model",
+    "cerebral cortex",
+    "surface atlas",
+    "fsaverage",
+    "fs_LR",
+    "neuroimaging"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "TODO(DOI)",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "TODO(DOI): replace the related_identifiers entry with the paper DOI before publishing this deposition."
+}

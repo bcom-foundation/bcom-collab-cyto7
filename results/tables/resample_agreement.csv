@@ -1,0 +1,15 @@
+hemi,type,n_164k,dice_roundtrip
+L,Allocortex,4147,0.6498
+L,Agranular,7938,0.8097
+L,Dysgranular,13583,0.9635
+L,Eulaminate I,27995,0.9805
+L,Eulaminate II,44540,0.9836
+L,Eulaminate III,45792,0.9876
+L,Koniocortex,9070,0.9762
+R,Allocortex,3193,0.6976
+R,Agranular,7446,0.849
+R,Dysgranular,12727,0.9638
+R,Eulaminate I,29129,0.9802
+R,Eulaminate II,46901,0.9843
+R,Eulaminate III,42576,0.9865
+R,Koniocortex,9935,0.9775

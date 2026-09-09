@@ -1,0 +1,33 @@
+Agreement summary: cyto7 vs von-Economo-derived cortical type
+Comparison mesh: fsaverage
+
+[pooled]  n=291068
+  overall agreement        : 0.525
+  Cohen's kappa            : 0.361
+  quadratic-weighted kappa : 0.699  (HEADLINE: ordinal types)
+  adjusted Rand index      : 0.188
+  mean |Delta-ordinal|     : 0.558
+  mean signed Delta-ordinal: +0.120  (+ => cyto7 more differentiated)
+
+[LH]  n=145502
+  overall agreement        : 0.528
+  Cohen's kappa            : 0.369
+  quadratic-weighted kappa : 0.707  (HEADLINE: ordinal types)
+  adjusted Rand index      : 0.197
+  mean |Delta-ordinal|     : 0.550
+  mean signed Delta-ordinal: +0.127  (+ => cyto7 more differentiated)
+
+[RH]  n=145566
+  overall agreement        : 0.521
+  Cohen's kappa            : 0.353
+  quadratic-weighted kappa : 0.690  (HEADLINE: ordinal types)
+  adjusted Rand index      : 0.180
+  mean |Delta-ordinal|     : 0.566
+  mean signed Delta-ordinal: +0.113  (+ => cyto7 more differentiated)
+
+cyto7 allocortex (code 1), excluded from agreement: LH=4147, RH=3193 vertices
+
+CAVEAT: these are DESCRIPTIVE statistics. Neighbouring vertices are
+spatially autocorrelated, so no naive p-values are attached. For a
+significance test, reuse the spin-test machinery in
+scripts/summarise_functional_features.py.

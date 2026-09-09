@@ -1,0 +1,202 @@
+id	name	hemi	base_parcel	cyto7_ordinal	cyto7_name	n_vertices	area_mm2	n_components	frac_largest_component	absorbed_residue	annot_index
+1	bankssts_eul2	lh	bankssts	5	eulaminate II	700	257.78	1	1.0	1	1
+1001	bankssts_eul2	rh	bankssts	5	eulaminate II	672	204.91	2	0.9955	0	1
+2	bankssts_eul3	lh	bankssts	6	eulaminate III	1437	459.79	1	1.0	0	2
+1002	bankssts_eul3	rh	bankssts	6	eulaminate III	1524	495.06	1	1.0	0	2
+3	caudalanteriorcingulate_agr	lh	caudalanteriorcingulate	2	agranular	1266	550.05	1	1.0	0	3
+1003	caudalanteriorcingulate_agr	rh	caudalanteriorcingulate	2	agranular	1433	618.42	2	0.9951	0	3
+4	caudalanteriorcingulate_dys	lh	caudalanteriorcingulate	3	dysgranular	173	54.14	3	0.8555	0	4
+1004	caudalanteriorcingulate_dys	rh	caudalanteriorcingulate	3	dysgranular	175	65.31	1	1.0	0	4
+5	caudalmiddlefrontal_eul1	lh	caudalmiddlefrontal	4	eulaminate I	1354	543.41	1	1.0	0	5
+1005	caudalmiddlefrontal_eul1	rh	caudalmiddlefrontal	4	eulaminate I	1065	336.32	1	1.0	0	5
+6	caudalmiddlefrontal_eul2	lh	caudalmiddlefrontal	5	eulaminate II	2382	936.49	1	1.0	0	6
+1006	caudalmiddlefrontal_eul2	rh	caudalmiddlefrontal	5	eulaminate II	2429	962.02	1	1.0	0	6
+7	cuneus_eul3	lh	cuneus	6	eulaminate III	1491	772.26	1	1.0	0	7
+1007	cuneus_eul3	rh	cuneus	6	eulaminate III	1476	793.46	1	1.0	0	7
+8	cuneus_kon	lh	cuneus	7	koniocortex	139	67.8	6	0.777	0	8
+1008	cuneus_kon	rh	cuneus	7	koniocortex	162	74.63	1	1.0	0	8
+9	entorhinal_allo	lh	entorhinal	1	allocortex	1102	424.12	3	0.9864	1	9
+1009	entorhinal_allo	rh	entorhinal	1	allocortex	852	340.81	4	0.9941	1	9
+10	frontalpole_eul2	lh	frontalpole	5	eulaminate II	272	175.42	1	1.0	0	10
+1010	frontalpole_eul2	rh	frontalpole	5	eulaminate II	369	215.32	1	1.0	0	10
+11	fusiform_agr	lh	fusiform	2	agranular	765	263.76	1	1.0	1	11
+1011	fusiform_agr	rh	fusiform	2	agranular	801	329.48	1	1.0	1	11
+12	fusiform_dys	lh	fusiform	3	dysgranular	409	178.1	2	0.9487	0	12
+1012	fusiform_dys	rh	fusiform	3	dysgranular	222	82.82	2	0.964	0	12
+13	fusiform_eul1	lh	fusiform	4	eulaminate I	2311	1080.26	1	1.0	0	13
+1013	fusiform_eul1	rh	fusiform	4	eulaminate I	2421	1057.62	1	1.0	0	13
+14	fusiform_eul2	lh	fusiform	5	eulaminate II	1105	517.02	1	1.0	0	14
+1014	fusiform_eul2	rh	fusiform	5	eulaminate II	1043	445.91	1	1.0	0	14
+15	fusiform_eul3	lh	fusiform	6	eulaminate III	124	59.58	1	1.0	0	15
+1015	fusiform_eul3	rh	fusiform	6	eulaminate III	174	65.59	1	1.0	0	15
+16	inferiorparietal_eul1	lh	inferiorparietal	4	eulaminate I	4643	1528.15	1	1.0	0	16
+1016	inferiorparietal_eul1	rh	inferiorparietal	4	eulaminate I	4919	1503.66	1	1.0	0	16
+17	inferiorparietal_eul2	lh	inferiorparietal	5	eulaminate II	3228	1118.31	2	0.9672	1	17
+1017	inferiorparietal_eul2	rh	inferiorparietal	5	eulaminate II	4757	1507.62	4	0.9186	1	17
+18	inferiortemporal_agr	lh	inferiortemporal	2	agranular	241	111.3	1	1.0	0	18
+1018	inferiortemporal_agr	rh	inferiortemporal	2	agranular	177	90.01	1	1.0	0	18
+19	inferiortemporal_dys	lh	inferiortemporal	3	dysgranular	697	326.41	1	1.0	0	19
+1019	inferiortemporal_dys	rh	inferiortemporal	3	dysgranular	805	392.11	1	1.0	0	19
+20	inferiortemporal_eul1	lh	inferiortemporal	4	eulaminate I	3477	1442.51	1	1.0	1	20
+1020	inferiortemporal_eul1	rh	inferiortemporal	4	eulaminate I	3216	1439.21	1	1.0	1	20
+21	insula_allo	lh	insula	1	allocortex	288	82.46	1	1.0	0	21
+1021	insula_allo	rh	insula	1	allocortex	246	82.77	6	0.7642	0	21
+22	insula_agr	lh	insula	2	agranular	478	175.94	7	0.9644	0	22
+1022	insula_agr	rh	insula	2	agranular	476	186.8	3	0.9895	0	22
+23	insula_dys	lh	insula	3	dysgranular	1677	683.22	1	1.0	0	23
+1023	insula_dys	rh	insula	3	dysgranular	1416	578.4	1	1.0	0	23
+24	insula_eul1	lh	insula	4	eulaminate I	1032	405.16	1	1.0	0	24
+1024	insula_eul1	rh	insula	4	eulaminate I	1227	450.03	1	1.0	0	24
+25	insula_eul2	lh	insula	5	eulaminate II	369	155.44	1	1.0	0	25
+1025	insula_eul2	rh	insula	5	eulaminate II	507	183.83	1	1.0	0	25
+26	insula_eul3	lh	insula	6	eulaminate III	1109	449.98	2	0.9982	0	26
+1026	insula_eul3	rh	insula	6	eulaminate III	1053	354.84	2	0.9972	0	26
+27	insula_kon	lh	insula	7	koniocortex	276	96.1	1	1.0	0	27
+1027	insula_kon	rh	insula	7	koniocortex	165	51.3	1	1.0	0	27
+28	isthmuscingulate_agr	lh	isthmuscingulate	2	agranular	361	142.42	2	0.7258	1	28
+1028	isthmuscingulate_agr	rh	isthmuscingulate	2	agranular	258	100.29	3	0.5853	1	28
+29	isthmuscingulate_dys	lh	isthmuscingulate	3	dysgranular	1608	556.35	2	0.9963	0	29
+1029	isthmuscingulate_dys	rh	isthmuscingulate	3	dysgranular	1733	600.36	1	1.0	0	29
+30	isthmuscingulate_eul1	lh	isthmuscingulate	4	eulaminate I	562	225.61	3	0.5819	1	30
+1030	isthmuscingulate_eul1	rh	isthmuscingulate	4	eulaminate I	397	149.0	6	0.5214	1	30
+31	lateraloccipital_eul2	lh	lateraloccipital	5	eulaminate II	1898	690.55	3	0.9968	1	31
+1031	lateraloccipital_eul2	rh	lateraloccipital	5	eulaminate II	1526	645.62	2	0.9548	1	31
+32	lateraloccipital_eul3	lh	lateraloccipital	6	eulaminate III	4174	1851.46	1	1.0	0	32
+1032	lateraloccipital_eul3	rh	lateraloccipital	6	eulaminate III	4195	1902.9	1	1.0	0	32
+33	lateraloccipital_kon	lh	lateraloccipital	7	koniocortex	307	154.96	1	1.0	0	33
+1033	lateraloccipital_kon	rh	lateraloccipital	7	koniocortex	242	103.68	1	1.0	0	33
+34	lateralorbitofrontal_agr	lh	lateralorbitofrontal	2	agranular	372	137.43	3	0.9946	1	34
+1034	lateralorbitofrontal_agr	rh	lateralorbitofrontal	2	agranular	615	217.98	3	0.9951	1	34
+35	lateralorbitofrontal_dys	lh	lateralorbitofrontal	3	dysgranular	1442	601.47	1	1.0	0	35
+1035	lateralorbitofrontal_dys	rh	lateralorbitofrontal	3	dysgranular	1242	513.53	1	1.0	0	35
+36	lateralorbitofrontal_eul1	lh	lateralorbitofrontal	4	eulaminate I	1551	694.14	1	1.0	0	36
+1036	lateralorbitofrontal_eul1	rh	lateralorbitofrontal	4	eulaminate I	1674	834.23	1	1.0	0	36
+37	lateralorbitofrontal_eul2	lh	lateralorbitofrontal	5	eulaminate II	823	503.19	2	0.8919	0	37
+1037	lateralorbitofrontal_eul2	rh	lateralorbitofrontal	5	eulaminate II	823	458.62	2	0.8469	0	37
+38	lingual_eul1	lh	lingual	4	eulaminate I	81	34.11	3	0.4815	0	38
+1038	lingual_eul1	rh	lingual	4	eulaminate I	154	58.27	2	0.9675	1	38
+39	lingual_eul2	lh	lingual	5	eulaminate II	420	166.41	3	0.6429	0	39
+1039	lingual_eul2	rh	lingual	5	eulaminate II	497	238.78	1	1.0	0	39
+40	lingual_eul3	lh	lingual	6	eulaminate III	3109	1515.78	1	1.0	0	40
+1040	lingual_eul3	rh	lingual	6	eulaminate III	2694	1428.8	2	0.997	1	40
+41	lingual_kon	lh	lingual	7	koniocortex	595	294.75	1	1.0	0	41
+1041	lingual_kon	rh	lingual	7	koniocortex	549	296.73	3	0.8561	0	41
+42	medialorbitofrontal_agr	lh	medialorbitofrontal	2	agranular	280	143.4	4	0.9179	0	42
+1042	medialorbitofrontal_agr	rh	medialorbitofrontal	2	agranular	383	167.35	7	0.9791	0	42
+43	medialorbitofrontal_dys	lh	medialorbitofrontal	3	dysgranular	1137	512.8	1	1.0	0	43
+1043	medialorbitofrontal_dys	rh	medialorbitofrontal	3	dysgranular	843	387.1	1	1.0	0	43
+44	medialorbitofrontal_eul1	lh	medialorbitofrontal	4	eulaminate I	1013	540.43	1	1.0	0	44
+1044	medialorbitofrontal_eul1	rh	medialorbitofrontal	4	eulaminate I	1104	526.57	1	1.0	0	44
+45	medialorbitofrontal_eul2	lh	medialorbitofrontal	5	eulaminate II	223	166.92	1	1.0	0	45
+1045	medialorbitofrontal_eul2	rh	medialorbitofrontal	5	eulaminate II	471	274.51	1	1.0	0	45
+46	middletemporal_dys	lh	middletemporal	3	dysgranular	330	191.11	1	1.0	0	46
+1046	middletemporal_dys	rh	middletemporal	3	dysgranular	612	320.2	1	1.0	0	46
+47	middletemporal_eul1	lh	middletemporal	4	eulaminate I	1683	742.4	1	1.0	0	47
+1047	middletemporal_eul1	rh	middletemporal	4	eulaminate I	1831	753.06	1	1.0	0	47
+48	middletemporal_eul2	lh	middletemporal	5	eulaminate II	821	324.46	2	0.9659	0	48
+1048	middletemporal_eul2	rh	middletemporal	5	eulaminate II	1104	388.67	2	0.7002	0	48
+49	middletemporal_eul3	lh	middletemporal	6	eulaminate III	1618	651.05	1	1.0	0	49
+1049	middletemporal_eul3	rh	middletemporal	6	eulaminate III	1510	733.19	1	1.0	0	49
+50	paracentral_dys	lh	paracentral	3	dysgranular	464	172.77	1	1.0	0	50
+1050	paracentral_dys	rh	paracentral	3	dysgranular	340	120.22	1	1.0	0	50
+51	paracentral_eul1	lh	paracentral	4	eulaminate I	239	85.4	1	1.0	0	51
+1051	paracentral_eul1	rh	paracentral	4	eulaminate I	628	233.29	1	1.0	0	51
+52	paracentral_eul2	lh	paracentral	5	eulaminate II	309	112.79	1	1.0	0	52
+1052	paracentral_eul2	rh	paracentral	5	eulaminate II	567	219.24	2	0.5626	0	52
+53	paracentral_eul3	lh	paracentral	6	eulaminate III	2173	870.9	1	1.0	0	53
+1053	paracentral_eul3	rh	paracentral	6	eulaminate III	2069	782.32	1	1.0	0	53
+54	paracentral_kon	lh	paracentral	7	koniocortex	109	40.86	1	1.0	0	54
+1054	paracentral_kon	rh	paracentral	7	koniocortex	227	81.8	1	1.0	0	54
+55	parahippocampal_allo	lh	parahippocampal	1	allocortex	573	213.9	4	0.993	0	55
+1055	parahippocampal_allo	rh	parahippocampal	1	allocortex	523	204.6	6	0.9809	0	55
+56	parahippocampal_agr	lh	parahippocampal	2	agranular	733	293.84	1	1.0	0	56
+1056	parahippocampal_agr	rh	parahippocampal	2	agranular	682	330.26	2	0.9956	0	56
+57	parahippocampal_dys	lh	parahippocampal	3	dysgranular	255	116.74	2	0.8824	0	57
+1057	parahippocampal_dys	rh	parahippocampal	3	dysgranular	284	130.8	1	1.0	0	57
+58	parahippocampal_eul1	lh	parahippocampal	4	eulaminate I	236	107.38	2	0.9915	1	58
+1058	parahippocampal_eul1	rh	parahippocampal	4	eulaminate I	195	90.21	2	0.9692	1	58
+59	parsopercularis_eul1	lh	parsopercularis	4	eulaminate I	744	287.2	3	0.8777	0	59
+1059	parsopercularis_eul1	rh	parsopercularis	4	eulaminate I	259	86.51	2	0.7336	0	59
+60	parsopercularis_eul2	lh	parsopercularis	5	eulaminate II	2375	922.55	1	1.0	1	60
+1060	parsopercularis_eul2	rh	parsopercularis	5	eulaminate II	2213	905.15	1	1.0	1	60
+61	parsorbitalis_eul1	lh	parsorbitalis	4	eulaminate I	146	67.99	3	0.9726	0	61
+1061	parsorbitalis_eul1	rh	parsorbitalis	4	eulaminate I	99	53.22	1	1.0	0	61
+62	parsorbitalis_eul2	lh	parsorbitalis	5	eulaminate II	810	351.3	1	1.0	0	62
+1062	parsorbitalis_eul2	rh	parsorbitalis	5	eulaminate II	847	442.5	1	1.0	0	62
+63	parstriangularis_eul1	lh	parstriangularis	4	eulaminate I	228	79.79	1	1.0	1	63
+1063	parstriangularis_eul1	rh	parstriangularis	4	eulaminate I	84	30.42	1	1.0	1	63
+64	parstriangularis_eul2	lh	parstriangularis	5	eulaminate II	557	240.67	3	0.8438	0	64
+1064	parstriangularis_eul2	rh	parstriangularis	5	eulaminate II	927	368.65	1	1.0	0	64
+65	parstriangularis_eul3	lh	parstriangularis	6	eulaminate III	1261	503.49	1	1.0	0	65
+1065	parstriangularis_eul3	rh	parstriangularis	6	eulaminate III	1369	493.35	1	1.0	0	65
+66	pericalcarine_kon	lh	pericalcarine	7	koniocortex	1912	825.14	1	1.0	1	66
+1066	pericalcarine_kon	rh	pericalcarine	7	koniocortex	1823	959.97	1	1.0	1	66
+67	postcentral_eul2	lh	postcentral	5	eulaminate II	14	5.21	1	1.0	0	67
+1067	postcentral_eul2	rh	postcentral	5	eulaminate II	208	76.35	1	1.0	0	67
+68	postcentral_eul3	lh	postcentral	6	eulaminate III	5835	2034.08	2	0.9998	0	68
+1068	postcentral_eul3	rh	postcentral	6	eulaminate III	5218	1751.5	2	0.9943	0	68
+69	postcentral_kon	lh	postcentral	7	koniocortex	3670	1567.75	1	1.0	0	69
+1069	postcentral_kon	rh	postcentral	7	koniocortex	3712	1650.86	1	1.0	0	69
+70	posteriorcingulate_agr	lh	posteriorcingulate	2	agranular	404	182.79	1	1.0	0	70
+1070	posteriorcingulate_agr	rh	posteriorcingulate	2	agranular	311	157.03	1	1.0	0	70
+71	posteriorcingulate_dys	lh	posteriorcingulate	3	dysgranular	2862	957.89	1	1.0	1	71
+1071	posteriorcingulate_dys	rh	posteriorcingulate	3	dysgranular	2683	970.11	1	1.0	1	71
+72	precentral_eul2	lh	precentral	5	eulaminate II	4188	1631.44	1	1.0	1	72
+1072	precentral_eul2	rh	precentral	5	eulaminate II	4365	1721.82	1	1.0	0	72
+73	precentral_eul3	lh	precentral	6	eulaminate III	5503	2166.56	2	0.9998	0	73
+1073	precentral_eul3	rh	precentral	6	eulaminate III	4155	1653.47	2	0.9995	0	73
+74	precentral_kon	lh	precentral	7	koniocortex	1049	354.53	4	0.918	0	74
+1074	precentral_kon	rh	precentral	7	koniocortex	2185	811.79	3	0.9986	0	74
+75	precuneus_dys	lh	precuneus	3	dysgranular	49	21.68	3	0.6531	0	75
+1075	precuneus_dys	rh	precuneus	3	dysgranular	201	67.71	2	0.9353	0	75
+76	precuneus_eul1	lh	precuneus	4	eulaminate I	1022	399.81	1	1.0	0	76
+1076	precuneus_eul1	rh	precuneus	4	eulaminate I	1064	357.2	1	1.0	0	76
+77	precuneus_eul2	lh	precuneus	5	eulaminate II	3973	1433.93	1	1.0	0	77
+1077	precuneus_eul2	rh	precuneus	5	eulaminate II	4606	1586.47	1	1.0	0	77
+78	precuneus_eul3	lh	precuneus	6	eulaminate III	2264	749.22	2	0.7633	1	78
+1078	precuneus_eul3	rh	precuneus	6	eulaminate III	2104	645.34	2	0.8313	1	78
+79	rostralanteriorcingulate_agr	lh	rostralanteriorcingulate	2	agranular	1007	458.66	2	0.999	0	79
+1079	rostralanteriorcingulate_agr	rh	rostralanteriorcingulate	2	agranular	807	422.12	4	0.9839	0	79
+80	rostralanteriorcingulate_dys	lh	rostralanteriorcingulate	3	dysgranular	343	130.33	2	0.9067	0	80
+1080	rostralanteriorcingulate_dys	rh	rostralanteriorcingulate	3	dysgranular	244	108.24	1	1.0	0	80
+81	rostralmiddlefrontal_eul1	lh	rostralmiddlefrontal	4	eulaminate I	2033	675.1	1	1.0	0	81
+1081	rostralmiddlefrontal_eul1	rh	rostralmiddlefrontal	4	eulaminate I	2949	901.3	1	1.0	0	81
+82	rostralmiddlefrontal_eul2	lh	rostralmiddlefrontal	5	eulaminate II	5210	2414.29	1	1.0	1	82
+1082	rostralmiddlefrontal_eul2	rh	rostralmiddlefrontal	5	eulaminate II	4915	2248.26	1	1.0	0	82
+83	superiorfrontal_dys	lh	superiorfrontal	3	dysgranular	1105	458.71	1	1.0	0	83
+1083	superiorfrontal_dys	rh	superiorfrontal	3	dysgranular	859	331.38	2	0.9977	1	83
+84	superiorfrontal_eul1	lh	superiorfrontal	4	eulaminate I	4678	2171.64	1	1.0	0	84
+1084	superiorfrontal_eul1	rh	superiorfrontal	4	eulaminate I	5300	2230.56	1	1.0	0	84
+85	superiorfrontal_eul2	lh	superiorfrontal	5	eulaminate II	6161	2593.36	2	0.6587	0	85
+1085	superiorfrontal_eul2	rh	superiorfrontal	5	eulaminate II	5719	2343.31	2	0.6879	0	85
+86	superiorfrontal_eul3	lh	superiorfrontal	6	eulaminate III	235	81.09	1	1.0	0	86
+87	superiorparietal_eul2	lh	superiorparietal	5	eulaminate II	6260	2012.01	1	1.0	0	87
+1087	superiorparietal_eul2	rh	superiorparietal	5	eulaminate II	6264	2054.16	1	1.0	0	87
+88	superiorparietal_eul3	lh	superiorparietal	6	eulaminate III	4196	1447.81	2	0.7374	0	88
+1088	superiorparietal_eul3	rh	superiorparietal	6	eulaminate III	3958	1316.96	2	0.7504	0	88
+89	superiortemporal_agr	lh	superiortemporal	2	agranular	477	196.82	1	1.0	1	89
+1089	superiortemporal_agr	rh	superiortemporal	2	agranular	410	189.78	1	1.0	1	89
+90	superiortemporal_dys	lh	superiortemporal	3	dysgranular	749	387.39	1	1.0	0	90
+1090	superiortemporal_dys	rh	superiortemporal	3	dysgranular	816	400.54	1	1.0	0	90
+91	superiortemporal_eul1	lh	superiortemporal	4	eulaminate I	373	204.01	1	1.0	0	91
+1091	superiortemporal_eul1	rh	superiortemporal	4	eulaminate I	537	246.78	1	1.0	0	91
+92	superiortemporal_eul2	lh	superiortemporal	5	eulaminate II	565	266.66	2	0.7168	0	92
+1092	superiortemporal_eul2	rh	superiortemporal	5	eulaminate II	424	201.35	2	0.9717	0	92
+93	superiortemporal_eul3	lh	superiortemporal	6	eulaminate III	4966	1933.9	1	1.0	0	93
+1093	superiortemporal_eul3	rh	superiortemporal	6	eulaminate III	4580	1872.07	1	1.0	0	93
+94	superiortemporal_kon	lh	superiortemporal	7	koniocortex	141	58.39	2	0.6099	0	94
+1094	superiortemporal_kon	rh	superiortemporal	7	koniocortex	101	45.42	4	0.5644	0	94
+95	supramarginal_eul1	lh	supramarginal	4	eulaminate I	697	181.51	1	1.0	0	95
+1095	supramarginal_eul1	rh	supramarginal	4	eulaminate I	223	58.56	1	1.0	0	95
+96	supramarginal_eul2	lh	supramarginal	5	eulaminate II	2008	542.67	1	1.0	0	96
+1096	supramarginal_eul2	rh	supramarginal	5	eulaminate II	1522	383.49	1	1.0	0	96
+97	supramarginal_eul3	lh	supramarginal	6	eulaminate III	5895	1738.98	1	1.0	1	97
+1097	supramarginal_eul3	rh	supramarginal	6	eulaminate III	6405	1855.01	1	1.0	1	97
+98	temporalpole_agr	lh	temporalpole	2	agranular	585	268.12	1	1.0	1	98
+1098	temporalpole_agr	rh	temporalpole	2	agranular	565	262.25	4	0.9947	1	98
+99	temporalpole_dys	lh	temporalpole	3	dysgranular	254	142.64	1	1.0	0	99
+1099	temporalpole_dys	rh	temporalpole	3	dysgranular	252	129.44	1	1.0	0	99
+100	transversetemporal_eul3	lh	transversetemporal	6	eulaminate III	258	102.58	3	0.8992	0	100
+1100	transversetemporal_eul3	rh	transversetemporal	6	eulaminate III	89	36.42	5	0.6404	0	100
+101	transversetemporal_kon	lh	transversetemporal	7	koniocortex	806	327.42	1	1.0	0	101
+1101	transversetemporal_kon	rh	transversetemporal	7	koniocortex	692	268.21	1	1.0	0	101

@@ -1,0 +1,78 @@
+parcellation,parcel,majority_cyto7_type,majority_type_code,dominant_fraction,n_types_ge10pct
+desikan,entorhinal,Allocortex,1,0.977,1
+desikan,parahippocampal,Agranular,2,0.406,4
+desikan,caudalanteriorcingulate,Agranular,2,0.886,2
+desikan,temporalpole,Agranular,2,0.585,3
+desikan,rostralanteriorcingulate,Agranular,2,0.756,2
+desikan,posteriorcingulate,Dysgranular,3,0.878,2
+desikan,isthmuscingulate,Dysgranular,3,0.679,3
+desikan,insula,Dysgranular,3,0.3,3
+desikan,medialorbitofrontal,Eulaminate I,4,0.388,4
+desikan,lateralorbitofrontal,Eulaminate I,4,0.378,4
+desikan,inferiortemporal,Eulaminate I,4,0.757,2
+desikan,fusiform,Eulaminate I,4,0.505,3
+desikan,inferiorparietal,Eulaminate I,4,0.545,2
+desikan,middletemporal,Eulaminate I,4,0.37,3
+desikan,superiorfrontal,Eulaminate II,5,0.494,2
+desikan,caudalmiddlefrontal,Eulaminate II,5,0.665,2
+desikan,rostralmiddlefrontal,Eulaminate II,5,0.67,2
+desikan,parsopercularis,Eulaminate II,5,0.788,2
+desikan,parsorbitalis,Eulaminate II,5,0.871,2
+desikan,frontalpole,Eulaminate II,5,1.0,1
+desikan,precuneus,Eulaminate II,5,0.561,3
+desikan,superiorparietal,Eulaminate II,5,0.606,2
+desikan,superiortemporal,Eulaminate III,6,0.675,2
+desikan,paracentral,Eulaminate III,6,0.595,4
+desikan,parstriangularis,Eulaminate III,6,0.594,2
+desikan,bankssts,Eulaminate III,6,0.683,2
+desikan,supramarginal,Eulaminate III,6,0.723,2
+desikan,precentral,Eulaminate III,6,0.45,3
+desikan,lateraloccipital,Eulaminate III,6,0.678,2
+desikan,lingual,Eulaminate III,6,0.716,3
+desikan,cuneus,Eulaminate III,6,0.908,1
+desikan,postcentral,Eulaminate III,6,0.593,2
+desikan,transversetemporal,Koniocortex,7,0.812,2
+desikan,pericalcarine,Koniocortex,7,0.969,1
+voneconomo,HA,Allocortex,1,1.0,1
+voneconomo,HB,Allocortex,1,1.0,1
+voneconomo,HC,Allocortex,1,0.421,2
+voneconomo,LA2,Agranular,2,0.665,2
+voneconomo,FLMN,Agranular,2,0.558,2
+voneconomo,TG,Dysgranular,3,0.497,3
+voneconomo,LD,Dysgranular,3,0.65,2
+voneconomo,LE,Dysgranular,3,0.747,2
+voneconomo,LA1,Dysgranular,3,0.676,2
+voneconomo,FJK,Dysgranular,3,0.579,2
+voneconomo,LC3,Dysgranular,3,1.0,1
+voneconomo,FH,Dysgranular,3,0.813,2
+voneconomo,LC2,Dysgranular,3,0.906,1
+voneconomo,IA,Dysgranular,3,0.629,2
+voneconomo,TF,Eulaminate I,4,0.628,2
+voneconomo,LC1,Eulaminate I,4,0.524,2
+voneconomo,FF,Eulaminate I,4,0.339,4
+voneconomo,FG,Eulaminate I,4,0.871,2
+voneconomo,FC,Eulaminate I,4,0.922,1
+voneconomo,PG,Eulaminate I,4,0.704,2
+voneconomo,FE,Eulaminate II,5,0.666,2
+voneconomo,FD,Eulaminate II,5,0.79,2
+voneconomo,FCBm,Eulaminate II,5,0.769,2
+voneconomo,FB,Eulaminate II,5,0.731,2
+voneconomo,PH,Eulaminate II,5,0.626,3
+voneconomo,FDdelta,Eulaminate II,5,1.0,1
+voneconomo,PE,Eulaminate II,5,0.795,2
+voneconomo,IB,Eulaminate III,6,0.349,4
+voneconomo,TE,Eulaminate III,6,0.434,3
+voneconomo,TB,Eulaminate III,6,0.463,3
+voneconomo,TA,Eulaminate III,6,0.641,1
+voneconomo,FDT,Eulaminate III,6,0.631,3
+voneconomo,PD,Eulaminate III,6,0.579,2
+voneconomo,PF,Eulaminate III,6,0.678,3
+voneconomo,FA,Eulaminate III,6,0.668,2
+voneconomo,OA,Eulaminate III,6,0.835,2
+voneconomo,OB,Eulaminate III,6,0.792,2
+voneconomo,PC,Eulaminate III,6,0.759,2
+voneconomo,OC,Koniocortex,7,0.674,2
+voneconomo,PA,Koniocortex,7,0.621,2
+voneconomo,PB,Koniocortex,7,0.668,2
+voneconomo,TC,Koniocortex,7,0.616,2
+voneconomo,TD,Koniocortex,7,1.0,1

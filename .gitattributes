@@ -1,0 +1,11 @@
+# Store and check out every file byte for byte.
+#
+# This repository ships dist/SHA256SUMS.txt, and a checksum is only useful if the file a
+# clone receives is the file that was hashed. Git's end-of-line conversion would rewrite
+# text files on checkout, differently on different platforms, so every text-file checksum
+# would fail for reasons that have nothing to do with integrity. Disabling the conversion
+# keeps the manifest verifiable everywhere.
+#
+# The cost is that text files keep the line endings they were committed with, which is the
+# correct trade for a data release.
+* -text

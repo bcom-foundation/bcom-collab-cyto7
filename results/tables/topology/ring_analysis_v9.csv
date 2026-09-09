@@ -1,0 +1,15 @@
+hemi,type,components,total,main,main_pct,encircles,small_lt30
+lh,Allocortex,1,4147,4147,100.0,False,0
+lh,Agranular,1,7938,7938,100.0,True,0
+lh,Dysgranular,1,13583,13583,100.0,True,0
+lh,Eulaminate I,1,27995,27995,100.0,True,0
+lh,Eulaminate II,1,44540,44540,100.0,True,0
+lh,Eulaminate III,3,45792,33828,73.9,False,0
+lh,Koniocortex,3,9070,4828,53.2,False,0
+rh,Allocortex,1,3193,3193,100.0,False,0
+rh,Agranular,1,7446,7446,100.0,True,0
+rh,Dysgranular,1,12727,12727,100.0,True,0
+rh,Eulaminate I,1,29129,29129,100.0,True,0
+rh,Eulaminate II,1,46901,46901,100.0,True,0
+rh,Eulaminate III,3,42576,31149,73.2,False,0
+rh,Koniocortex,3,9935,6124,61.6,False,0

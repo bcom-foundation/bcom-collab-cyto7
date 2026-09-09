@@ -1,0 +1,4 @@
+feature,subset,n,win_frac_cyto7,binom_p
+BigBrain Hist-G1 (histology),all,27298,0.4993,0.8134
+BigBrain Hist-G1 (histology),off1,23168,0.4917,0.0119
+BigBrain Hist-G1 (histology),off2,4130,0.5416,0.0

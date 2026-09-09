@@ -1,0 +1,3 @@
+measures plotted: 12
+survivors (q<0.05): 10
+non-survivors: Evolutionary expansion, Receptor diversity

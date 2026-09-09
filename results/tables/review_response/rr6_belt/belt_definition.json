@@ -1,0 +1,65 @@
+{
+  "counts_164k": {
+    "per_hemi": {
+      "L": {
+        "labelled": 153065,
+        "Allocortex": 4147,
+        "Agranular": 7938,
+        "Dysgranular": 13583
+      },
+      "R": {
+        "labelled": 151907,
+        "Allocortex": 3193,
+        "Agranular": 7446,
+        "Dysgranular": 12727
+      }
+    },
+    "total_labelled": 304972,
+    "belt": 49034,
+    "belt_fraction": 0.1607819734270687,
+    "per_type": {
+      "Allocortex": 7340,
+      "Agranular": 15384,
+      "Dysgranular": 26310
+    }
+  },
+  "spec_counts": {
+    "total_labelled": 304972,
+    "belt": 49034,
+    "allocortex": 7340,
+    "agranular": 15384,
+    "dysgranular": 26310
+  },
+  "setB_164k": 4558,
+  "setB_32k": 1001,
+  "setA_32k": 8049,
+  "labelled_32k": 58731,
+  "setB_components_164k": {
+    "trusted_flip": 4492,
+    "weighted_flip": 1502
+  },
+  "frozen_unchanged": true,
+  "frozen": {
+    "pial.lh.cyto7.32k_fs_LR.label.gii": {
+      "before": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "after": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "unchanged": true
+    },
+    "pial.lh.cyto7.v9.annot": {
+      "before": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "after": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.32k_fs_LR.label.gii": {
+      "before": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "after": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.v9.annot": {
+      "before": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "after": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "unchanged": true
+    }
+  },
+  "n_spin": 1000
+}

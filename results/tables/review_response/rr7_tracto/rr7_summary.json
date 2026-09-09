@@ -1,0 +1,80 @@
+{
+  "reproduction": {
+    "slope": {
+      "published": -1.2306,
+      "recomputed": -1.2306
+    },
+    "perm_p": {
+      "published": 0.003,
+      "recomputed": 0.003
+    },
+    "partial_r": {
+      "published": -0.6358,
+      "recomputed": -0.6358
+    },
+    "partial_p": {
+      "published": 0.0019,
+      "recomputed": 0.0019
+    }
+  },
+  "collinearity_typedist_vs_geodesic": {
+    "geodesic_centroid_mm": {
+      "pearson_r": 0.8127,
+      "pearson_p": 0.0,
+      "spearman_rho": 0.8055,
+      "spearman_p": 0.0
+    },
+    "geodesic_footprint_mm": {
+      "pearson_r": 0.9591,
+      "pearson_p": 0.0,
+      "spearman_rho": 0.977,
+      "spearman_p": 0.0
+    }
+  },
+  "published_slope_vs_topology_preserving_null": {
+    "observed_slope_per_ordinal_step": -1.2306,
+    "observed_slope_per_SD": -1.8345,
+    "observed_pearson_r": -0.7649,
+    "p_spin_slope_per_SD": 0.04,
+    "p_spin_pearson_r": 0.04,
+    "spin_null_mean_slope_per_SD": -0.8002,
+    "spin_null_sd_slope_per_SD": 0.6877,
+    "spin_null_mean_pearson_r": -0.3337,
+    "observed_typedistance_SD": 1.4907,
+    "surrogate_typedistance_SD_median": 0.3819,
+    "n_spin_fits": 1000
+  },
+  "poisson_random_intercept": {
+    "coef": 0.0,
+    "se": 0.6375
+  },
+  "n_rows": 924,
+  "n_tracts": 33,
+  "n_spin_requested": 1000,
+  "n_spin_fitted": 1000,
+  "n_perm": 1000,
+  "endpoint_note": "per-streamline endpoints are not persisted; the spin null is built on per-type aggregates (area-weighted mean rotated rank per type footprint)",
+  "frozen_unchanged": true,
+  "frozen": {
+    "pial.lh.cyto7.32k_fs_LR.label.gii": {
+      "before": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "after": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "unchanged": true
+    },
+    "pial.lh.cyto7.v9.annot": {
+      "before": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "after": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.32k_fs_LR.label.gii": {
+      "before": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "after": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.v9.annot": {
+      "before": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "after": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "unchanged": true
+    }
+  }
+}

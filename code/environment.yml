@@ -1,0 +1,32 @@
+name: cyto7
+# Conda environment for reproducing the cytoarchitecture / myelin contour-overlay
+# figures in this repository. Create it with:
+#     conda env create -f environment.yml
+#     conda activate cyto7
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  # Force the OpenBLAS BLAS/LAPACK implementation. The MKL build of numpy
+  # hard-crashes (Windows exception 0xc06d007f in numpy.linalg) on some CPUs
+  # during matplotlib's 3D axis setup; OpenBLAS avoids this.
+  - nomkl
+  - libblas=*=*openblas
+  - numpy>=1.24
+  - scipy>=1.10
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - pandas>=2.0
+  - nibabel>=5.1
+  - nilearn>=0.10.3
+  - pip
+  - pip:
+      # Fetching the functional feature maps (one-time, see
+      # scripts/fetch_neuromaps_features.py). Not needed to reproduce figures
+      # from the cached maps under resources/neuromaps_cache/.
+      - neuromaps>=0.0.7
+      # ENIGMA toolbox — ONLY for the Fig-9 disease-vulnerability check
+      # (scripts/fig9_predictions.py Part B). Not on PyPI; pinned to the exact
+      # commit used. NOTE: its high-level spin_test is broken against modern VTK;
+      # the script routes around it with a numpy-only parcel spin (see the report).
+      - enigmatoolbox @ git+https://github.com/MICA-MNI/ENIGMA.git@b08974b55243060cbc1fad12c87048037446e8f7

@@ -1,0 +1,10 @@
+metric,frac_subject_vertices_nonzero,n_subjects_constant,n_subjects,median_within_subject_sd
+int_area,1.0,0,89,0.012856397802410642
+exponent_fixed,1.0,0,89,0.10895876875267183
+centroid,1.0,0,89,0.566046749917912
+sf_ratio,1.0,0,89,1.237207352825013
+osc_delta,0.0018,56,89,0.0
+osc_theta,0.3022,0,89,0.1067489745714972
+osc_alpha,0.8161,0,89,0.3139901263389407
+osc_beta,0.9944,0,89,0.3142731440278661
+osc_gamma1,0.0299,4,89,0.017829978961441843

@@ -1,0 +1,6 @@
+spec,coef,coef_per_SD,spin_null_mean,n_spin_fits,p_spin_typepreserving,label_perm_null_mean,n_perm_fits,p_label_perm
+A1  aggregate + endpoint-pair offset,-1.3631,-2.0321,-0.6541,1000,0.0599,-0.1373,1000,0.004
+A3  aggregate + offset + contact + geodesic,-2.732,-4.0726,-0.4481,1000,0.007,-0.0935,1000,0.002
+S1  + endpoint-pair offset,0.0089,0.0154,0.0498,1000,0.9001,0.127,1000,0.954
+S5  full without geodesic,0.1096,0.1903,0.0258,1000,0.4655,0.0958,1000,0.2967
+S6  full + geodesic (centroid),-0.4003,-0.6924,-0.288,1000,0.1149,-0.0724,1000,0.002

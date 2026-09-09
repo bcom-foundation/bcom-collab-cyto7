@@ -1,0 +1,219 @@
+{
+  "misassignment": [
+    {
+      "resolution": "vertex",
+      "n_labelled_vertices": 299730,
+      "n_misassigned_vertices": 0,
+      "fraction_vertices": 0.0,
+      "area_mm2_labelled": 118243.3,
+      "area_mm2_misassigned": 0.0,
+      "fraction_area": 0.0,
+      "mean_abs_ordinal_diff": 0.0,
+      "mean_abs_ordinal_diff_area_weighted": 0.0,
+      "max_abs_ordinal_diff": 0,
+      "atlas": "Desikan-Killiany",
+      "n_nodes": 299730
+    },
+    {
+      "resolution": "crossed",
+      "n_labelled_vertices": 299730,
+      "n_misassigned_vertices": 1712,
+      "fraction_vertices": 0.0057118072932305745,
+      "area_mm2_labelled": 118243.3,
+      "area_mm2_misassigned": 652.4,
+      "fraction_area": 0.005517408191381535,
+      "mean_abs_ordinal_diff": 1.0186915887850467,
+      "mean_abs_ordinal_diff_area_weighted": 1.0114141067557012,
+      "max_abs_ordinal_diff": 5,
+      "atlas": "Desikan-Killiany",
+      "n_nodes": null
+    },
+    {
+      "resolution": "areal",
+      "n_labelled_vertices": 299730,
+      "n_misassigned_vertices": 120074,
+      "fraction_vertices": 0.40060721315850933,
+      "area_mm2_labelled": 118243.3,
+      "area_mm2_misassigned": 47247.1,
+      "fraction_area": 0.3995750959745128,
+      "mean_abs_ordinal_diff": 1.2528357512867065,
+      "mean_abs_ordinal_diff_area_weighted": 1.2587927025156531,
+      "max_abs_ordinal_diff": 5,
+      "atlas": "Desikan-Killiany",
+      "n_nodes": 34
+    },
+    {
+      "resolution": "areal (bilateral majority)",
+      "n_labelled_vertices": 299730,
+      "n_misassigned_vertices": 120284,
+      "fraction_vertices": 0.4013078437260201,
+      "area_mm2_labelled": 118243.3,
+      "area_mm2_misassigned": 47315.4,
+      "fraction_area": 0.4001531459274354,
+      "mean_abs_ordinal_diff": 1.2342289913870506,
+      "mean_abs_ordinal_diff_area_weighted": 1.2412618275153569,
+      "max_abs_ordinal_diff": 5,
+      "atlas": "Desikan-Killiany",
+      "n_nodes": 34
+    },
+    {
+      "resolution": "vertex",
+      "n_labelled_vertices": 295589,
+      "n_misassigned_vertices": 0,
+      "fraction_vertices": 0.0,
+      "area_mm2_labelled": 116515.8,
+      "area_mm2_misassigned": 0.0,
+      "fraction_area": 0.0,
+      "mean_abs_ordinal_diff": 0.0,
+      "mean_abs_ordinal_diff_area_weighted": 0.0,
+      "max_abs_ordinal_diff": 0,
+      "atlas": "von Economo",
+      "n_nodes": 295589
+    },
+    {
+      "resolution": "crossed",
+      "n_labelled_vertices": 295589,
+      "n_misassigned_vertices": 3420,
+      "fraction_vertices": 0.011570119321084343,
+      "area_mm2_labelled": 116515.8,
+      "area_mm2_misassigned": 1323.1,
+      "fraction_area": 0.011355577249919547,
+      "mean_abs_ordinal_diff": 1.22046783625731,
+      "mean_abs_ordinal_diff_area_weighted": 1.210864935621932,
+      "max_abs_ordinal_diff": 4,
+      "atlas": "von Economo",
+      "n_nodes": null
+    },
+    {
+      "resolution": "areal",
+      "n_labelled_vertices": 295589,
+      "n_misassigned_vertices": 99051,
+      "fraction_vertices": 0.33509704353003666,
+      "area_mm2_labelled": 116515.8,
+      "area_mm2_misassigned": 37792.8,
+      "fraction_area": 0.3243573789747404,
+      "mean_abs_ordinal_diff": 1.3369678246559853,
+      "mean_abs_ordinal_diff_area_weighted": 1.3524681545539088,
+      "max_abs_ordinal_diff": 5,
+      "atlas": "von Economo",
+      "n_nodes": 43
+    },
+    {
+      "resolution": "areal (bilateral majority)",
+      "n_labelled_vertices": 295589,
+      "n_misassigned_vertices": 98970,
+      "fraction_vertices": 0.3348230143882215,
+      "area_mm2_labelled": 116515.8,
+      "area_mm2_misassigned": 37915.9,
+      "fraction_area": 0.3254140243698539,
+      "mean_abs_ordinal_diff": 1.342891785389512,
+      "mean_abs_ordinal_diff_area_weighted": 1.3650450199880517,
+      "max_abs_ordinal_diff": 5,
+      "atlas": "von Economo",
+      "n_nodes": 43
+    }
+  ],
+  "panel_c_parcel": {
+    "parcel": "middletemporal",
+    "n_types_above_10pct": 4,
+    "types": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "area_mm2": 4104.1,
+    "pct": {
+      "3": 12.5,
+      "4": 36.4,
+      "5": 17.4,
+      "6": 33.7
+    },
+    "runners_up": [
+      {
+        "parcel": "paracentral",
+        "n_types_above_10pct": 4,
+        "types": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "area_mm2": 2719.6,
+        "pct": {
+          "3": 10.8,
+          "4": 11.7,
+          "5": 12.2,
+          "6": 60.8,
+          "7": 4.5
+        }
+      },
+      {
+        "parcel": "medialorbitofrontal",
+        "n_types_above_10pct": 4,
+        "types": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "area_mm2": 2719.1,
+        "pct": {
+          "2": 11.4,
+          "3": 33.1,
+          "4": 39.2,
+          "5": 16.2
+        }
+      },
+      {
+        "parcel": "parahippocampal",
+        "n_types_above_10pct": 4,
+        "types": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "area_mm2": 1487.7,
+        "pct": {
+          "1": 28.1,
+          "2": 42.0,
+          "3": 16.6,
+          "4": 11.6,
+          "5": 1.7
+        }
+      }
+    ]
+  },
+  "qc_skip_edges": {
+    "aparc_cyto7": {
+      "vertex": 0,
+      "crossed": 52,
+      "areal": 12114
+    },
+    "voneconomo_cyto7": {
+      "vertex": 0,
+      "crossed": 728,
+      "areal": 10550
+    }
+  },
+  "parcel_purity": {
+    "aparc_cyto7": {
+      "n_parcels_per_hemi_pooled": 68,
+      "median_parcel_purity": 0.6598556808689829,
+      "mean_parcel_purity": 0.6636190502110751,
+      "area_weighted_purity": 0.6004249040254874,
+      "corr_size_vs_purity": -0.4877954163731914
+    },
+    "voneconomo_cyto7": {
+      "n_parcels_per_hemi_pooled": 86,
+      "median_parcel_purity": 0.6933391180788081,
+      "mean_parcel_purity": 0.7076478624153723,
+      "area_weighted_purity": 0.6756426210252595,
+      "corr_size_vs_purity": -0.192378836800364
+    }
+  },
+  "frozen_v9_unchanged": true,
+  "frozen_rr10_unchanged": true,
+  "runtime_seconds": 49.8
+}

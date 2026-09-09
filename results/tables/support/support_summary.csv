@@ -1,0 +1,15 @@
+hemi,type,n,mean_support,median_support,pct_low_<0.33,pct_high_>=0.66
+lh,Allocortex,4147,0.5084,0.3162,57.2,39.4
+lh,Agranular,7938,0.7994,0.8113,0.0,99.2
+lh,Dysgranular,13583,0.8399,0.8739,0.0,98.6
+lh,Eulaminate I,27995,0.9305,0.9306,0.0,100.0
+lh,Eulaminate II,44540,0.9544,0.9873,0.0,100.0
+lh,Eulaminate III,45792,0.941,0.9433,0.0,100.0
+lh,Koniocortex,9070,0.9088,0.9306,0.0,100.0
+rh,Allocortex,3193,0.5237,0.3162,51.3,39.4
+rh,Agranular,7446,0.7977,0.8113,0.0,98.9
+rh,Dysgranular,12727,0.8388,0.8739,0.0,98.4
+rh,Eulaminate I,29129,0.9272,0.9306,0.0,100.0
+rh,Eulaminate II,46901,0.9554,0.9873,0.0,100.0
+rh,Eulaminate III,42576,0.9389,0.9433,0.0,100.0
+rh,Koniocortex,9935,0.9074,0.8891,0.0,100.0

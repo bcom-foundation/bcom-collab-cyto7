@@ -1,0 +1,30 @@
+The CYTO7 Authors
+
+cyto7 is an open, vertex-level cytoarchitectural type atlas of the human cortex.
+This file lists the individuals and institutions holding copyright in the atlas
+products and in the analysis code released in this repository.
+
+Individuals
+  Ricardo Salvador
+  Borja Mercadal
+  Francesca Castaldo
+  Miguel Angel Garcia-Cabezas
+  Giulio Ruffini
+
+Institutions
+  Neuroelectrics Barcelona, Barcelona, Spain
+  Barcelona Computational Foundation (BCOM), Barcelona, Spain
+  Department of Anatomy, Histology and Neuroscience, School of Medicine,
+    Universidad Autonoma de Madrid, Madrid, Spain
+  Neural Systems Laboratory, Department of Health Sciences, Boston University,
+    Boston, MA, USA
+
+Licences
+  Code: MIT (see LICENSE-CODE)
+  Data: CC BY 4.0 (see LICENSE-DATA)
+
+Third-party data
+  No third-party data is redistributed here. The validation analyses used the
+  Human Connectome Project, ENIGMA, the Allen Human Brain Atlas, the Hansen PET
+  collection and BigBrain. Each remains available from its original provider
+  under that provider's own terms.

@@ -1,0 +1,513 @@
+{
+  "totals": {
+    "all": 85,
+    "drawn": 0,
+    "constants": 50,
+    "prose": 35
+  },
+  "drawn": [],
+  "constants": [
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 106,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 4"
+      ],
+      "text": "GC2020 Table 4"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 108,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 4"
+      ],
+      "text": "GC2020 Table 4"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 110,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 4"
+      ],
+      "text": "GC2020 Table 4"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 112,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 4"
+      ],
+      "text": "GC2020 Table 4"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 115,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 117,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 119,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 121,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 123,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 125,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 127,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 129,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 131,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 5"
+      ],
+      "text": "GC2020 Table 5"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 141,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 143,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 146,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 148,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 150,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 152,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 154,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 156,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 158,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 161,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 163,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 165,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 168,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 170,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 172,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 174,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 176,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 178,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 180,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 182,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 7"
+      ],
+      "text": "GC2020 Table 7"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 185,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 187,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 189,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 191,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 193,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 195,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fetch_voneconomo_atlas.py",
+      "line": 197,
+      "kind": "constant, check use",
+      "context": "assigned to GC_ASSIGNMENT",
+      "refs": [
+        "Table 6"
+      ],
+      "text": "GC2020 Table 6"
+    },
+    {
+      "file": "fig9_predictions.py",
+      "line": 439,
+      "kind": "constant, check use",
+      "context": "assigned to DIRN",
+      "refs": [
+        "Fig.9"
+      ],
+      "text": "ENIGMA d=case-control (neg d=atrophy); with atrophy, rho(d,type)>0 => more atrophy at LOWER type"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 377,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 4",
+        "Fig. 6"
+      ],
+      "text": "section 3.5, Fig. 4 caption, Fig. 6"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 401,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Table S3"
+      ],
+      "text": "section 3.6, Annex F, Table S3"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 421,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 5"
+      ],
+      "text": "section 3.7, Fig. 5 caption"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 433,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 6"
+      ],
+      "text": "section 3.8, Fig. 6 caption"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 433,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 6"
+      ],
+      "text": "number of surviving measures in Fig. 6"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 439,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 6"
+      ],
+      "text": "Fig. 6 caption"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 439,
+      "kind": "constant, check use",
+      "context": "assigned to MANUSCRIPT_CLAIMS",
+      "refs": [
+        "Fig. 6"
+      ],
+      "text": "RORB omitted from Fig. 6"
+    },
+    {
+      "file": "rr2_outcome_table.py",
+      "line": 740,
+      "kind": "constant, check use",
+      "context": "assigned to L",
+      "refs": [
+        "Supplementary Table S8"
+      ],
+      "text": "\\caption{\\textbf{Supplementary Table S8. Complete outcome table.} Every statistical test run in "
+    },
+    {
+      "file": "rr3_fig6_bands.py",
+      "line": 67,
+      "kind": "constant, check use",
+      "context": "assigned to RULE",
+      "refs": [
+        "Fig. S4",
+        "Fig. S7"
+      ],
+      "text": "Headline panel, not a census: one measure per construct, from data independent of the atlas. Ind"
+    }
+  ]
+}

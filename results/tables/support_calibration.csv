@@ -1,0 +1,5 @@
+component,auc_disagree,logit_coef,mean_agree,mean_off1,mean_off2
+topo,0.5,-0.051,1.0,1.0,1.0
+geom,0.5713,-1.9046,0.9416,0.9146,0.8434
+prior,0.5442,-3.1919,0.9157,0.9052,0.8292
+indep,0.5774,-5.284,0.9489,0.935,0.8808

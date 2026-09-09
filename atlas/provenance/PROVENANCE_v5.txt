@@ -1,0 +1,19 @@
+cyto7 v5 — cingulate rings + closure + smoothing + strict topology
+================================================================
+Source: pial.{lh,rh}.cyto7.v4.annot -> pial.{lh,rh}.cyto7.v5.annot
+cyto7 stays 7 labels. Medial wall from FreeSurfer ?h.cortex.label (never painted).
+Params: inner-hops=6, retro-hops=12, min-speck=30, smooth-passes=2.
+
+Ordered edits (per-vertex reason in v4_to_v5_changelog.csv):
+  (i)   cingulate_gradient : posterior/isthmus OUTER agranular (> inner-hops from wall) -> dysgranular; inner strip + anterior kept.
+  (ii)  ring_closure       : inner-zone genuine cortex currently unknown + embedded specks -> agranular (closes the inner ring; wall never painted).
+  (iii) topology_buffer    : strict R1 (converge_topology); ±1 relabels may propagate into eulaminate I+.
+  (iv)  speck_cleanup      : components < min-speck absorbed to majority neighbour, protecting koniocortex / retrosplenial dysgranular / inner agranular ring / allocortex.
+  (v)   boundary_smooth    : majority-vote relaxation (<=1 ordinal step, no R1 skip, protected features frozen).
+
+Per-hemisphere summary:
+  lh: changed 2492; by reason {'cingulate_gradient': 1719, 'ring_closure': 636, 'boundary_smooth': 137}; inner-zone 1449; buffer 0; forced 2-step moves 0; low-conf ring flags 393.
+  rh: changed 2192; by reason {'cingulate_gradient': 1357, 'ring_closure': 688, 'boundary_smooth': 147}; inner-zone 1495; buffer 29; forced 2-step moves 0; low-conf ring flags 364.
+
+Guardrails: 7 labels only; changes <=1 ordinal step where possible (2-step moves reported above, from speck absorption); real features protected; medial wall never painted; v4 left intact.
+Changelog: v4_to_v5_changelog.csv (every moved vertex + reason + low_conf_flag).

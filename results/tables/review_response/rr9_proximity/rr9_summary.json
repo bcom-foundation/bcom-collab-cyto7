@@ -1,0 +1,253 @@
+{
+  "step1_old_measure_failure": {
+    "contact_vs_centroid_pearson_r": -0.2298107636401873,
+    "contact_vs_centroid_pearson_p": 0.6613523509857675,
+    "contact_vs_centroid_spearman_rho": 0.14285714285714288,
+    "contact_vs_centroid_spearman_p": 0.7871720116618076,
+    "contact_vs_nn_eucl_pearson_r": 0.23872269553761116,
+    "contact_vs_nn_eucl_pearson_p": 0.6487181838884758,
+    "contact_vs_nn_eucl_spearman_rho": 0.2,
+    "contact_vs_nn_eucl_spearman_p": 0.7040000000000001,
+    "contact_vs_nn_geo_pearson_r": -0.07717541710160469,
+    "contact_vs_nn_geo_pearson_p": 0.8844667044763537,
+    "contact_vs_nn_geo_spearman_rho": -0.14285714285714288,
+    "contact_vs_nn_geo_spearman_p": 0.7871720116618076,
+    "centroid_range_mm": [
+      4.501507097540516,
+      54.264383997499834
+    ],
+    "nn_eucl_range_mm": [
+      4.92323778398595,
+      9.48178434764234
+    ]
+  },
+  "step1_table": [
+    {
+      "type_a": "Eulaminate-III",
+      "type_b": "Koniocortex",
+      "type_distance": 1,
+      "shared_border_mm2": 3808.0,
+      "centroid_geodesic_mm": 4.501507097540516,
+      "nn_eucl_median_mm": 7.695978374610276,
+      "nn_geo_median_mm": 12.630764562044199
+    },
+    {
+      "type_a": "Eulaminate-I",
+      "type_b": "Eulaminate-II",
+      "type_distance": 1,
+      "shared_border_mm2": 9024.0,
+      "centroid_geodesic_mm": 5.5178320498710995,
+      "nn_eucl_median_mm": 7.6074263440686325,
+      "nn_geo_median_mm": 9.416397215104382
+    },
+    {
+      "type_a": "Dysgranular",
+      "type_b": "Eulaminate-I",
+      "type_distance": 1,
+      "shared_border_mm2": 4350.0,
+      "centroid_geodesic_mm": 20.197026300425016,
+      "nn_eucl_median_mm": 9.177510107187533,
+      "nn_geo_median_mm": 11.916513947657139
+    },
+    {
+      "type_a": "Allocortex",
+      "type_b": "Agranular",
+      "type_distance": 1,
+      "shared_border_mm2": 1736.0,
+      "centroid_geodesic_mm": 27.688056529700724,
+      "nn_eucl_median_mm": 7.2207530986240736,
+      "nn_geo_median_mm": 10.740335332760539
+    },
+    {
+      "type_a": "Eulaminate-II",
+      "type_b": "Eulaminate-III",
+      "type_distance": 1,
+      "shared_border_mm2": 7277.0,
+      "centroid_geodesic_mm": 29.944845626457578,
+      "nn_eucl_median_mm": 9.48178434764234,
+      "nn_geo_median_mm": 12.810235298086416
+    },
+    {
+      "type_a": "Agranular",
+      "type_b": "Dysgranular",
+      "type_distance": 1,
+      "shared_border_mm2": 4728.0,
+      "centroid_geodesic_mm": 54.264383997499834,
+      "nn_eucl_median_mm": 4.92323778398595,
+      "nn_geo_median_mm": 6.501332551060727
+    }
+  ],
+  "collinearity": [
+    {
+      "measure": "centroid_geodesic_mm_SUPERSEDED",
+      "description": "centroid-to-centroid geodesic (RR7, superseded)",
+      "n_pairs": 21,
+      "pearson_r": 0.8126703771490438,
+      "pearson_p": 7.5967159620566755e-06,
+      "spearman_rho": 0.8055334735735333,
+      "spearman_p": 1.0518225142355944e-05,
+      "abs_pearson_r": 0.8126703771490438
+    },
+    {
+      "measure": "footprint_geodesic_mm",
+      "description": "footprint-mean geodesic (RR7, secondary)",
+      "n_pairs": 21,
+      "pearson_r": 0.9590995351291995,
+      "pearson_p": 7.230326326630458e-12,
+      "spearman_rho": 0.9770084209183945,
+      "spearman_p": 3.258050972733665e-14,
+      "abs_pearson_r": 0.9590995351291995
+    },
+    {
+      "measure": "nn_eucl_median_mm",
+      "description": "nearest-neighbour median, Euclidean",
+      "n_pairs": 21,
+      "pearson_r": 0.9410283338853463,
+      "pearson_p": 2.177843227282421e-10,
+      "spearman_rho": 0.9537463156584327,
+      "spearman_p": 2.2778400568928736e-11,
+      "abs_pearson_r": 0.9410283338853463
+    },
+    {
+      "measure": "nn_eucl_p10_mm",
+      "description": "nearest-neighbour 10th percentile, Euclidean",
+      "n_pairs": 21,
+      "pearson_r": 0.9670253461747437,
+      "pearson_p": 9.635995308015534e-13,
+      "spearman_rho": 0.9690328419721219,
+      "spearman_p": 5.34743147193904e-13,
+      "abs_pearson_r": 0.9670253461747437
+    },
+    {
+      "measure": "nn_geo_median_mm",
+      "description": "nearest-neighbour median, geodesic",
+      "n_pairs": 21,
+      "pearson_r": 0.9216807189694356,
+      "pearson_p": 2.988121354493144e-09,
+      "spearman_rho": 0.9517524209218646,
+      "spearman_p": 3.3748414484677435e-11,
+      "abs_pearson_r": 0.9216807189694356
+    },
+    {
+      "measure": "nn_geo_p10_mm",
+      "description": "nearest-neighbour 10th percentile, geodesic",
+      "n_pairs": 21,
+      "pearson_r": 0.9616529636525498,
+      "pearson_p": 3.958476845618605e-12,
+      "spearman_rho": 0.9630511577624173,
+      "spearman_p": 2.7967676291829714e-12,
+      "abs_pearson_r": 0.9616529636525498
+    },
+    {
+      "measure": "log_pairs_within_40mm",
+      "description": "log opportunity, 40 mm",
+      "n_pairs": 21,
+      "pearson_r": -0.7775080623614989,
+      "pearson_p": 3.3585670096832614e-05,
+      "spearman_rho": -0.6892229472737245,
+      "spearman_p": 0.000548491021723074,
+      "abs_pearson_r": 0.7775080623614989
+    },
+    {
+      "measure": "log_pairs_within_80mm",
+      "description": "log opportunity, 80 mm (primary)",
+      "n_pairs": 21,
+      "pearson_r": -0.5931194588541986,
+      "pearson_p": 0.0045977260452498905,
+      "spearman_rho": -0.5097724209825908,
+      "spearman_p": 0.01824016661480646,
+      "abs_pearson_r": 0.5931194588541986
+    },
+    {
+      "measure": "log_pairs_within_120mm",
+      "description": "log opportunity, 120 mm",
+      "n_pairs": 21,
+      "pearson_r": -0.4177756745440503,
+      "pearson_p": 0.059498346567820666,
+      "spearman_rho": -0.3987789473136304,
+      "spearman_p": 0.07334690826830338,
+      "abs_pearson_r": 0.4177756745440503
+    },
+    {
+      "measure": "log_opportunity_fraction_80mm",
+      "description": "log opportunity fraction, 80 mm",
+      "n_pairs": 21,
+      "pearson_r": -0.6490099137157826,
+      "pearson_p": 0.0014569416838730207,
+      "spearman_rho": -0.6579852630674902,
+      "spearman_p": 0.0011859037145356775,
+      "abs_pearson_r": 0.6490099137157826
+    }
+  ],
+  "published_statistic_with_offset": {
+    "raw_count_published": {
+      "pearson_r": -0.7649,
+      "slope_per_ordinal_step": -1.2306,
+      "p_spin_pearson_r": 0.04,
+      "spin_null_mean_r": -0.3337,
+      "n_spin": 1000
+    },
+    "rate_per_opportunity_80mm": {
+      "pearson_r": -0.5972,
+      "slope_per_ordinal_step": -0.7999,
+      "p_spin_pearson_r": 0.0699,
+      "spin_null_mean_r": -0.2108,
+      "n_spin": 1000
+    },
+    "rate_per_possible_pair": {
+      "pearson_r": -0.6327,
+      "slope_per_ordinal_step": -0.9124,
+      "p_spin_pearson_r": 0.0579,
+      "spin_null_mean_r": -0.2191,
+      "n_spin": 1000
+    }
+  },
+  "verdict": {
+    "outcome": 3,
+    "aggregate_R1_coef": -1.1526069670150938,
+    "aggregate_R1_p_spin": 0.06693306693306693,
+    "aggregate_R1_p_model": 1.7373861284251256e-06,
+    "aggregate_survives_R1_R3": false,
+    "bundle_coefficient_nonzero": false,
+    "per_model_aggregate_survives": {
+      "R1": false,
+      "R2": true,
+      "R3": true
+    },
+    "alpha": 0.05
+  },
+  "primary_radius_mm": 80.0,
+  "sensitivity_radii_mm": [
+    40.0,
+    80.0,
+    120.0
+  ],
+  "n_spin": 1000,
+  "n_aggregate_pairs": 21,
+  "n_bundle_rows": 924,
+  "zero_opportunity_pairs_80mm": 0,
+  "runtime_seconds": 155.6,
+  "frozen_unchanged": true,
+  "frozen": {
+    "pial.lh.cyto7.32k_fs_LR.label.gii": {
+      "before": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "after": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "unchanged": true
+    },
+    "pial.lh.cyto7.v9.annot": {
+      "before": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "after": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.32k_fs_LR.label.gii": {
+      "before": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "after": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.v9.annot": {
+      "before": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "after": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "unchanged": true
+    }
+  }
+}

@@ -1,0 +1,81 @@
+cyto7 crossed parcellation (anatomical parcel x cyto7 type) - provenance
+==============================================================================
+
+built: 2026-08-27 12:39:27
+build command: conda run -n cyto7 python scripts/rr10_crossed_parcellation.py --subject bert
+generator: scripts/rr10_crossed_parcellation.py
+
+INPUTS (SHA-256)
+------------------------------------------------------------------------------
+  pial.lh.cyto7.32k_fs_LR.label.gii
+    99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c
+  pial.lh.cyto7.v9.annot
+    89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec
+  pial.rh.cyto7.32k_fs_LR.label.gii
+    d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc
+  pial.rh.cyto7.v9.annot
+    504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb
+  resources/voneconomo/lh.aparc.annot
+    39b1acde9a32b4227631eb51cbcd8dff84e2138c57bf9f96d74026f2c17f1480
+  resources/voneconomo/rh.aparc.annot
+    6a326aed325d313e6e0d10f67630efcd8d3b8343c50d3e108e005f626614badb
+  resources/voneconomo/lh.economo.annot
+    91a8c76c4ee1ee8451718d8cb55bf9d0b516a9b4e2f104328cb39a79132db0dd
+  resources/voneconomo/rh.economo.annot
+    935e31a5358145030d88311a02ace004911f8a24571b1a02f29ce9632dba50e0
+  resources/refine_atlases/lh.cortex.label
+    e08216c1a840f0c192ac63c212fbbe12efc7e9731faa64a45083a098746b928a
+  resources/refine_atlases/rh.cortex.label
+    432e9ce95e095c066dae2ed2fb3e6c0c67af6e77d8f52ba2d3b560b4fc50b87f
+
+BUILD RULES
+------------------------------------------------------------------------------
+  minimum node size      200 vertices, 164k fsaverage
+  node inventory         a (parcel, type) cell is a node when its vertex count
+                         summed over BOTH hemispheres exceeds the floor. This is
+                         what reproduces the counts reported in the paper (101
+                         Desikan nodes from 34 parcels, 115 von Economo from 43).
+                         Consequence: a node can be small or absent in one
+                         hemisphere; per-hemisphere sizes are in the node table.
+  residue                absorbed into the largest neighbouring node within the
+                         SAME anatomical parcel, so no anatomical boundary is
+                         crossed. Whole cells are absorbed, largest target first.
+  contiguity             one node per (parcel x type) cell even when it spans
+                         several patches. Component counts are in the node table;
+                         ?h.*_cc.annot is a secondary contiguity-split variant.
+  naming                 <parcel>_<typeabbrev>, lowercase, underscore separated.
+                         Split on the LAST underscore to recover the base parcel
+                         exactly as FreeSurfer spells it.
+                         allo agr dys eul1 eul2 eul3 kon = cyto7 ordinals 1..7.
+  ids                    nodes ordered by base parcel alphabetical, then cyto7
+                         ordinal ascending, numbered from 1. That number is the
+                         annot colour-table index in BOTH hemispheres. Node table
+                         ids are lh = index, rh = 1000 + index, so a
+                         bilateral table has no collisions. Index 0 = unknown.
+  surface                areas and adjacency on fsaverage white, 164k.
+
+APARC_CYTO7
+------------------------------------------------------------------------------
+  base atlas           desikan
+  bilateral cells      124
+  nodes above floor    101 from 34 parcels (mean 2.97)
+  node table rows      201 (one per node per hemisphere)
+  floor cost           1712 of 299730 labelled vertices (0.57%)
+  cells absorbed       40 cells, 1712 vertices
+  contiguity variant   lh 105 nodes, rh 106 nodes
+
+VONECONOMO_CYTO7
+------------------------------------------------------------------------------
+  base atlas           voneconomo
+  bilateral cells      158
+  nodes above floor    115 from 43 parcels (mean 2.67)
+  node table rows      229 (one per node per hemisphere)
+  floor cost           3420 of 295589 labelled vertices (1.16%)
+  cells absorbed       66 cells, 3420 vertices
+  contiguity variant   lh 120 nodes, rh 121 nodes
+
+CITATION
+------------------------------------------------------------------------------
+  Cite the cyto7 v9 map AND the base atlas (Desikan-Killiany; von
+  Economo-Koskinas). The cross moves no boundary: it intersects two labellings,
+  so a node is only as good as its base parcel's definition.

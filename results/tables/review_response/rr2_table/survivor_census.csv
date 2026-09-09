@@ -1,0 +1,22 @@
+family,n_members,n_tests_listed,n_survivors_q_lt_0.05,n_survivors_incl_raw_p,fdr_applied
+structure_function_9,9,9,3,3,yes
+external_reference_3,3,3,1,1,yes
+dynamics_singlemember_7,7,7,4,4,yes
+dynamics_robustness_variants (outside FDR),5,5,0,0,no
+osc_band_as_coded,4,4,0,0,yes
+receptor_maps_19,19,19,4,4,yes
+receptor_composites_8,8,8,3,3,yes
+fig9_predictions_3,3,3,0,0,yes
+no FDR family (robustness variant),1,1,0,0,no
+layer_markers_8,8,8,8,8,yes
+disease_8,8,8,5,5,yes
+disease_partial_8,8,8,2,2,yes
+tractography_5,5,5,0,2,no
+tractography_per_type_8 (no FDR applied),8,8,0,5,no
+added_value_global_9,9,9,3,3,yes
+added_value_localized_27 (no FDR applied),27,27,0,25,no
+added_value_aggregate_3,3,3,0,3,no
+bigbrain_added_value_2,2,2,0,0,yes
+negative_control_2,2,2,0,0,yes
+benchmark_controls_4,4,4,0,1,no
+TOTAL,143,143,33,69,

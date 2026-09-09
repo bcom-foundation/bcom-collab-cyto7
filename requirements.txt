@@ -1,0 +1,61 @@
+# cyto7 analysis dependencies.
+#
+# Derived from what the scripts under code/ actually import, not from memory: every entry
+# below is a top-level import found by parsing all 95 modules, pinned to the version the
+# published analyses were run with.
+#
+# Nothing here is needed to *use* the atlas. The files under atlas/ are standard FreeSurfer
+# .annot and GIFTI, readable by any neuroimaging toolkit. This list is for re-running the
+# analysis code.
+#
+# Install:  pip install -r requirements.txt
+# The published runs used Python 3.11.
+
+# --- core numerics and plotting, used almost everywhere ---
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.3
+matplotlib==3.11.0
+seaborn==0.13.2
+pillow==12.2.0
+tqdm==4.68.3
+
+# --- neuroimaging surfaces and file formats ---
+nibabel==5.4.2
+nilearn==0.13.1
+neuromaps==0.0.7
+netneurotools==0.3.0
+
+# --- statistics ---
+statsmodels==0.14.6
+scikit-learn==1.9.0
+scikit-image==0.26.0
+specparam==2.0.0rc7
+
+# --- dataset accessors. Each fetches third-party data under that provider's own terms;
+#     none of that data is redistributed here ---
+abagen==0.1.3          # Allen Human Brain Atlas, for the gene expression analyses
+enigmatoolbox==2.0.3   # ENIGMA case-control effect-size maps
+boto3==1.43.56         # HCP downloads from ConnectomeDB
+botocore==1.43.56
+
+# --- tractography. Needed only by code/pipeline/compute_tractography_connectivity.py,
+#     which also needs a tractogram that is not redistributed here ---
+dipy
+
+# --- 3D rendering. Needed only by the anatomy figures ---
+pyvista==0.48.4
+
+# --- Notes on two entries ---
+# dipy is deliberately unpinned: it was not installed in the environment the published
+#   analyses ran in, because the tractography connectivity step was run separately. Pin it
+#   yourself if you intend to re-run that step.
+# pkg_resources is imported by code/pipeline/layer_marker_genes.py inside a try/except, as a
+#   shim for abagen 0.1.3 on setuptools>=81, which removed it. It is part of setuptools and
+#   is not listed as a separate requirement.
+#
+# Not installable from PyPI, and needed only for specific steps:
+#   Connectome Workbench   fsaverage to fs_LR resampling        (CYTO7_WORKBENCH_DIR)
+#   FreeSurfer             mri_surf2surf                        (CYTO7_FREESURFER_HOME)
+#   FieldTrip and MATLAB   MEG source reconstruction only       (CYTO7_FIELDTRIP_DIR, CYTO7_MATLAB_BIN)
+# See code/.env.example and docs/REPRODUCING.md.

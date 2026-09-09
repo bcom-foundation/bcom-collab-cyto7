@@ -1,0 +1,4 @@
+FeatureKey,Feature,spearman_rho,p_param,n,p_spin,p_spin_fdr
+genepc1,AHBA gene expression PC1,0.6656730948691427,0.0,57957,0.0009990009990009,0.0029970029970029
+receptorpc1,PET receptor PC1 (Hansen-2022 collection),-0.3292195683731758,0.0,58731,0.0629370629370629,0.0944055944055944
+bigbrain_profile_skewness,"BigBrain profile skewness (pre-registered, histology)",-0.2090730553017751,0.0,58731,0.3206793206793207,0.4008491508491508

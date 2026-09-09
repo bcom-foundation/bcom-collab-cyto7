@@ -1,0 +1,6 @@
+file,shape,n_strict,n_permissive,on_palette_pct
+cyto7_flat_viridis.png,"(2602, 4709)",2,33305,23.584941847663124
+cyto7_flat_gc.png,"(2602, 4709)",0,44345,0.0
+labeled_flat_viridis_nolabels.png,"(1821, 3173)",4,14317,34.50525464288626
+labeled_flat_viridis.png,"(1821, 3173)",4,25745,33.438663295969405
+cyto7_v9_labeled_inflated_viridis_nolabels.png (inflated control),"(1583, 4710)",0,23215,1.1555365997266607

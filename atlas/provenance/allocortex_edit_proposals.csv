@@ -1,0 +1,6 @@
+hemi,category,cluster_id,n_verts,centroid,centroid_vertex,cyto7_label,weighted_consensus,weighted_score,sources_agreeing,source_weights,dist_to_medial_wall_mm,suggested_class,topology_effect,r1_safe
+lh,discrepant_iso_in_periallo,lh_discrepant_iso_in_periallo_0,933,"(-29.5, -41.0, -13.9)",34434,Eulaminate I,periallo(weak),0.343,Glasser,Glasser=2,28.87,periallocortex (Agranular/Dysgranular),requires_agranular_buffer (would manufacture an R1 skip),False
+rh,discrepant_iso_in_periallo,rh_discrepant_iso_in_periallo_0,635,"(33.3, -39.5, -14.0)",120882,Eulaminate I,periallo(weak),0.345,Glasser,Glasser=2,30.79,periallocortex (Agranular/Dysgranular),requires_agranular_buffer (would manufacture an R1 skip),False
+lh,discrepant_iso_in_periallo,lh_discrepant_iso_in_periallo_1,122,"(-38.8, 1.9, -17.9)",14411,Eulaminate I,periallo(weak),0.286,Glasser,Glasser=2,25.9,periallocortex (Agranular/Dysgranular),"one-step relabel, R1-safe",True
+lh,discrepant_allo_in_iso,lh_discrepant_allo_in_iso_0,94,"(-25.9, -9.8, -26.3)",46274,Allocortex,isocortex,0.0,none,,13.82,isocortex / periallocortex (per reference),"one-step relabel, R1-safe",True
+rh,discrepant_iso_in_periallo,rh_discrepant_iso_in_periallo_1,36,"(40.7, 1.3, -17.9)",69627,Eulaminate I,periallo(weak),0.286,Glasser,Glasser=2,23.84,periallocortex (Agranular/Dysgranular),"one-step relabel, R1-safe",True

@@ -1,0 +1,13 @@
+metric,construct,role,group_mean_rho,spin_p,fdr_q_singlemember,verdict
+int_area,Intrinsic timescale (ACF-area),family_member,-0.4592,0.004,0.014,survives
+centroid,Spectral centroid,family_member,0.4088,0.004,0.014,survives
+sf_ratio,Slow/fast ratio,family_member,-0.3564,0.009,0.021,survives
+osc_beta,Aperiodic-corrected beta power,family_member,0.2222,0.012,0.021,survives
+exponent_fixed,Aperiodic exponent (fixed),family_member,-0.1192,0.4985,0.5816,null
+peak_freq,Peak frequency,family_member,0.028,0.8242,0.8242,null
+offset,Offset,family_member,-0.1618,0.2128,0.2979,null
+int_1e,Intrinsic timescale (1/e-lag) [robustness],robustness_variant_excluded,-0.3147,0.025,,raw p only
+int_tau,Intrinsic timescale (exp-decay) [robustness],robustness_variant_excluded,-0.3797,0.013,,raw p only
+knee_tau,Intrinsic timescale (knee-derived) [robustness],robustness_variant_excluded,-0.3434,0.027,,raw p only
+exponent_knee,Aperiodic exponent (knee mode) [robustness],robustness_variant_excluded,0.3388,0.04,,raw p only
+exponent_broad,Aperiodic exponent (broadband 1-100) [robustness],robustness_variant_excluded,0.0954,0.4685,,raw p only

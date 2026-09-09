@@ -1,0 +1,1454 @@
+{
+  "min_vertices": 200,
+  "rh_id_offset": 1000,
+  "node_inventory": "bilateral (parcel, type) cell above the floor",
+  "atlases": {
+    "aparc_cyto7": {
+      "stats": {
+        "n_cells": 124,
+        "n_nodes": 101,
+        "n_parcels_total": 34,
+        "n_parcels_with_node": 34,
+        "labelled_vertices": 299730,
+        "residue_vertices": 1712,
+        "residue_pct": 0.5711807293230574,
+        "mean_nodes_per_parcel": 2.9705882352941178,
+        "parcels_without_node": []
+      },
+      "n_rows": 201,
+      "cc_counts": {
+        "lh": 105,
+        "rh": 106
+      },
+      "merges": {
+        "lh": [
+          {
+            "parcel": "bankssts",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 27,
+            "rule": "adjacent",
+            "target_node": "bankssts_eul2"
+          },
+          {
+            "parcel": "entorhinal",
+            "from_type": 2,
+            "to_type": 1,
+            "n_vertices": 23,
+            "rule": "adjacent",
+            "target_node": "entorhinal_allo"
+          },
+          {
+            "parcel": "fusiform",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 48,
+            "rule": "adjacent",
+            "target_node": "fusiform_agr"
+          },
+          {
+            "parcel": "inferiorparietal",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 41,
+            "rule": "adjacent",
+            "target_node": "inferiorparietal_eul2"
+          },
+          {
+            "parcel": "inferiortemporal",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 25,
+            "rule": "adjacent",
+            "target_node": "inferiortemporal_eul1"
+          },
+          {
+            "parcel": "isthmuscingulate",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "isthmuscingulate_agr"
+          },
+          {
+            "parcel": "isthmuscingulate",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 95,
+            "rule": "adjacent",
+            "target_node": "isthmuscingulate_eul1"
+          },
+          {
+            "parcel": "lateraloccipital",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 43,
+            "rule": "adjacent",
+            "target_node": "lateraloccipital_eul2"
+          },
+          {
+            "parcel": "lateralorbitofrontal",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 2,
+            "rule": "adjacent",
+            "target_node": "lateralorbitofrontal_agr"
+          },
+          {
+            "parcel": "parahippocampal",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 36,
+            "rule": "adjacent",
+            "target_node": "parahippocampal_eul1"
+          },
+          {
+            "parcel": "parsopercularis",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 156,
+            "rule": "adjacent",
+            "target_node": "parsopercularis_eul2"
+          },
+          {
+            "parcel": "parstriangularis",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 76,
+            "rule": "adjacent",
+            "target_node": "parstriangularis_eul1"
+          },
+          {
+            "parcel": "pericalcarine",
+            "from_type": 6,
+            "to_type": 7,
+            "n_vertices": 4,
+            "rule": "adjacent",
+            "target_node": "pericalcarine_kon"
+          },
+          {
+            "parcel": "posteriorcingulate",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 47,
+            "rule": "adjacent",
+            "target_node": "posteriorcingulate_dys"
+          },
+          {
+            "parcel": "precentral",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 7,
+            "rule": "adjacent",
+            "target_node": "precentral_eul2"
+          },
+          {
+            "parcel": "precuneus",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 47,
+            "rule": "adjacent",
+            "target_node": "precuneus_eul3"
+          },
+          {
+            "parcel": "rostralmiddlefrontal",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 13,
+            "rule": "adjacent",
+            "target_node": "rostralmiddlefrontal_eul2"
+          },
+          {
+            "parcel": "superiortemporal",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 43,
+            "rule": "adjacent",
+            "target_node": "superiortemporal_agr"
+          },
+          {
+            "parcel": "supramarginal",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 23,
+            "rule": "adjacent",
+            "target_node": "supramarginal_eul3"
+          },
+          {
+            "parcel": "temporalpole",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 61,
+            "rule": "adjacent",
+            "target_node": "temporalpole_agr"
+          }
+        ],
+        "rh": [
+          {
+            "parcel": "entorhinal",
+            "from_type": 2,
+            "to_type": 1,
+            "n_vertices": 22,
+            "rule": "adjacent",
+            "target_node": "entorhinal_allo"
+          },
+          {
+            "parcel": "fusiform",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 74,
+            "rule": "adjacent",
+            "target_node": "fusiform_agr"
+          },
+          {
+            "parcel": "inferiorparietal",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 63,
+            "rule": "adjacent",
+            "target_node": "inferiorparietal_eul2"
+          },
+          {
+            "parcel": "inferiortemporal",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 147,
+            "rule": "adjacent",
+            "target_node": "inferiortemporal_eul1"
+          },
+          {
+            "parcel": "isthmuscingulate",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 10,
+            "rule": "adjacent",
+            "target_node": "isthmuscingulate_agr"
+          },
+          {
+            "parcel": "isthmuscingulate",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 52,
+            "rule": "adjacent",
+            "target_node": "isthmuscingulate_eul1"
+          },
+          {
+            "parcel": "lateraloccipital",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "lateraloccipital_eul2"
+          },
+          {
+            "parcel": "lateralorbitofrontal",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 15,
+            "rule": "adjacent",
+            "target_node": "lateralorbitofrontal_agr"
+          },
+          {
+            "parcel": "lingual",
+            "from_type": 1,
+            "to_type": 6,
+            "n_vertices": 8,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "lingual_eul3"
+          },
+          {
+            "parcel": "lingual",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "lingual_eul1"
+          },
+          {
+            "parcel": "parahippocampal",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 16,
+            "rule": "adjacent",
+            "target_node": "parahippocampal_eul1"
+          },
+          {
+            "parcel": "parsopercularis",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 25,
+            "rule": "adjacent",
+            "target_node": "parsopercularis_eul2"
+          },
+          {
+            "parcel": "parstriangularis",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 14,
+            "rule": "adjacent",
+            "target_node": "parstriangularis_eul1"
+          },
+          {
+            "parcel": "pericalcarine",
+            "from_type": 6,
+            "to_type": 7,
+            "n_vertices": 115,
+            "rule": "adjacent",
+            "target_node": "pericalcarine_kon"
+          },
+          {
+            "parcel": "posteriorcingulate",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 12,
+            "rule": "adjacent",
+            "target_node": "posteriorcingulate_dys"
+          },
+          {
+            "parcel": "precuneus",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 19,
+            "rule": "adjacent",
+            "target_node": "precuneus_eul3"
+          },
+          {
+            "parcel": "superiorfrontal",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 3,
+            "rule": "adjacent",
+            "target_node": "superiorfrontal_dys"
+          },
+          {
+            "parcel": "superiortemporal",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 3,
+            "rule": "adjacent",
+            "target_node": "superiortemporal_agr"
+          },
+          {
+            "parcel": "supramarginal",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 173,
+            "rule": "adjacent",
+            "target_node": "supramarginal_eul3"
+          },
+          {
+            "parcel": "temporalpole",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 121,
+            "rule": "adjacent",
+            "target_node": "temporalpole_agr"
+          }
+        ]
+      },
+      "orphan_parcels": {
+        "lh": [],
+        "rh": []
+      }
+    },
+    "voneconomo_cyto7": {
+      "stats": {
+        "n_cells": 158,
+        "n_nodes": 115,
+        "n_parcels_total": 43,
+        "n_parcels_with_node": 43,
+        "labelled_vertices": 295589,
+        "residue_vertices": 3420,
+        "residue_pct": 1.1570119321084344,
+        "mean_nodes_per_parcel": 2.6744186046511627,
+        "parcels_without_node": []
+      },
+      "n_rows": 229,
+      "cc_counts": {
+        "lh": 120,
+        "rh": 121
+      },
+      "merges": {
+        "lh": [
+          {
+            "parcel": "FA",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 111,
+            "rule": "adjacent",
+            "target_node": "FA_eul2"
+          },
+          {
+            "parcel": "FB",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "FB_eul3"
+          },
+          {
+            "parcel": "FCBm",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 10,
+            "rule": "adjacent",
+            "target_node": "FCBm_eul2"
+          },
+          {
+            "parcel": "FD",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 23,
+            "rule": "adjacent",
+            "target_node": "FD_eul2"
+          },
+          {
+            "parcel": "FDT",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 21,
+            "rule": "adjacent",
+            "target_node": "FDT_eul1"
+          },
+          {
+            "parcel": "FE",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 64,
+            "rule": "adjacent",
+            "target_node": "FE_dys"
+          },
+          {
+            "parcel": "FF",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 2,
+            "rule": "adjacent",
+            "target_node": "FF_agr"
+          },
+          {
+            "parcel": "FG",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 42,
+            "rule": "adjacent",
+            "target_node": "FG_eul1"
+          },
+          {
+            "parcel": "FH",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 101,
+            "rule": "adjacent",
+            "target_node": "FH_dys"
+          },
+          {
+            "parcel": "FH",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 32,
+            "rule": "adjacent",
+            "target_node": "FH_dys"
+          },
+          {
+            "parcel": "FJK",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "FJK_agr"
+          },
+          {
+            "parcel": "IA",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 21,
+            "rule": "adjacent",
+            "target_node": "IA_dys"
+          },
+          {
+            "parcel": "IB",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 88,
+            "rule": "adjacent",
+            "target_node": "IB_agr"
+          },
+          {
+            "parcel": "IB",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 100,
+            "rule": "adjacent",
+            "target_node": "IB_eul3"
+          },
+          {
+            "parcel": "LC1",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 199,
+            "rule": "adjacent",
+            "target_node": "LC1_eul1"
+          },
+          {
+            "parcel": "LC2",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 106,
+            "rule": "adjacent",
+            "target_node": "LC2_dys"
+          },
+          {
+            "parcel": "LC2",
+            "from_type": 5,
+            "to_type": 3,
+            "n_vertices": 25,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "LC2_dys"
+          },
+          {
+            "parcel": "LE",
+            "from_type": 1,
+            "to_type": 3,
+            "n_vertices": 3,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "LE_dys"
+          },
+          {
+            "parcel": "LE",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 117,
+            "rule": "adjacent",
+            "target_node": "LE_dys"
+          },
+          {
+            "parcel": "OA",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 43,
+            "rule": "adjacent",
+            "target_node": "OA_eul1"
+          },
+          {
+            "parcel": "OA",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 7,
+            "rule": "adjacent",
+            "target_node": "OA_eul3"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 2,
+            "to_type": 6,
+            "n_vertices": 10,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "OB_eul3"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 3,
+            "to_type": 6,
+            "n_vertices": 35,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "OB_eul3"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 15,
+            "rule": "adjacent",
+            "target_node": "OB_eul2"
+          },
+          {
+            "parcel": "PF",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 46,
+            "rule": "adjacent",
+            "target_node": "PF_eul3"
+          },
+          {
+            "parcel": "PG",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 32,
+            "rule": "adjacent",
+            "target_node": "PG_eul2"
+          },
+          {
+            "parcel": "TA",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 91,
+            "rule": "adjacent",
+            "target_node": "TA_dys"
+          },
+          {
+            "parcel": "TB",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 28,
+            "rule": "adjacent",
+            "target_node": "TB_eul1"
+          },
+          {
+            "parcel": "TB",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 42,
+            "rule": "adjacent",
+            "target_node": "TB_eul3"
+          },
+          {
+            "parcel": "TD",
+            "from_type": 6,
+            "to_type": 7,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "TD_kon"
+          },
+          {
+            "parcel": "TG",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 131,
+            "rule": "adjacent",
+            "target_node": "TG_dys"
+          },
+          {
+            "parcel": "TG",
+            "from_type": 5,
+            "to_type": 2,
+            "n_vertices": 1,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "TG_agr"
+          }
+        ],
+        "rh": [
+          {
+            "parcel": "FA",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 70,
+            "rule": "adjacent",
+            "target_node": "FA_eul2"
+          },
+          {
+            "parcel": "FCBm",
+            "from_type": 6,
+            "to_type": 5,
+            "n_vertices": 72,
+            "rule": "adjacent",
+            "target_node": "FCBm_eul2"
+          },
+          {
+            "parcel": "FDT",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 10,
+            "rule": "adjacent",
+            "target_node": "FDT_eul1"
+          },
+          {
+            "parcel": "FF",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 32,
+            "rule": "adjacent",
+            "target_node": "FF_agr"
+          },
+          {
+            "parcel": "FG",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 85,
+            "rule": "adjacent",
+            "target_node": "FG_eul1"
+          },
+          {
+            "parcel": "FG",
+            "from_type": 5,
+            "to_type": 4,
+            "n_vertices": 26,
+            "rule": "adjacent",
+            "target_node": "FG_eul1"
+          },
+          {
+            "parcel": "FH",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 102,
+            "rule": "adjacent",
+            "target_node": "FH_dys"
+          },
+          {
+            "parcel": "FJK",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 10,
+            "rule": "adjacent",
+            "target_node": "FJK_agr"
+          },
+          {
+            "parcel": "FJK",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 142,
+            "rule": "adjacent",
+            "target_node": "FJK_dys"
+          },
+          {
+            "parcel": "FJK",
+            "from_type": 5,
+            "to_type": 3,
+            "n_vertices": 83,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "FJK_dys"
+          },
+          {
+            "parcel": "FJK",
+            "from_type": 6,
+            "to_type": 3,
+            "n_vertices": 2,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "FJK_dys"
+          },
+          {
+            "parcel": "IA",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 87,
+            "rule": "adjacent",
+            "target_node": "IA_dys"
+          },
+          {
+            "parcel": "IB",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 12,
+            "rule": "adjacent",
+            "target_node": "IB_agr"
+          },
+          {
+            "parcel": "IB",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 69,
+            "rule": "adjacent",
+            "target_node": "IB_eul3"
+          },
+          {
+            "parcel": "LA1",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 85,
+            "rule": "adjacent",
+            "target_node": "LA1_dys"
+          },
+          {
+            "parcel": "LC2",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 9,
+            "rule": "adjacent",
+            "target_node": "LC2_dys"
+          },
+          {
+            "parcel": "LD",
+            "from_type": 1,
+            "to_type": 2,
+            "n_vertices": 21,
+            "rule": "adjacent",
+            "target_node": "LD_agr"
+          },
+          {
+            "parcel": "LE",
+            "from_type": 1,
+            "to_type": 3,
+            "n_vertices": 94,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "LE_dys"
+          },
+          {
+            "parcel": "LE",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 62,
+            "rule": "adjacent",
+            "target_node": "LE_dys"
+          },
+          {
+            "parcel": "OA",
+            "from_type": 2,
+            "to_type": 6,
+            "n_vertices": 52,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "OA_eul3"
+          },
+          {
+            "parcel": "OA",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 83,
+            "rule": "adjacent",
+            "target_node": "OA_eul1"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 2,
+            "to_type": 6,
+            "n_vertices": 1,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "OB_eul3"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 3,
+            "to_type": 6,
+            "n_vertices": 59,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "OB_eul3"
+          },
+          {
+            "parcel": "OB",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 59,
+            "rule": "adjacent",
+            "target_node": "OB_eul2"
+          },
+          {
+            "parcel": "OC",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 1,
+            "rule": "adjacent",
+            "target_node": "OC_dys"
+          },
+          {
+            "parcel": "PB",
+            "from_type": 4,
+            "to_type": 7,
+            "n_vertices": 83,
+            "rule": "largest-in-parcel (no contact)",
+            "target_node": "PB_kon"
+          },
+          {
+            "parcel": "PB",
+            "from_type": 5,
+            "to_type": 6,
+            "n_vertices": 164,
+            "rule": "adjacent",
+            "target_node": "PB_eul3"
+          },
+          {
+            "parcel": "PD",
+            "from_type": 4,
+            "to_type": 5,
+            "n_vertices": 52,
+            "rule": "adjacent",
+            "target_node": "PD_eul2"
+          },
+          {
+            "parcel": "PF",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 67,
+            "rule": "adjacent",
+            "target_node": "PF_eul3"
+          },
+          {
+            "parcel": "TA",
+            "from_type": 2,
+            "to_type": 3,
+            "n_vertices": 96,
+            "rule": "adjacent",
+            "target_node": "TA_dys"
+          },
+          {
+            "parcel": "TB",
+            "from_type": 3,
+            "to_type": 4,
+            "n_vertices": 36,
+            "rule": "adjacent",
+            "target_node": "TB_eul1"
+          },
+          {
+            "parcel": "TB",
+            "from_type": 7,
+            "to_type": 6,
+            "n_vertices": 41,
+            "rule": "adjacent",
+            "target_node": "TB_eul3"
+          },
+          {
+            "parcel": "TD",
+            "from_type": 6,
+            "to_type": 7,
+            "n_vertices": 2,
+            "rule": "adjacent",
+            "target_node": "TD_kon"
+          },
+          {
+            "parcel": "TG",
+            "from_type": 4,
+            "to_type": 3,
+            "n_vertices": 2,
+            "rule": "adjacent",
+            "target_node": "TG_dys"
+          }
+        ]
+      },
+      "orphan_parcels": {
+        "lh": [],
+        "rh": []
+      }
+    }
+  },
+  "verification": {
+    "aparc_cyto7": {
+      "partition": {
+        "lh": {
+          "assigned": 149912,
+          "valid": 149912,
+          "assigned_outside_valid": 0,
+          "valid_unassigned": 0,
+          "exact": true
+        },
+        "rh": {
+          "assigned": 149818,
+          "valid": 149818,
+          "assigned_outside_valid": 0,
+          "valid_unassigned": 0,
+          "exact": true
+        }
+      },
+      "types": {
+        "n_nodes": 101,
+        "n_pure": 78,
+        "min_purity": 0.7115384615384616,
+        "mean_purity": 0.9890895082338386,
+        "mismatches": [],
+        "impure_nodes": [
+          {
+            "node": "parstriangularis_eul1",
+            "purity": 0.7115384615384616,
+            "n_vertices": 312
+          },
+          {
+            "node": "temporalpole_agr",
+            "purity": 0.8417391304347827,
+            "n_vertices": 1150
+          },
+          {
+            "node": "isthmuscingulate_eul1",
+            "purity": 0.8467153284671532,
+            "n_vertices": 959
+          },
+          {
+            "node": "parahippocampal_eul1",
+            "purity": 0.8793503480278422,
+            "n_vertices": 431
+          },
+          {
+            "node": "fusiform_agr",
+            "purity": 0.9220945083014048,
+            "n_vertices": 1566
+          },
+          {
+            "node": "superiortemporal_agr",
+            "purity": 0.9481397970687712,
+            "n_vertices": 887
+          },
+          {
+            "node": "parsopercularis_eul2",
+            "purity": 0.9605492589363557,
+            "n_vertices": 4588
+          },
+          {
+            "node": "pericalcarine_kon",
+            "purity": 0.9681392235609103,
+            "n_vertices": 3735
+          },
+          {
+            "node": "inferiortemporal_eul1",
+            "purity": 0.9743015090392948,
+            "n_vertices": 6693
+          },
+          {
+            "node": "entorhinal_allo",
+            "purity": 0.9769703172978506,
+            "n_vertices": 1954
+          },
+          {
+            "node": "bankssts_eul2",
+            "purity": 0.9803206997084548,
+            "n_vertices": 1372
+          },
+          {
+            "node": "isthmuscingulate_agr",
+            "purity": 0.9822294022617124,
+            "n_vertices": 619
+          },
+          {
+            "node": "lateralorbitofrontal_agr",
+            "purity": 0.9827760891590679,
+            "n_vertices": 987
+          },
+          {
+            "node": "supramarginal_eul3",
+            "purity": 0.9840650406504065,
+            "n_vertices": 12300
+          },
+          {
+            "node": "precuneus_eul3",
+            "purity": 0.9848901098901099,
+            "n_vertices": 4368
+          },
+          {
+            "node": "inferiorparietal_eul2",
+            "purity": 0.9869755792110206,
+            "n_vertices": 7985
+          },
+          {
+            "node": "lateraloccipital_eul2",
+            "purity": 0.9871495327102804,
+            "n_vertices": 3424
+          },
+          {
+            "node": "posteriorcingulate_dys",
+            "purity": 0.9893597835888187,
+            "n_vertices": 5545
+          },
+          {
+            "node": "lingual_eul1",
+            "purity": 0.9957446808510638,
+            "n_vertices": 235
+          },
+          {
+            "node": "superiorfrontal_dys",
+            "purity": 0.9984725050916496,
+            "n_vertices": 1964
+          },
+          {
+            "node": "lingual_eul3",
+            "purity": 0.9986214027227296,
+            "n_vertices": 5803
+          },
+          {
+            "node": "rostralmiddlefrontal_eul2",
+            "purity": 0.9987160493827161,
+            "n_vertices": 10125
+          },
+          {
+            "node": "precentral_eul2",
+            "purity": 0.9991815737168245,
+            "n_vertices": 8553
+          }
+        ]
+      },
+      "contiguity": {
+        "n_rows": 201,
+        "n_multi_component": 71,
+        "median_frac_largest": 1.0,
+        "median_frac_largest_multi": 0.9487,
+        "max_components": 7
+      }
+    },
+    "voneconomo_cyto7": {
+      "partition": {
+        "lh": {
+          "assigned": 147966,
+          "valid": 147966,
+          "assigned_outside_valid": 0,
+          "valid_unassigned": 0,
+          "exact": true
+        },
+        "rh": {
+          "assigned": 147623,
+          "valid": 147623,
+          "assigned_outside_valid": 0,
+          "valid_unassigned": 0,
+          "exact": true
+        }
+      },
+      "types": {
+        "n_nodes": 115,
+        "n_pure": 80,
+        "min_purity": 0.6621983914209115,
+        "mean_purity": 0.9727360715868306,
+        "mismatches": [],
+        "impure_nodes": [
+          {
+            "node": "OA_eul1",
+            "purity": 0.6621983914209115,
+            "n_vertices": 373
+          },
+          {
+            "node": "TA_dys",
+            "purity": 0.6934426229508197,
+            "n_vertices": 610
+          },
+          {
+            "node": "LE_dys",
+            "purity": 0.747483989021043,
+            "n_vertices": 1093
+          },
+          {
+            "node": "FJK_dys",
+            "purity": 0.7874531835205992,
+            "n_vertices": 1068
+          },
+          {
+            "node": "IB_agr",
+            "purity": 0.8023715415019763,
+            "n_vertices": 506
+          },
+          {
+            "node": "TB_eul1",
+            "purity": 0.808955223880597,
+            "n_vertices": 335
+          },
+          {
+            "node": "FH_dys",
+            "purity": 0.8133439237490071,
+            "n_vertices": 1259
+          },
+          {
+            "node": "OB_eul2",
+            "purity": 0.8163771712158809,
+            "n_vertices": 403
+          },
+          {
+            "node": "FG_eul1",
+            "purity": 0.870777027027027,
+            "n_vertices": 1184
+          },
+          {
+            "node": "FE_dys",
+            "purity": 0.8717434869739479,
+            "n_vertices": 499
+          },
+          {
+            "node": "TB_eul3",
+            "purity": 0.8824362606232294,
+            "n_vertices": 706
+          },
+          {
+            "node": "PB_eul3",
+            "purity": 0.8872852233676976,
+            "n_vertices": 1455
+          },
+          {
+            "node": "LC2_dys",
+            "purity": 0.9,
+            "n_vertices": 1400
+          },
+          {
+            "node": "LD_agr",
+            "purity": 0.90625,
+            "n_vertices": 224
+          },
+          {
+            "node": "IB_eul3",
+            "purity": 0.9071938495332235,
+            "n_vertices": 1821
+          },
+          {
+            "node": "LC1_eul1",
+            "purity": 0.9131762652705061,
+            "n_vertices": 2292
+          },
+          {
+            "node": "FDT_eul1",
+            "purity": 0.9261904761904762,
+            "n_vertices": 420
+          },
+          {
+            "node": "FA_eul2",
+            "purity": 0.9487687517690349,
+            "n_vertices": 3533
+          },
+          {
+            "node": "IA_dys",
+            "purity": 0.9524229074889868,
+            "n_vertices": 2270
+          },
+          {
+            "node": "TG_dys",
+            "purity": 0.9568881685575364,
+            "n_vertices": 3085
+          },
+          {
+            "node": "FF_agr",
+            "purity": 0.9700440528634361,
+            "n_vertices": 1135
+          },
+          {
+            "node": "FJK_agr",
+            "purity": 0.9714285714285714,
+            "n_vertices": 385
+          },
+          {
+            "node": "PB_kon",
+            "purity": 0.9738335435056746,
+            "n_vertices": 3172
+          },
+          {
+            "node": "OB_eul3",
+            "purity": 0.9766355140186916,
+            "n_vertices": 4494
+          },
+          {
+            "node": "LA1_dys",
+            "purity": 0.9769585253456221,
+            "n_vertices": 3689
+          },
+          {
+            "node": "FCBm_eul2",
+            "purity": 0.9816636851520573,
+            "n_vertices": 4472
+          },
+          {
+            "node": "PF_eul3",
+            "purity": 0.9890979257115292,
+            "n_vertices": 10365
+          },
+          {
+            "node": "PG_eul2",
+            "purity": 0.9900590245417832,
+            "n_vertices": 3219
+          },
+          {
+            "node": "PD_eul2",
+            "purity": 0.9940855323020928,
+            "n_vertices": 8792
+          },
+          {
+            "node": "OA_eul3",
+            "purity": 0.9954989319499542,
+            "n_vertices": 13108
+          },
+          {
+            "node": "TD_kon",
+            "purity": 0.9964912280701754,
+            "n_vertices": 855
+          },
+          {
+            "node": "OC_dys",
+            "purity": 0.9971751412429378,
+            "n_vertices": 354
+          },
+          {
+            "node": "FD_eul2",
+            "purity": 0.9978326422917452,
+            "n_vertices": 10612
+          },
+          {
+            "node": "FB_eul3",
+            "purity": 0.9995391705069124,
+            "n_vertices": 2170
+          },
+          {
+            "node": "TG_agr",
+            "purity": 0.9995462794918331,
+            "n_vertices": 2204
+          }
+        ]
+      },
+      "contiguity": {
+        "n_rows": 229,
+        "n_multi_component": 77,
+        "median_frac_largest": 1.0,
+        "median_frac_largest_multi": 0.8719,
+        "max_components": 12
+      }
+    }
+  },
+  "section_4_7": {
+    "aparc_cyto7": {
+      "expected_nodes": 101,
+      "got_nodes": 101,
+      "expected_parcels": 34,
+      "got_parcels": 34,
+      "expected_cost_pct": 0.5,
+      "got_cost_pct": 0.57,
+      "mean_per_parcel": 2.97,
+      "reproduces": true
+    },
+    "voneconomo_cyto7": {
+      "expected_nodes": 115,
+      "got_nodes": 115,
+      "expected_parcels": 43,
+      "got_parcels": 43,
+      "expected_cost_pct": 1.1,
+      "got_cost_pct": 1.16,
+      "mean_per_parcel": 2.67,
+      "reproduces": true
+    }
+  },
+  "roundtrip": {
+    "aparc_cyto7@bert": {
+      "subject": "bert",
+      "atlas": "aparc_cyto7",
+      "hemis": {
+        "lh": {
+          "ok": false,
+          "n_nodes_fsaverage": 101,
+          "n_nodes_on_subject": 101,
+          "missing": [],
+          "vertices_fsaverage": 149912,
+          "vertices_subject": 123615,
+          "mesh_scale": 0.8246,
+          "share_ratio_min": 0.404,
+          "share_ratio_median": 0.896,
+          "share_ratio_max": 1.973,
+          "nodes_outside_half_to_double": [
+            "insula_allo"
+          ]
+        },
+        "rh": {
+          "ok": false,
+          "n_nodes_fsaverage": 100,
+          "n_nodes_on_subject": 100,
+          "missing": [],
+          "vertices_fsaverage": 149818,
+          "vertices_subject": 123365,
+          "mesh_scale": 0.8234,
+          "share_ratio_min": 0.484,
+          "share_ratio_median": 0.924,
+          "share_ratio_max": 1.807,
+          "nodes_outside_half_to_double": [
+            "insula_allo"
+          ]
+        }
+      }
+    },
+    "voneconomo_cyto7@bert": {
+      "subject": "bert",
+      "atlas": "voneconomo_cyto7",
+      "hemis": {
+        "lh": {
+          "ok": false,
+          "n_nodes_fsaverage": 115,
+          "n_nodes_on_subject": 115,
+          "missing": [],
+          "vertices_fsaverage": 147966,
+          "vertices_subject": 122499,
+          "mesh_scale": 0.8279,
+          "share_ratio_min": 0.491,
+          "share_ratio_median": 0.871,
+          "share_ratio_max": 1.731,
+          "nodes_outside_half_to_double": [
+            "IB_agr",
+            "LD_agr"
+          ]
+        },
+        "rh": {
+          "ok": true,
+          "n_nodes_fsaverage": 114,
+          "n_nodes_on_subject": 114,
+          "missing": [],
+          "vertices_fsaverage": 147623,
+          "vertices_subject": 121965,
+          "mesh_scale": 0.8262,
+          "share_ratio_min": 0.543,
+          "share_ratio_median": 0.879,
+          "share_ratio_max": 1.699,
+          "nodes_outside_half_to_double": []
+        }
+      }
+    },
+    "aparc_cyto7@fsaverage": {
+      "subject": "fsaverage",
+      "atlas": "aparc_cyto7",
+      "hemis": {
+        "lh": {
+          "ok": true,
+          "n_nodes_fsaverage": 101,
+          "n_nodes_on_subject": 101,
+          "missing": [],
+          "vertices_fsaverage": 149912,
+          "vertices_subject": 149912,
+          "mesh_scale": 1.0,
+          "share_ratio_min": 1.0,
+          "share_ratio_median": 1.0,
+          "share_ratio_max": 1.0,
+          "nodes_outside_half_to_double": []
+        },
+        "rh": {
+          "ok": true,
+          "n_nodes_fsaverage": 100,
+          "n_nodes_on_subject": 100,
+          "missing": [],
+          "vertices_fsaverage": 149818,
+          "vertices_subject": 149818,
+          "mesh_scale": 1.0,
+          "share_ratio_min": 1.0,
+          "share_ratio_median": 1.0,
+          "share_ratio_max": 1.0,
+          "nodes_outside_half_to_double": []
+        }
+      }
+    },
+    "voneconomo_cyto7@fsaverage": {
+      "subject": "fsaverage",
+      "atlas": "voneconomo_cyto7",
+      "hemis": {
+        "lh": {
+          "ok": true,
+          "n_nodes_fsaverage": 115,
+          "n_nodes_on_subject": 115,
+          "missing": [],
+          "vertices_fsaverage": 147966,
+          "vertices_subject": 147966,
+          "mesh_scale": 1.0,
+          "share_ratio_min": 1.0,
+          "share_ratio_median": 1.0,
+          "share_ratio_max": 1.0,
+          "nodes_outside_half_to_double": []
+        },
+        "rh": {
+          "ok": true,
+          "n_nodes_fsaverage": 114,
+          "n_nodes_on_subject": 114,
+          "missing": [],
+          "vertices_fsaverage": 147623,
+          "vertices_subject": 147623,
+          "mesh_scale": 1.0,
+          "share_ratio_min": 1.0,
+          "share_ratio_median": 1.0,
+          "share_ratio_max": 1.0,
+          "nodes_outside_half_to_double": []
+        }
+      }
+    }
+  },
+  "frozen_unchanged": true,
+  "frozen": {
+    "pial.lh.cyto7.32k_fs_LR.label.gii": {
+      "before": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "after": "99c8c73af41b328d8832bdd0016ad8b622a6fc338a59b9d0d37a52a651f36f2c",
+      "unchanged": true
+    },
+    "pial.lh.cyto7.v9.annot": {
+      "before": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "after": "89d5de08dc395b5bd4a5e6fbcb248cffc7a4cd7db86c5e759c81ed025b0d21ec",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.32k_fs_LR.label.gii": {
+      "before": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "after": "d3b1bc8722a7a5e2a34f34bfde69df13e8cf146a23aa9d821ba74cd45005cbbc",
+      "unchanged": true
+    },
+    "pial.rh.cyto7.v9.annot": {
+      "before": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "after": "504941c21952414b65e0f71c96308d88aed6f39b56815d69ce762f4b8a86dcdb",
+      "unchanged": true
+    }
+  },
+  "runtime_seconds": 41.8
+}

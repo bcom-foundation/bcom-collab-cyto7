@@ -1,0 +1,4 @@
+,myelin,thickness,gradient
+myelin,1.0,-0.577,-0.536
+thickness,-0.577,1.0,0.363
+gradient,-0.536,0.363,1.0

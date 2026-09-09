@@ -1,0 +1,13 @@
+band,measure,key,rho,q,unit,family,survives,source_file
+Vertex-level (32k fs_LR vertices),Gene expression PC1 (AHBA),genepc1,0.6657,0.0029970029970029,vertex (32k fs_LR),external_reference_3,True,figures/v9/structure_function/external_validation_table.csv
+Vertex-level (32k fs_LR vertices),T1w/T2w myelin,myelin,0.5894,0.0044955044955044,vertex (32k fs_LR),structure_function_9,True,figures/v9/structure_function/functional_summary_table_v9.csv
+Vertex-level (32k fs_LR vertices),Ionotropic/metabotropic index,composite_iono_minus_metabo_index,0.4263,0.0159840159840159,vertex (32k fs_LR),receptor_composites_8,True,figures/v9/structure_function/receptor_composites.csv
+Vertex-level (32k fs_LR vertices),Evolutionary expansion,xu2020_evoexp,-0.2659,0.0689310689310689,vertex (32k fs_LR),fig9_predictions_3,False,figures/v9/structure_function/fig9_predictions_summary.csv
+Vertex-level (32k fs_LR vertices),Receptor diversity,diversity_shannon_entropy_H,-0.3812,0.0689310689310689,vertex (32k fs_LR),fig9_predictions_3,False,figures/v9/structure_function/receptor_diversity.csv
+Vertex-level (32k fs_LR vertices),Cortical thickness,thickness,-0.5018,0.0059940059940059,vertex (32k fs_LR),structure_function_9,True,figures/v9/structure_function/functional_summary_table_v9.csv
+Vertex-level (32k fs_LR vertices),Functional gradient,gradient,-0.5761,0.0044955044955044,vertex (32k fs_LR),structure_function_9,True,figures/v9/structure_function/functional_summary_table_v9.csv
+Parcel-level (Desikan-68 parcels),"RORB, layer-IV marker",layer_RORB,0.7761,0.0,parcel (Desikan-68),layer_markers_8,True,figures/v9/definitional/layer_marker_genes.csv
+"Subject-level (N = 89, group mean of per-subject $\rho$)",Spectral centroid (MEG),centroid,0.4088,0.014,subject (N=89) x vertex (4k fs_LR),dynamics_singlemember_7,True,figures/v9/structure_function/meg_dynamics_v2_summary_fdr_singlemember.csv
+"Subject-level (N = 89, group mean of per-subject $\rho$)",Aperiodic-corrected $\beta$ power (MEG),osc_beta,0.2222,0.021,subject (N=89) x vertex (4k fs_LR),dynamics_singlemember_7,True,figures/v9/structure_function/meg_dynamics_v2_summary_fdr_singlemember.csv
+"Subject-level (N = 89, group mean of per-subject $\rho$)",Slow/fast band ratio (MEG),sf_ratio,-0.3564,0.021,subject (N=89) x vertex (4k fs_LR),dynamics_singlemember_7,True,figures/v9/structure_function/meg_dynamics_v2_summary_fdr_singlemember.csv
+"Subject-level (N = 89, group mean of per-subject $\rho$)",Intrinsic timescale (MEG),int_area,-0.4592,0.014,subject (N=89) x vertex (4k fs_LR),dynamics_singlemember_7,True,figures/v9/structure_function/meg_dynamics_v2_summary_fdr_singlemember.csv

@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: If you use cyto7, please cite both the paper and the data DOI.
+title: >-
+  cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex
+type: dataset
+license: CC-BY-4.0
+# The Zenodo DOI is minted from a GitHub release, which does not exist yet. This is a
+# placeholder, not an identifier: it will not resolve until the release is made.
+doi: "TODO(DOI)"
+# Names are final and match AUTHORS. ORCIDs are still being collected.
+authors:
+  - given-names: "Ricardo"
+    family-names: "Salvador"
+    affiliation: "Research Department, Neuroelectrics Barcelona, Barcelona, Spain"
+    orcid: "TODO(ORCID)"
+  - given-names: "Borja"
+    family-names: "Mercadal"
+    affiliation: "Research Department, Neuroelectrics Barcelona, Barcelona, Spain"
+    orcid: "TODO(ORCID)"
+  - given-names: "Francesca"
+    family-names: "Castaldo"
+    affiliation: "Research Department, Neuroelectrics Barcelona, Barcelona, Spain"
+    orcid: "TODO(ORCID)"
+  - given-names: "Miguel Ángel"
+    family-names: "García-Cabezas"
+    affiliation: "Department of Anatomy, Histology and Neuroscience, School of Medicine, Universidad Autónoma de Madrid, Madrid, Spain"
+    orcid: "TODO(ORCID)"
+  - given-names: "Giulio"
+    family-names: "Ruffini"
+    affiliation: "Research Department, Neuroelectrics Barcelona, Barcelona, Spain"
+    orcid: "TODO(ORCID)"
+keywords:
+  - cytoarchitecture
+  - cortical type
+  - Structural Model
+  - cerebral cortex
+  - surface atlas
+  - fsaverage
+  - fs_LR
+  - neuroimaging
+references:
+  - type: article
+    title: >-
+      cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex
+    # The published DOI and the preprint DOI are both pending; neither resolves yet.
+    doi: "TODO(DOI)"
+    authors:
+      - given-names: "Ricardo"
+        family-names: "Salvador"
+      - given-names: "Borja"
+        family-names: "Mercadal"
+      - given-names: "Francesca"
+        family-names: "Castaldo"
+      - given-names: "Miguel Ángel"
+        family-names: "García-Cabezas"
+      - given-names: "Giulio"
+        family-names: "Ruffini"

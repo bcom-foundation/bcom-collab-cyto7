@@ -1,0 +1,22 @@
+{
+  "promoted": 14,
+  "were_v3": 14,
+  "acceptance_pass": 14,
+  "acceptance_total": 14,
+  "acceptance_all_pass": true,
+  "step5": {
+    "lh": {
+      "max_abs_diff": 0.0,
+      "identical": true,
+      "n_compared": 153065
+    },
+    "rh": {
+      "max_abs_diff": 0.0,
+      "identical": true,
+      "n_compared": 151907
+    }
+  },
+  "frozen_v9_unchanged": true,
+  "frozen_rr10_unchanged": true,
+  "runtime_seconds": 0.3
+}

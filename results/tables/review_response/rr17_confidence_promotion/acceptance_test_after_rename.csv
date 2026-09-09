@@ -1,0 +1,15 @@
+hemi,type,n_vertices,n_expected,median_promoted,median_summary_csv,match
+lh,Allocortex,4147,4147,0.3162,0.3162,True
+lh,Agranular,7938,7938,0.8113,0.8113,True
+lh,Dysgranular,13583,13583,0.8739,0.8739,True
+lh,Eulaminate I,27995,27995,0.9306,0.9306,True
+lh,Eulaminate II,44540,44540,0.9873,0.9873,True
+lh,Eulaminate III,45792,45792,0.9433,0.9433,True
+lh,Koniocortex,9070,9070,0.9306,0.9306,True
+rh,Allocortex,3193,3193,0.3162,0.3162,True
+rh,Agranular,7446,7446,0.8113,0.8113,True
+rh,Dysgranular,12727,12727,0.8739,0.8739,True
+rh,Eulaminate I,29129,29129,0.9306,0.9306,True
+rh,Eulaminate II,46901,46901,0.9873,0.9873,True
+rh,Eulaminate III,42576,42576,0.9433,0.9433,True
+rh,Koniocortex,9935,9935,0.8891,0.8891,True

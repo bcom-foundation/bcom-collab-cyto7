@@ -1,0 +1,10 @@
+feature,rho_cyto7,rho_voneconomo,d_rho_abs,spin_p_cyto_better,q_fdr
+T1w/T2w myelin,0.6078,0.4971,0.1106,0.001,0.006
+Cortical thickness,-0.5086,-0.4178,0.0908,0.002,0.006
+Intrinsic timescale,-0.4831,-0.3284,0.1547,0.037,0.0832
+Delta power (0.5-4 Hz),-0.4441,-0.308,0.1362,0.0819,0.1475
+Theta power (4-8 Hz),-0.2112,-0.1427,0.0685,0.5395,0.5395
+Alpha power (8-12 Hz),0.3699,0.2639,0.1061,0.2238,0.3006
+Beta power (12-30 Hz),0.2342,0.1456,0.0885,0.4486,0.5046
+Gamma power (30-60 Hz),-0.3226,-0.2251,0.0975,0.2338,0.3006
+Principal functional gradient,-0.5853,-0.4204,0.1649,0.002,0.006

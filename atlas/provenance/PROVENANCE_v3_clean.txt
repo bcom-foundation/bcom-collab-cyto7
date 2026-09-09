@@ -1,0 +1,22 @@
+cyto7 v3_clean — topologically-clean release map
+=================================================
+Source: pial.{lh,rh}.cyto7.v3.annot  ->  pial.{lh,rh}.cyto7.v3_clean.annot
+Method: speckle removal only. For each type (codes 1-7), connected components on the
+  fsaverage mesh graph with size <= 10 vertices were relabelled to the majority label of
+  their immediate non-medial neighbours; iterated to convergence. Colour table preserved.
+Moved: 10 vertices (LH) + 14 (RH) = 24 total. Per-vertex changelog:
+  v3_to_v3clean_speckle_changelog.csv
+Topology (verified, both hemispheres):
+  R1 sequential gradients : 0 skip-edges
+  R2 core continuity      : ADOPTED as limbic-belt continuity — the union
+                            {allocortex + agranular + dysgranular} is a single connected
+                            component forming a closed annulus (its complement splits into
+                            the enclosed medial wall + outer isocortex).
+  R3 eulaminate-II matrix : 1 component, exactly 3 enclosed holes.
+  R4 higher-order islands : eulaminate-III and koniocortex are non-annular islands.
+Retained by design (NOT speckles; real multi-focal anatomy under belt-continuity R2):
+  allocortex piriform + periamygdaloid patch; dysgranular temporal/insular mass +
+  retrosplenial island + isthmus-cingulate patch (14-17 vtx, bilateral; García-Cabezas
+  Q8 sign-off still pending — merge vs keep vs reassign).
+Note: at the 7-type aggregate level used by the tractography analysis, speckle removal
+  does not materially change the connectivity/contact-area matrices.

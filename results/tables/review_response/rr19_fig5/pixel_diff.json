@@ -1,0 +1,23 @@
+{
+  "image_size": [
+    4488,
+    3543
+  ],
+  "differing_pixels": 14583,
+  "differing_fraction_pct": 0.0917,
+  "row_range": [
+    3408,
+    3461
+  ],
+  "col_range": [
+    3399,
+    4327
+  ],
+  "rows_from_bottom": [
+    81,
+    134
+  ],
+  "pixels_above_bottom_8pct_strip": 0,
+  "pixels_left_of_footnote_origin": 0,
+  "confined_to_footnote": true
+}

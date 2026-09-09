@@ -1,0 +1,15 @@
+STOP-AND-LOG (Analysis 3): BigBrain per-layer thickness maps are not in the cache and are not available via neuromaps. Expected files (not found):
+  .\resources\neuromaps_cache\bigbrain_layer1_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer1_thickness_fsLR32k_hemi-R.npy
+  .\resources\neuromaps_cache\bigbrain_layer2_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer2_thickness_fsLR32k_hemi-R.npy
+  .\resources\neuromaps_cache\bigbrain_layer3_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer3_thickness_fsLR32k_hemi-R.npy
+  .\resources\neuromaps_cache\bigbrain_layer4_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer4_thickness_fsLR32k_hemi-R.npy
+  .\resources\neuromaps_cache\bigbrain_layer5_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer5_thickness_fsLR32k_hemi-R.npy
+  .\resources\neuromaps_cache\bigbrain_layer6_thickness_fsLR32k_hemi-L.npy
+  .\resources\neuromaps_cache\bigbrain_layer6_thickness_fsLR32k_hemi-R.npy
+
+These require BigBrainWarp's BBW_BigData.zip (sciebo) Wagstyl-2020 layer thickness on tpl-fs_LR den-32k (the profiles/Hist-G1 were cached from the same source, but the raw download is no longer on disk and layer thickness was never cached). Re-downloading BBW_BigData.zip was out of scope for these light add-ons and would not be run while the MEG jobs occupy the machine. Once the six layer maps are saved to the paths above, re-running this script computes L4 thickness (primary, rho>0) and L4 fraction vs cyto7 v9 with the released spin. The §4.9 single-specimen limitation therefore stands for now (an acceptable, honest outcome per the SPEC).

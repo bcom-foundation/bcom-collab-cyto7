@@ -1,0 +1,15 @@
+cyto7 connectivity analysis — summary
+============================================
+Per-bundle records:       223
+Geometry records:         174
+Short/long cutoff:     80.0 mm
+Sum streamlines short:       8749
+Sum streamlines long:       32817
+
+Orientation / tortuosity vs type-distance (weighted slopes):
+  I–S alignment, short bundles: -0.1971 per step
+  I–S alignment, long bundles:  +0.0256 per step
+  Tortuosity,    short bundles: -0.0195 per step
+  Tortuosity,    long bundles:  -0.3105 per step
+Boundary vs short: Pearson r = +0.675, Spearman ρ = +0.648
+Boundary vs long:  Pearson r = +0.560, Spearman ρ = +0.400

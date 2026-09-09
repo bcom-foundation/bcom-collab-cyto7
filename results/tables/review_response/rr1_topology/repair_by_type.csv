@@ -1,0 +1,21 @@
+hemi,reason_class,v9_type,n_vertices,area_mm2,pct_of_type
+lh,topology,Allocortex,12,5.0,0.289
+lh,topology,Agranular,38,13.9,0.479
+lh,topology,Dysgranular,729,299.6,5.367
+lh,topology,Eulaminate I,52,24.9,0.186
+lh,topology,Eulaminate II,114,41.8,0.256
+lh,topology,Eulaminate III,22,8.0,0.048
+lh,both,Dysgranular,232,107.7,1.708
+lh,anatomy,Allocortex,3780,1435.1,91.15
+lh,anatomy,Agranular,2658,1146.3,33.485
+lh,anatomy,Dysgranular,2579,885.6,18.987
+rh,topology,Allocortex,4,1.7,0.125
+rh,topology,Agranular,24,8.8,0.322
+rh,topology,Dysgranular,1195,480.7,9.389
+rh,topology,Eulaminate I,114,50.2,0.391
+rh,topology,Eulaminate II,43,16.8,0.092
+rh,topology,Eulaminate III,21,8.8,0.049
+rh,both,Dysgranular,117,56.7,0.919
+rh,anatomy,Allocortex,2891,1013.8,90.542
+rh,anatomy,Agranular,2544,1170.2,34.166
+rh,anatomy,Dysgranular,2183,794.7,17.153

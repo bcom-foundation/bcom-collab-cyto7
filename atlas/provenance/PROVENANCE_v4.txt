@@ -1,0 +1,23 @@
+cyto7 v4 — allocortex expansion + strict sequential gradient
+============================================================
+Source: pial.{lh,rh}.cyto7.v3_clean.annot -> pial.{lh,rh}.cyto7.v4.annot
+Framework: Zaldívar-Díez & García-Cabezas 2026 (GC meeting, July 2026).
+Tiers: allocortex=1; mesocortex=2-3; isocortex=4-7. 7-type ordinal scale kept.
+
+Allocortex membership (surface):
+  - Entorhinal (EC): FreeSurfer ex-vivo EC label ∪ Desikan 'entorhinal'.
+  - Presubiculum+parasubiculum: APPROXIMATION (no clean fsaverage label) = Destrieux 'G_oc-temp_med-Parahip' within 3 graph-hops of the medial wall (periarchicortical strip bordering the hippocampal fissure, medial to EC), minus EC. *** FLAGGED: proxy, pending a dedicated presub/parasub surface label.
+  - Piriform (olfactory allocortex): retained from v3_clean.
+Perirhinal (BA35/36) -> mesocortex: ex-vivo perirhinal minus the allo set; per-vertex agranular(2) if graph-closer to allocortex else dysgranular(3) toward isocortex.
+
+Strict gradient (R1): converge_topology grows a graded mesocortex buffer (lower the higher endpoint of every |Δτ|>=2 skip by one ordinal per pass; locked allocortex never moved) until every edge has |Δτ|<=1. Allocortex therefore never abuts isocortex.
+
+Per-hemisphere summary (vertices):
+  lh: allocortex 500 -> 2130 (EC 1598, presub-proxy 74, piriform 500); perirhinal->meso 332; strict-buffer 16; total changed 1712; R1 skip-edges after = 0.
+  rh: allocortex 308 -> 1770 (EC 1241, presub-proxy 221, piriform 308); perirhinal->meso 86; strict-buffer 9; total changed 1471; R1 skip-edges after = 0.
+
+Changelog: v3clean_to_v4_changelog.csv (every moved vertex).
+Fragment cleanup (SPEC_dysgranular_components_and_cleanup, in-place on v4):
+  Absorbed every belt-type (allocortex/agranular/dysgranular) connected component < 20 vertices into its majority adjacent labelled type (same rule as the v3->v3_clean speckle step). Total moved = 50 vertices (lh 37, rh 13). Changelog: v4_fragment_cleanup_changelog.csv.
+  ~0.017% of labelled vertices => headline numbers unchanged (re-audit only, no full re-run). R1=0 and R2-R4 re-confirmed after cleanup (topology_audit_v4).
+  Post-cleanup belt component counts: lh allocortex 2 / agranular 1 / dysgranular 2 (main+retrosplenial); rh allocortex 3 / agranular 1 / dysgranular 2. All fragments < 20v removed.

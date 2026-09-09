@@ -1,0 +1,4 @@
+measure,set,n_retained_4k,group_mean_rho,group_median_rho,spin_p,n_subj,frac_predicted,frac_positive
+MEG intrinsic timescale (int_area),published (all labelled),7234,-0.4592,-0.4712,0.004,89,1.0,0.0
+MEG intrinsic timescale (int_area),allocortex excluded,7143,-0.451,-0.4641,0.005,89,1.0,0.0
+MEG intrinsic timescale (int_area),belt excluded (Set A),6242,-0.3531,-0.3644,0.0659,89,0.9888,0.0112

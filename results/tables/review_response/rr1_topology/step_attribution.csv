@@ -1,0 +1,13 @@
+step,hemi,n_changed,documented_topology,documented_both,documented_anatomy,replayed_topology,replay_moves_unchanged_vertices,replay_unresolved_skips,required_by_r1,r1_skips_before,r1_skips_after,note
+v3_clean->v4,lh,1728,41,0,1687,0,0,0,14,0,0,PROVENANCE_v4: 'strict-buffer 16' (lh) / '9' (rh) from converge_topology; everything else is the allocortex membership rule and the perirhinal demotion.
+v3_clean->v4,rh,1478,17,0,1461,0,0,0,6,0,0,PROVENANCE_v4: 'strict-buffer 16' (lh) / '9' (rh) from converge_topology; everything else is the allocortex membership rule and the perirhinal demotion.
+v4->v5,lh,2492,137,0,2355,0,0,0,0,0,0,v4_to_v5_changelog.csv reason column. cingulate_gradient and ring_closure are anatomical/protocol; boundary_smooth is the R1-constrained regularisation and topology_buffer and speck_cleanup are rule-driven.
+v4->v5,rh,2192,147,0,2045,0,0,0,0,0,0,v4_to_v5_changelog.csv reason column. cingulate_gradient and ring_closure are anatomical/protocol; boundary_smooth is the R1-constrained regularisation and topology_buffer and speck_cleanup are rule-driven.
+v5->v6,lh,844,0,0,844,0,0,0,0,0,0,"PROVENANCE_v6: hand-painted ring completion, 'Isocortex was not touched', no topology-motivated transition documented."
+v5->v6,rh,1087,0,0,1087,0,0,0,0,0,0,"PROVENANCE_v6: hand-painted ring completion, 'Isocortex was not touched', no topology-motivated transition documented."
+v6->v7,lh,1551,821,0,730,20,0,0,75,0,0,PROVENANCE_v7: 'All changes are EulI->Dys (gradient buffer) and Dys/EulI->Agr (the insula sector)'.
+v6->v7,rh,2328,1255,0,1073,22,0,0,223,0,0,PROVENANCE_v7: 'All changes are EulI->Dys (gradient buffer) and Dys/EulI->Agr (the insula sector)'.
+v7->v8,lh,4315,95,232,3988,0,0,0,1,0,0,"PROVENANCE_v8: 'Eulaminate-II THICKENED so eulaminate-I and -III no longer abut (preserves R1)' -> EulIII->EulII and EulII->EulI are topological. The belt widening EulI->Dys is an anatomical decision whose extent is also R1-constrained, so it is classed as both."
+v7->v8,rh,2454,72,117,2265,0,0,0,0,0,0,"PROVENANCE_v8: 'Eulaminate-II THICKENED so eulaminate-I and -III no longer abut (preserves R1)' -> EulIII->EulII and EulII->EulI are topological. The belt widening EulI->Dys is an anatomical decision whose extent is also R1-constrained, so it is classed as both."
+v8->v9,lh,543,0,0,543,0,0,0,0,0,0,"PROVENANCE_v9: 543 LH entorhinal vertices agranular->allocortex, RH untouched."
+v8->v9,rh,0,0,0,0,0,0,0,0,0,0,"PROVENANCE_v9: 543 LH entorhinal vertices agranular->allocortex, RH untouched."

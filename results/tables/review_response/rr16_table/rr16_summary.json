@@ -1,0 +1,29 @@
+{
+  "n_tests": 143,
+  "n_families": 20,
+  "previous": {
+    "n_tests": 136,
+    "n_families": 19
+  },
+  "rows_added": 7,
+  "cells_reformatted": 25,
+  "pq_cells": {
+    "total": 286,
+    "zero_000": 0,
+    "bare_zero": 0,
+    "lt_0001": 24,
+    "four_dp": [
+      "0.0004"
+    ],
+    "dashes": 57
+  },
+  "guardrails": {
+    "allowbreak_occurrences": 450,
+    "annexj_caption_sentence_removed": true,
+    "status_clause_present": true,
+    "footnotesize_wrapper": true,
+    "tabcolsep_4pt": true,
+    "no_page_geometry_in_file": true
+  },
+  "copies_identical": true
+}

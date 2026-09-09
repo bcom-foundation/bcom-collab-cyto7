@@ -1,0 +1,4 @@
+test,support_tertile,n_vertices,win_frac_cyto7,conf_range
+confidence tertile (anatomical support score),low,9099,0.5713,[0.67..0.90)
+confidence tertile (anatomical support score),mid,7378,0.6953,[0.90..0.98)
+confidence tertile (anatomical support score),high,10821,0.5617,[0.98..0.98]

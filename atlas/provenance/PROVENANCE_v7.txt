@@ -1,0 +1,25 @@
+cyto7 v7 — hand-painted release (canonical): agranular ventro-anterior insula added
+========================================================================
+Source: pial.{lh,rh}.cyto7.v6.annot -> pial.{lh,rh}.cyto7.v7.annot
+cyto7 stays 7 labels. v7 is the RELEASED / CANONICAL map.
+
+Origin: hand-painted by Ricardo Salvador from v6. Adds the missing AGRANULAR
+ventro-anterior insula (von Economo frontoinsular FJK/FI sector), with a RH
+touch-up so the agranular sector is L/R-balanced, plus a +-1 dysgranular buffer
+to preserve the strict sequential gradient. Cortex-only; the true medial wall
+(?h.cortex.label) is never painted; medial wall & fills identical to v6.
+Isocortex above eulaminate-I (EulII/EulIII/koniocortex) is unchanged.
+
+Per-vertex diff (v6_to_v7_changelog.csv):
+  lh: 1551 vtx changed; net agranular +730, dysgranular +146, eulaminate I -876; insula agranular total now 8885.
+      transitions: eulaminate I->dysgranular 821, dysgranular->agranular 675, eulaminate I->agranular 55
+  rh: 2328 vtx changed; net agranular +1073, dysgranular +383, eulaminate I -1456; insula agranular total now 8025.
+      transitions: eulaminate I->dysgranular 1255, dysgranular->agranular 872, eulaminate I->agranular 201
+
+All changes are EulI->Dys (gradient buffer) and Dys/EulI->Agr (the insula sector);
+isocortex above eulaminate-I untouched. Strict R1=0 preserved (see topology_audit_v7).
+
+Canonical wiring: resolve_target_map('v7', ...) -> pial.{hemi}.cyto7.v7.annot
+(allowed-versions tuple in scripts/cyto7_surface_io.py includes 'v7'); refresh_figures
+'latest' + plot_flat_categorical default + miguel_pack default now resolve to v7.
+v4/v5/v6 retained untouched. Manuscript text files not edited.

@@ -1,0 +1,49 @@
+measure,key,family,set,n_retained,rho,spin_p,q,published_rho,delta_rho
+T1w/T2w myelin,myelin,structure-function (9),published (all labelled),58731,0.5894,0.001,0.0045,0.5894,0.0
+Cortical thickness,thickness,structure-function (9),published (all labelled),58731,-0.5018,0.002,0.006,-0.5018,0.0
+Intrinsic timescale,timescale,structure-function (9),published (all labelled),58731,-0.4848,0.046,0.1034,,
+Delta power (0.5-4 Hz),delta,structure-function (9),published (all labelled),58731,-0.4427,0.1099,0.1978,,
+Theta power (4-8 Hz),theta,structure-function (9),published (all labelled),58731,-0.1777,0.6234,0.6234,,
+Alpha power (8-12 Hz),alpha,structure-function (9),published (all labelled),58731,0.3692,0.2567,0.3712,,
+Beta power (12-30 Hz),beta,structure-function (9),published (all labelled),58731,0.266,0.4156,0.4675,,
+Gamma power (30-60 Hz),gamma,structure-function (9),published (all labelled),58731,-0.3082,0.2887,0.3712,,
+Principal functional gradient,gradient,structure-function (9),published (all labelled),58731,-0.5761,0.001,0.0045,-0.5761,0.0
+T1w/T2w myelin,myelin,structure-function (9),allocortex excluded,57952,0.6039,0.001,0.0045,0.5894,0.0145
+Cortical thickness,thickness,structure-function (9),allocortex excluded,57952,-0.5014,0.002,0.006,-0.5018,0.0004
+Intrinsic timescale,timescale,structure-function (9),allocortex excluded,57952,-0.4879,0.05,0.1124,,
+Delta power (0.5-4 Hz),delta,structure-function (9),allocortex excluded,57952,-0.4477,0.1129,0.2032,,
+Theta power (4-8 Hz),theta,structure-function (9),allocortex excluded,57952,-0.2048,0.5754,0.5754,,
+Alpha power (8-12 Hz),alpha,structure-function (9),allocortex excluded,57952,0.3662,0.2687,0.3519,,
+Beta power (12-30 Hz),beta,structure-function (9),allocortex excluded,57952,0.2425,0.4645,0.5226,,
+Gamma power (30-60 Hz),gamma,structure-function (9),allocortex excluded,57952,-0.319,0.2737,0.3519,,
+Principal functional gradient,gradient,structure-function (9),allocortex excluded,57952,-0.5822,0.001,0.0045,-0.5761,-0.0061
+T1w/T2w myelin,myelin,structure-function (9),belt excluded (Set A),50682,0.5856,0.001,0.0045,0.5894,-0.0038
+Cortical thickness,thickness,structure-function (9),belt excluded (Set A),50682,-0.4349,0.008,0.024,-0.5018,0.0669
+Intrinsic timescale,timescale,structure-function (9),belt excluded (Set A),50682,-0.4343,0.1239,0.2787,,
+Delta power (0.5-4 Hz),delta,structure-function (9),belt excluded (Set A),50682,-0.3722,0.2607,0.4693,,
+Theta power (4-8 Hz),theta,structure-function (9),belt excluded (Set A),50682,-0.209,0.5874,0.6004,,
+Alpha power (8-12 Hz),alpha,structure-function (9),belt excluded (Set A),50682,0.2678,0.4885,0.6004,,
+Beta power (12-30 Hz),beta,structure-function (9),belt excluded (Set A),50682,0.1822,0.6004,0.6004,,
+Gamma power (30-60 Hz),gamma,structure-function (9),belt excluded (Set A),50682,-0.2375,0.4965,0.6004,,
+Principal functional gradient,gradient,structure-function (9),belt excluded (Set A),50682,-0.6177,0.001,0.0045,-0.5761,-0.0416
+T1w/T2w myelin,myelin,structure-function (9),belt excluded (Set B),57730,0.606,0.001,0.0045,0.5894,0.0166
+Cortical thickness,thickness,structure-function (9),belt excluded (Set B),57730,-0.5075,0.002,0.006,-0.5018,-0.0057
+Intrinsic timescale,timescale,structure-function (9),belt excluded (Set B),57730,-0.4846,0.0509,0.1146,,
+Delta power (0.5-4 Hz),delta,structure-function (9),belt excluded (Set B),57730,-0.4464,0.1129,0.2032,,
+Theta power (4-8 Hz),theta,structure-function (9),belt excluded (Set B),57730,-0.2084,0.5714,0.5714,,
+Alpha power (8-12 Hz),alpha,structure-function (9),belt excluded (Set B),57730,0.373,0.2557,0.3545,,
+Beta power (12-30 Hz),beta,structure-function (9),belt excluded (Set B),57730,0.2408,0.4685,0.5271,,
+Gamma power (30-60 Hz),gamma,structure-function (9),belt excluded (Set B),57730,-0.3196,0.2757,0.3545,,
+Principal functional gradient,gradient,structure-function (9),belt excluded (Set B),57730,-0.5871,0.001,0.0045,-0.5761,-0.011
+AHBA gene expression PC1,genepc1,external reference (3),published (all labelled),57957,0.6657,0.001,0.003,0.6657,0.0
+PET receptor PC1 (Hansen-2022 collection),receptorpc1,external reference (3),published (all labelled),58731,-0.3292,0.0629,0.0944,-0.3292,0.0
+"BigBrain profile skewness (pre-registered, histology)",bigbrain_profile_skewness,external reference (3),published (all labelled),58731,-0.2091,0.3207,0.3207,-0.2091,0.0
+AHBA gene expression PC1,genepc1,external reference (3),allocortex excluded,57494,0.6601,0.001,0.003,0.6657,-0.0056
+PET receptor PC1 (Hansen-2022 collection),receptorpc1,external reference (3),allocortex excluded,57952,-0.3628,0.038,0.0569,-0.3292,-0.0336
+"BigBrain profile skewness (pre-registered, histology)",bigbrain_profile_skewness,external reference (3),allocortex excluded,57952,-0.2057,0.3457,0.3457,-0.2091,0.0034
+AHBA gene expression PC1,genepc1,external reference (3),belt excluded (Set A),50682,0.5821,0.004,0.012,0.6657,-0.0836
+PET receptor PC1 (Hansen-2022 collection),receptorpc1,external reference (3),belt excluded (Set A),50682,-0.3652,0.0699,0.1049,-0.3292,-0.036
+"BigBrain profile skewness (pre-registered, histology)",bigbrain_profile_skewness,external reference (3),belt excluded (Set A),50682,-0.208,0.3836,0.3836,-0.2091,0.0011
+AHBA gene expression PC1,genepc1,external reference (3),belt excluded (Set B),57269,0.6648,0.001,0.003,0.6657,-0.0009
+PET receptor PC1 (Hansen-2022 collection),receptorpc1,external reference (3),belt excluded (Set B),57730,-0.3585,0.034,0.0509,-0.3292,-0.0293
+"BigBrain profile skewness (pre-registered, histology)",bigbrain_profile_skewness,external reference (3),belt excluded (Set B),57730,-0.2239,0.2777,0.2777,-0.2091,-0.0148

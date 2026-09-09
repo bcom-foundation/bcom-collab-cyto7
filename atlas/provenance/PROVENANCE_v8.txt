@@ -1,0 +1,33 @@
+cyto7 v8 — hand-painted expert-consensus revision of v7 (NOT yet canonical)
+========================================================================
+Source: pial.{lh,rh}.cyto7.v7.annot -> pial.{lh,rh}.cyto7.v8.annot
+cyto7 stays 7 labels. v8 is a CANDIDATE pending the SPEC_adopt_v8 decision gate;
+v6/v7 retained untouched and v7 remains the default until validations are reviewed.
+
+Origin: hand-painted by Ricardo Salvador from v7 after the 2026-07-17 García-Cabezas
+meeting (expert consensus). The meeting explicitly PRIORITISED VISUAL CLARITY of the
+gradient over strict anatomical realism. Changes vs v7:
+  - Entorhinal + pre-/parasubiculum moved into ALLOCORTEX (developmental argument).
+  - Low-differentiation belt bands WIDENED for gradient visibility.
+  - Eulaminate-II THICKENED so eulaminate-I and -III no longer abut (preserves R1).
+  - Agranular insula ENLARGED.
+  - Piriform sliver CONNECTED into the main allocortex arc.
+Cortex-only; the true medial wall (?h.cortex.label) is never painted; medial-wall
+fills identical to v7 (3153 LH / 2089 RH). Isocortex membership shifts where the belt
+was widened (EulI->Dys), but the eulaminate/koniocortex island structure is retained.
+
+Per-vertex diff (v7_to_v8_changelog.csv):
+  lh: 4315 vtx changed; net Allocortex +1473, Agranular -404, Dysgranular -837, Eulaminate I -210, Eulaminate II +51, Eulaminate III -73.
+      top transitions: Agranular->Allocortex 2065, Dysgranular->Agranular 1200, Allocortex->Agranular 592, Eulaminate I->Dysgranular 232, Agranular->Dysgranular 131, Eulaminate III->Eulaminate II 73
+  rh: 2454 vtx changed; net Allocortex +1365, Agranular -579, Dysgranular -669, Eulaminate I -45, Eulaminate II -72.
+      top transitions: Agranular->Allocortex 1399, Dysgranular->Agranular 809, Eulaminate I->Dysgranular 117, Eulaminate II->Eulaminate I 72, Allocortex->Agranular 34, Agranular->Dysgranular 23
+
+Allocortex surface vertices: LH 2131 -> 3604 (x1.69); RH 1828 -> 3193 (x1.75).
+Insula agranular fraction (Desikan insula): lh 5%->9%; rh 6%->9%.
+Topology: strict R1=0 preserved; allocortex = 1 connected component, beta1=0 (still an
+OPEN ARC, piriform merged in — NOT a closed ring on the surface; off-surface framing kept).
+See figures/v6/topology/topology_audit_v8.* and ring_analysis_v8.csv.
+
+Wiring: resolve_target_map('v8', ...) resolves (allowed-versions tuple in
+scripts/cyto7_surface_io.py includes 'v8'; version_label recognises v8). Defaults NOT
+switched to v8 (decision gate). Manuscript text files not edited.

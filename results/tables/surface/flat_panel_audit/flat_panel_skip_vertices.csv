@@ -1,0 +1,4 @@
+vertex,from_type,to_type,partner,partner_type,hemi
+1193,3,4,1224,5,L
+11263,4,5,11294,6,L
+1470,4,5,1491,6,R

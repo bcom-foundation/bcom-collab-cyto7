@@ -1,0 +1,8 @@
+{
+  "n_tests": 143,
+  "n_families": 20,
+  "n_survivors_q_lt_0.05": 33,
+  "n_survivors_excl_disease": 26,
+  "n_convention_corrections": 16,
+  "frozen_unchanged": true
+}

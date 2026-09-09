@@ -1,0 +1,109 @@
+{
+  "per_hemi": [
+    {
+      "hemi": "lh",
+      "n_labelled": 153065,
+      "toplevel_vs_v9_r": 0.6266139262258784,
+      "n_allocortex": 4147,
+      "reconstructed_vs_released_r": 0.9999999999999922,
+      "reconstructed_vs_released_max_abs_diff": 2.978362467764839e-08
+    },
+    {
+      "hemi": "rh",
+      "n_labelled": 151907,
+      "toplevel_vs_v9_r": 0.6522526907763503,
+      "n_allocortex": 3193,
+      "reconstructed_vs_released_r": 0.9999999999999936,
+      "reconstructed_vs_released_max_abs_diff": 2.979459379215399e-08
+    }
+  ],
+  "correlation": 0.9924235426382118,
+  "difference": {
+    "mean": 0.0005065202469440188,
+    "sd": 0.012556964883424634,
+    "min": -0.190133627229377,
+    "max": 0.2985603869344263,
+    "n_changed_gt_0.001": 1590,
+    "pct_changed_gt_0.001": 0.5213593379064307
+  },
+  "per_type_medians": [
+    {
+      "type": 1,
+      "type_name": "allocortex",
+      "n": 7340,
+      "median_released": 0.3162,
+      "median_harmonised": 0.5555,
+      "delta": 0.2393
+    },
+    {
+      "type": 2,
+      "type_name": "agranular",
+      "n": 15384,
+      "median_released": 0.8113,
+      "median_harmonised": 0.8113,
+      "delta": 0.0
+    },
+    {
+      "type": 3,
+      "type_name": "dysgranular",
+      "n": 26310,
+      "median_released": 0.8739,
+      "median_harmonised": 0.8739,
+      "delta": 0.0
+    },
+    {
+      "type": 4,
+      "type_name": "eulaminate I",
+      "n": 57124,
+      "median_released": 0.9306,
+      "median_harmonised": 0.9306,
+      "delta": 0.0
+    },
+    {
+      "type": 5,
+      "type_name": "eulaminate II",
+      "n": 91441,
+      "median_released": 0.9873,
+      "median_harmonised": 0.9873,
+      "delta": 0.0
+    },
+    {
+      "type": 6,
+      "type_name": "eulaminate III",
+      "n": 88368,
+      "median_released": 0.9433,
+      "median_harmonised": 0.9433,
+      "delta": 0.0
+    },
+    {
+      "type": 7,
+      "type_name": "koniocortex",
+      "n": 19005,
+      "median_released": 0.9306,
+      "median_harmonised": 0.9306,
+      "delta": 0.0
+    }
+  ],
+  "tertile_moved": 0,
+  "tertile_moved_pct": 0.0,
+  "tertile_movers_by_type": {
+    "allocortex": 0,
+    "agranular": 0,
+    "dysgranular": 0,
+    "eulaminate I": 0,
+    "eulaminate II": 0,
+    "eulaminate III": 0,
+    "koniocortex": 0
+  },
+  "checks": {
+    "correlation_above_0.98": true,
+    "no_per_type_median_moves_more_than_0.02": false,
+    "AUC_moves_less_than_0.01": true,
+    "tertile_change_under_1pct": true
+  },
+  "classification": "material",
+  "largest_median_shift": 0.2393,
+  "frozen_v9_unchanged": true,
+  "frozen_rr10_unchanged": true,
+  "runtime_seconds": 6.4
+}

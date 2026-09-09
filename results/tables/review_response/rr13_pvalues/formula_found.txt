@@ -1,0 +1,26 @@
+As implemented (enigmatoolbox.permutation_testing.perm_sphere_p, called by
+scripts/layer_marker_genes.py with nrot=1000, numpy seed 0):
+
+    rho_emp = spearman(x, y)
+    for each of nperm rotations r:
+        rho_null_xy[r] = spearman(x[perm[:, r]], y)
+        rho_null_yx[r] = spearman(x, y[perm[:, r]])
+
+    if rho_emp >= 0:
+        p_xy = sum(rho_null_xy >  rho_emp) / nperm
+        p_yx = sum(rho_null_yx >  rho_emp) / nperm
+    else:
+        p_xy = sum(rho_null_xy <  rho_emp) / nperm
+        p_yx = sum(rho_null_yx <  rho_emp) / nperm
+
+    p = (p_xy + p_yx) / 2
+
+Section 2.6 states instead:
+
+    p = (1 + #{|rho_null| >= |rho_obs|}) / (N + 1)
+
+Four differences: no plus-one correction (so zero is attainable); one-tailed on the
+signed correlation rather than two-tailed on |rho|; strict > rather than >=; and an
+average of two null directions rather than one null distribution. The granularity of
+the published value is 1/(2*nperm) = 0.0005, which is why the reported values are all
+multiples of 0.0005.

@@ -1,0 +1,9 @@
+summary,spearman_rho_vs_myelin,n_types
+degree_short,-0.14285714285714288,7
+degree_long,0.10714285714285716,7
+degree_total,-0.03571428571428572,7
+degree_per_vertex,-0.6785714285714287,7
+degree_short_per_vertex,-0.9642857142857145,7
+degree_long_per_vertex,-0.6785714285714287,7
+mean_length_mm,0.8928571428571429,7
+mean_tortuosity,0.7857142857142859,7

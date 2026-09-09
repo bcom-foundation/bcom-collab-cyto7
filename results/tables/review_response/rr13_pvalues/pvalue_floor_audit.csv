@@ -1,0 +1,272 @@
+file,column,test_kind,row_index,row_label,value,n_used,n_basis,floor_plus_one,floor_raw_tail,exactly_zero,equals_floor_within_tolerance,violates_stated_floor
+added_value_localized.csv,binom_p,parametric,0,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,1,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,2,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,3,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,4,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,5,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,6,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,7,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,8,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,9,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,10,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,11,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,12,Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,14,Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,15,Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,16,Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,18,Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,19,Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,20,Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,21,Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,22,Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,24,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,25,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+added_value_localized.csv,binom_p,parametric,26,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+definitional/layer_marker_genes.csv,p_spin,resampling,0,RORB,0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin,resampling,1,CUX2,0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin,resampling,2,FEZF2,0.0005,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,False,False,True
+definitional/layer_marker_genes.csv,p_spin,resampling,5,upper(CUX2),0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin,resampling,6,granular(RORB),0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin_fdr,resampling,0,RORB,0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin_fdr,resampling,1,CUX2,0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin_fdr,resampling,2,FEZF2,0.0008,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,False,False,True
+definitional/layer_marker_genes.csv,p_spin_fdr,resampling,5,upper(CUX2),0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/layer_marker_genes.csv,p_spin_fdr,resampling,6,granular(RORB),0.0,1000,"ENIGMA rotate_parcellation, nrot=1000, seed 0, two directions averaged",0.000999,0.001,True,False,True
+definitional/negative_control.csv,p_param,parametric,0,,1.8528675069505543e-21,1000,"released vertex spin nulls, seed 0",0.000999,0.001,False,False,False
+definitional/negative_control.csv,p_param,parametric,1,,8.887881397780978e-36,1000,"released vertex spin nulls, seed 0",0.000999,0.001,False,False,False
+external/disease_vulnerability.csv,spin_p,resampling,1,adhd,0.0005,1000,assumed repo default,0.000999,0.001,False,False,True
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,57,"RORB [gene, layer IV (granular)]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,58,"CUX2 [gene, layer II/III (upper)]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,59,"FEZF2 [gene, layer V (deep)]",0.0005,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,62,"upper(CUX2) [composite, layer -]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,63,"granular(RORB) [composite, layer -]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,69,ENIGMA cortical-thickness effect size: adhd,0.0005,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,92,Per-type connectional property: mean_tortuosity,0.0003968253968253,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,102,Win fraction on the disagreement set (all): T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,103,Win fraction on the disagreement set (off1): T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,104,Win fraction on the disagreement set (off2): T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,105,Win fraction on the disagreement set (all): Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,106,Win fraction on the disagreement set (off1): Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,107,Win fraction on the disagreement set (off2): Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,108,Win fraction on the disagreement set (all): Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,109,Win fraction on the disagreement set (off1): Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,110,Win fraction on the disagreement set (off2): Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,111,Win fraction on the disagreement set (all): Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,112,Win fraction on the disagreement set (off1): Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,113,Win fraction on the disagreement set (off2): Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,114,Win fraction on the disagreement set (all): Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,116,Win fraction on the disagreement set (off2): Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,117,Win fraction on the disagreement set (all): Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,118,Win fraction on the disagreement set (off1): Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,120,Win fraction on the disagreement set (all): Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,121,Win fraction on the disagreement set (off1): Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,122,Win fraction on the disagreement set (off2): Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,123,Win fraction on the disagreement set (all): Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,124,Win fraction on the disagreement set (off1): Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,126,Win fraction on the disagreement set (all): Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,127,Win fraction on the disagreement set (off1): Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,p_raw,harvested,128,Win fraction on the disagreement set (off2): Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,q,harvested,57,"RORB [gene, layer IV (granular)]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,q,harvested,58,"CUX2 [gene, layer II/III (upper)]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,q,harvested,59,"FEZF2 [gene, layer V (deep)]",0.0008,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr2_table/outcome_table.csv,q,harvested,62,"upper(CUX2) [composite, layer -]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr2_table/outcome_table.csv,q,harvested,63,"granular(RORB) [composite, layer -]",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr3_fig6/fig6_source_values.csv,q,unclassified,7,"RORB, layer-IV marker",0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,0,published (whole cortex),0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,1,published (whole cortex),0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,2,published (whole cortex),0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,3,per-arbiter,6.5e-322,1000,stated in the file's n_spin column,0.000999,0.001,False,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,4,per-arbiter,1.162605429172794e-112,1000,stated in the file's n_spin column,0.000999,0.001,False,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,5,per-arbiter,0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,6,"holdout: fit LH, score RH",0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,7,"holdout: fit RH, score LH",0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,8,"holdout: fit LH, score RH",7.44484928735829e-309,1000,stated in the file's n_spin column,0.000999,0.001,False,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,9,"holdout: fit RH, score LH",0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,10,areal interior (> 5 hops),1.6344193788933135e-98,1000,stated in the file's n_spin column,0.000999,0.001,False,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,11,areal border band (<= 5 hops),0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,12,areal interior (> 5 hops),3.808597848374418e-08,1000,stated in the file's n_spin column,0.000999,0.001,False,False,False
+review_response/rr4_benchmark/holdout_and_strata.csv,binom_p,parametric,13,areal border band (<= 5 hops),0.0,1000,stated in the file's n_spin column,0.000999,0.001,True,False,False
+review_response/rr7_tracto/model_coefficients.csv,p_model,parametric,16,"A0  aggregate, no offset",6.401968910861191e-07,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr7_tracto/model_coefficients.csv,p_model,parametric,17,A1  aggregate + endpoint-pair offset,1.803885929059719e-08,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr7_tracto/model_coefficients.csv,p_model,parametric,18,A2  aggregate + offset + contact,9.868634684432691e-06,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr7_tracto/model_coefficients.csv,p_model,parametric,19,A3  aggregate + offset + contact + geodesic,1.4864762547838918e-11,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,0,centroid_geodesic_mm_SUPERSEDED,7.5967159620566755e-06,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,1,footprint_geodesic_mm,7.230326326630458e-12,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,2,nn_eucl_median_mm,2.1778432272824208e-10,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,3,nn_eucl_p10_mm,9.635995308015534e-13,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,4,nn_geo_median_mm,2.988121354493144e-09,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,5,nn_geo_p10_mm,3.958476845618605e-12,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,pearson_p,parametric,6,log_pairs_within_40mm,3.3585670096832614e-05,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,0,centroid_geodesic_mm_SUPERSEDED,1.0518225142355944e-05,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,1,footprint_geodesic_mm,3.2580509727336654e-14,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,2,nn_eucl_median_mm,2.2778400568928736e-11,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,3,nn_eucl_p10_mm,5.34743147193904e-13,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,4,nn_geo_median_mm,3.3748414484677435e-11,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,5,nn_geo_p10_mm,2.796767629182972e-12,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/collinearity.csv,spearman_p,parametric,6,log_pairs_within_40mm,0.000548491021723,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/model_coefficients_rr9.csv,p_model,parametric,0,,1.803885929059719e-08,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/model_coefficients_rr9.csv,p_model,parametric,1,,1.7373861284251256e-06,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/model_coefficients_rr9.csv,p_model,parametric,2,,0.0002150896796387,1000,assumed repo default,0.000999,0.001,False,False,False
+review_response/rr9_proximity/model_coefficients_rr9.csv,p_model,parametric,5,,1.8845259414408882e-08,1000,assumed repo default,0.000999,0.001,False,False,False
+structure_function/bigbrain_addedvalue/added_value_localized.csv,binom_p,parametric,2,BigBrain Hist-G1 (histology),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/bigbrain_profiles/profile_features_by_type.csv,p_param,parametric,0,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/bigbrain_profiles/profile_features_by_type.csv,p_param,parametric,1,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/bigbrain_profiles/profile_features_by_type.csv,p_param,parametric,2,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/bigbrain_profiles/profile_features_by_type.csv,p_param,parametric,3,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/bigbrain_profiles/profile_features_by_type.csv,p_param,parametric,4,,4.038801676780324e-94,1000,assumed repo default,0.000999,0.001,False,False,False
+structure_function/external_validation_table.csv,p_param,parametric,0,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/external_validation_table.csv,p_param,parametric,1,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/external_validation_table.csv,p_param,parametric,2,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,0,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,1,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,2,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,3,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,4,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,5,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,6,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,7,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,8,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,9,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,10,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,11,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,12,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,13,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,14,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,15,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,16,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,17,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,18,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,19,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,20,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,21,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,22,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,23,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,24,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,25,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,26,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,27,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,28,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,29,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,30,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,31,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,32,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,33,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,34,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,35,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,36,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,37,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,38,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,39,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,40,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,41,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,42,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,43,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,44,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,45,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,46,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,47,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,48,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,49,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,50,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,51,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,52,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,53,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,54,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,55,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,56,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,57,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,58,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,59,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,60,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,61,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,62,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,63,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,64,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,65,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,66,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,67,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,68,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,69,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,70,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,71,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,72,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,73,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,74,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,75,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,76,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,77,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,78,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,79,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,80,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,81,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,82,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,83,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,84,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,85,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,86,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,87,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,88,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,89,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,90,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,91,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,92,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,93,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,94,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,95,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,96,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,97,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,98,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,99,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,100,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,101,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,102,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,103,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,104,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,105,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,106,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,107,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,108,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,109,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,110,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,111,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,112,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,113,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,114,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,115,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,116,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,117,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,118,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,119,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,120,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,121,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,122,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,123,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,124,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+structure_function/functional_summary_table_v9.csv,p_param,parametric,125,,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+tractography/tractography_null.csv,conn_vs_typedist_p,unclassified,0,,0.0001,1000,stated in the file's n_perm column,0.000999,0.001,False,False,False
+tractography_null.csv,conn_vs_typedist_p,unclassified,0,,0.0001,1000,stated in the file's n_perm column,0.000999,0.001,False,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,0,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,1,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,2,T1w/T2w myelin,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,3,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,4,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,5,Cortical thickness,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,6,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,7,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,8,Intrinsic timescale,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,9,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,10,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,11,Delta power (0.5-4 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,12,Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,13,Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,14,Theta power (4-8 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,15,Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,16,Alpha power (8-12 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,18,Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,19,Beta power (12-30 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,21,Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,22,Gamma power (30-60 Hz),0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,24,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,25,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False
+vs_voneconomo/added_value_localized.csv,binom_p,parametric,26,Principal functional gradient,0.0,1000,assumed repo default,0.000999,0.001,True,False,False

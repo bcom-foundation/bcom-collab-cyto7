@@ -1,0 +1,17 @@
+measure,key,window,n,rho,published_rho,delta_vs_published
+T1w/T2w myelin,myelin,types 1-4,19403,0.2834,0.5894,-0.306
+Cortical thickness,thickness,types 1-4,19403,-0.3081,-0.5018,0.1937
+Principal functional gradient,gradient,types 1-4,19403,0.2211,-0.5761,0.7972
+AHBA gene expression PC1,genepc1,types 1-4,18629,0.5019,0.6657,-0.1638
+T1w/T2w myelin,myelin,types 2-5,36910,0.3652,0.5894,-0.2242
+Cortical thickness,thickness,types 2-5,36910,-0.4383,-0.5018,0.0635
+Principal functional gradient,gradient,types 2-5,36910,-0.1757,-0.5761,0.4004
+AHBA gene expression PC1,genepc1,types 2-5,36452,0.4914,0.6657,-0.1743
+T1w/T2w myelin,myelin,types 3-6,52031,0.5034,0.5894,-0.086
+Cortical thickness,thickness,types 3-6,52031,-0.3859,-0.5018,0.1159
+Principal functional gradient,gradient,types 3-6,52031,-0.5444,-0.5761,0.0317
+AHBA gene expression PC1,genepc1,types 3-6,51915,0.5719,0.6657,-0.0938
+T1w/T2w myelin,myelin,types 4-7,50682,0.5856,0.5894,-0.0038
+Cortical thickness,thickness,types 4-7,50682,-0.4349,-0.5018,0.0669
+Principal functional gradient,gradient,types 4-7,50682,-0.6177,-0.5761,-0.0416
+AHBA gene expression PC1,genepc1,types 4-7,50682,0.5821,0.6657,-0.0836

@@ -1,0 +1,4 @@
+outcome,pearson_r,slope_per_ordinal_step,p_spin_pearson_r,spin_null_mean_r,n_spin
+raw_count_published,-0.7649,-1.2306,0.04,-0.3337,1000.0
+rate_per_opportunity_80mm,-0.5972,-0.7999,0.0699,-0.2108,1000.0
+rate_per_possible_pair,-0.6327,-0.9124,0.0579,-0.2191,1000.0

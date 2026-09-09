@@ -1,0 +1,14 @@
+type,type_name,n,released,harmonised,delta,quantity
+1.0,allocortex,7340.0,0.3162,0.5555,0.2393,per-type median confidence: allocortex
+2.0,agranular,15384.0,0.8113,0.8113,0.0,per-type median confidence: agranular
+3.0,dysgranular,26310.0,0.8739,0.8739,0.0,per-type median confidence: dysgranular
+4.0,eulaminate I,57124.0,0.9306,0.9306,0.0,per-type median confidence: eulaminate I
+5.0,eulaminate II,91441.0,0.9873,0.9873,0.0,per-type median confidence: eulaminate II
+6.0,eulaminate III,88368.0,0.9433,0.9433,0.0,per-type median confidence: eulaminate III
+7.0,koniocortex,19005.0,0.9306,0.9306,0.0,per-type median confidence: koniocortex
+,,,1.0,0.992424,-0.007576,"vertex-wise correlation, released vs harmonised combined"
+,,,0.0,0.000647,0.000647,mean absolute difference in combined score
+,,,0.0,0.0,0.0,vertices changing combined-score tertile (%)
+,,,unchanged,unchanged,0.0,"disagreement AUC (uses indep, no atlas term)"
+,,,unchanged,unchanged,0.0,"ex-vivo patch tertile errors (uses indep, no atlas term)"
+,,,unchanged,unchanged,0.0,"RR4 / section 3.3 confidence-tertile win fractions (uses indep, no atlas term)"

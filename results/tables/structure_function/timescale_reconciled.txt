@@ -1,0 +1,4 @@
+Intrinsic-timescale reconciliation (authoritative = 9-feature-panel masking):
+  rho = -0.482, spin_p = 0.047, q_fdr = 0.106
+  masking = build_validity_mask (all 9 feats finite, gradient!=0, myelin/thickness>0), allocortex INCLUDED, 32k fs_LR, v3, seed 0, 1000 spins.
+  This is the number to propagate to the Abstract, Results 3.6, and Annex F. The Annex-F value (-0.51/0.025/0.06) used an allocortex-EXCLUDED mask (Section 7); the panel masking above is authoritative for the headline single number.

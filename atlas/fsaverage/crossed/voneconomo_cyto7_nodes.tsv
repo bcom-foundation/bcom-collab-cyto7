@@ -1,0 +1,230 @@
+id	name	hemi	base_parcel	cyto7_ordinal	cyto7_name	n_vertices	area_mm2	n_components	frac_largest_component	absorbed_residue	annot_index
+1	FA_dys	lh	FA	3	dysgranular	378	142.28	1	1.0	0	1
+2	FA_eul2	lh	FA	5	eulaminate II	2099	860.76	2	0.8914	1	2
+1002	FA_eul2	rh	FA	5	eulaminate II	1434	579.79	3	0.9073	1	2
+3	FA_eul3	lh	FA	6	eulaminate III	5918	2371.09	1	1.0	0	3
+1003	FA_eul3	rh	FA	6	eulaminate III	4897	1943.97	1	1.0	0	3
+4	FA_kon	lh	FA	7	koniocortex	704	243.68	3	0.875	0	4
+1004	FA_kon	rh	FA	7	koniocortex	757	336.43	8	0.5495	0	4
+5	FB_dys	lh	FB	3	dysgranular	181	51.67	1	1.0	0	5
+1005	FB_dys	rh	FB	3	dysgranular	310	109.02	4	0.8419	0	5
+6	FB_eul1	lh	FB	4	eulaminate I	1997	764.07	2	0.9629	0	6
+1006	FB_eul1	rh	FB	4	eulaminate I	2325	837.33	2	0.9819	0	6
+7	FB_eul2	lh	FB	5	eulaminate II	8941	3417.89	1	1.0	0	7
+1007	FB_eul2	rh	FB	5	eulaminate II	10015	3766.58	1	1.0	0	7
+8	FB_eul3	lh	FB	6	eulaminate III	1197	404.5	3	0.5848	1	8
+1008	FB_eul3	rh	FB	6	eulaminate III	973	355.92	4	0.6321	0	8
+9	FC_dys	lh	FC	3	dysgranular	252	120.84	1	1.0	0	9
+1009	FC_dys	rh	FC	3	dysgranular	109	43.49	1	1.0	0	9
+10	FC_eul1	lh	FC	4	eulaminate I	5321	2250.8	1	1.0	0	10
+1010	FC_eul1	rh	FC	4	eulaminate I	6002	2191.34	1	1.0	0	10
+11	FC_eul2	lh	FC	5	eulaminate II	404	178.99	2	0.5891	0	11
+1011	FC_eul2	rh	FC	5	eulaminate II	188	87.61	9	0.6702	0	11
+12	FCBm_eul1	lh	FCBm	4	eulaminate I	937	343.99	2	0.794	0	12
+1012	FCBm_eul1	rh	FCBm	4	eulaminate I	315	101.79	3	0.5238	0	12
+13	FCBm_eul2	lh	FCBm	5	eulaminate II	2007	763.37	1	1.0	1	13
+1013	FCBm_eul2	rh	FCBm	5	eulaminate II	2465	1007.78	1	1.0	1	13
+14	FD_dys	lh	FD	3	dysgranular	507	231.81	1	1.0	0	14
+1014	FD_dys	rh	FD	3	dysgranular	399	167.69	1	1.0	0	14
+15	FD_eul1	lh	FD	4	eulaminate I	707	358.98	6	0.8769	0	15
+1015	FD_eul1	rh	FD	4	eulaminate I	1179	513.57	4	0.8015	0	15
+16	FD_eul2	lh	FD	5	eulaminate II	5635	2585.66	1	1.0	1	16
+1016	FD_eul2	rh	FD	5	eulaminate II	4977	2381.58	1	1.0	0	16
+17	FDT_eul1	lh	FDT	4	eulaminate I	197	72.46	2	0.5279	1	17
+1017	FDT_eul1	rh	FDT	4	eulaminate I	223	78.46	2	0.6413	1	17
+18	FDT_eul2	lh	FDT	5	eulaminate II	442	211.73	3	0.7308	0	18
+1018	FDT_eul2	rh	FDT	5	eulaminate II	459	182.72	3	0.7778	0	18
+19	FDT_eul3	lh	FDT	6	eulaminate III	1069	433.34	1	1.0	0	19
+1019	FDT_eul3	rh	FDT	6	eulaminate III	1189	419.63	1	1.0	0	19
+20	FDdelta_eul2	lh	FDdelta	5	eulaminate II	1045	455.07	1	1.0	0	20
+1020	FDdelta_eul2	rh	FDdelta	5	eulaminate II	1177	492.55	1	1.0	0	20
+21	FE_dys	lh	FE	3	dysgranular	423	168.86	1	1.0	1	21
+1021	FE_dys	rh	FE	3	dysgranular	76	31.92	1	1.0	0	21
+22	FE_eul1	lh	FE	4	eulaminate I	580	315.81	1	1.0	0	22
+1022	FE_eul1	rh	FE	4	eulaminate I	643	293.17	2	0.717	0	22
+23	FE_eul2	lh	FE	5	eulaminate II	1574	1081.72	1	1.0	0	23
+1023	FE_eul2	rh	FE	5	eulaminate II	1856	1114.55	1	1.0	0	23
+24	FF_agr	lh	FF	2	agranular	429	155.81	1	1.0	1	24
+1024	FF_agr	rh	FF	2	agranular	706	247.32	1	1.0	1	24
+25	FF_dys	lh	FF	3	dysgranular	1090	471.59	1	1.0	0	25
+1025	FF_dys	rh	FF	3	dysgranular	1021	434.9	1	1.0	0	25
+26	FF_eul1	lh	FF	4	eulaminate I	1666	746.63	1	1.0	0	26
+1026	FF_eul1	rh	FF	4	eulaminate I	1478	765.63	1	1.0	0	26
+27	FF_eul2	lh	FF	5	eulaminate II	1172	492.03	1	1.0	0	27
+1027	FF_eul2	rh	FF	5	eulaminate II	1241	600.41	1	1.0	0	27
+28	FF_eul3	lh	FF	6	eulaminate III	328	117.77	1	1.0	0	28
+1028	FF_eul3	rh	FF	6	eulaminate III	131	54.89	1	1.0	0	28
+29	FG_eul1	lh	FG	4	eulaminate I	533	262.81	1	1.0	1	29
+1029	FG_eul1	rh	FG	4	eulaminate I	651	314.54	1	1.0	1	29
+30	FH_dys	lh	FH	3	dysgranular	773	358.27	1	1.0	1	30
+1030	FH_dys	rh	FH	3	dysgranular	486	226.92	1	1.0	1	30
+31	FJK_agr	lh	FJK	2	agranular	246	90.95	3	0.9675	1	31
+1031	FJK_agr	rh	FJK	2	agranular	139	61.17	2	0.9353	1	31
+32	FJK_dys	lh	FJK	3	dysgranular	491	184.44	1	1.0	0	32
+1032	FJK_dys	rh	FJK	3	dysgranular	577	212.01	1	1.0	1	32
+33	FLMN_agr	lh	FLMN	2	agranular	274	138.63	1	1.0	0	33
+1033	FLMN_agr	rh	FLMN	2	agranular	340	144.69	1	1.0	0	33
+34	FLMN_dys	lh	FLMN	3	dysgranular	294	127.25	1	1.0	0	34
+1034	FLMN_dys	rh	FLMN	3	dysgranular	193	91.08	1	1.0	0	34
+35	HA_allo	lh	HA	1	allocortex	357	119.76	1	1.0	0	35
+1035	HA_allo	rh	HA	1	allocortex	355	117.13	1	1.0	0	35
+36	HB_allo	lh	HB	1	allocortex	333	150.13	1	1.0	0	36
+1036	HB_allo	rh	HB	1	allocortex	306	132.65	1	1.0	0	36
+37	HC_allo	lh	HC	1	allocortex	665	247.13	1	1.0	0	37
+1037	HC_allo	rh	HC	1	allocortex	390	161.07	1	1.0	0	37
+38	HC_agr	lh	HC	2	agranular	572	242.37	1	1.0	0	38
+1038	HC_agr	rh	HC	2	agranular	431	236.01	1	1.0	0	38
+39	HC_dys	lh	HC	3	dysgranular	130	65.03	1	1.0	0	39
+1039	HC_dys	rh	HC	3	dysgranular	95	51.22	1	1.0	0	39
+40	HC_eul1	lh	HC	4	eulaminate I	138	59.36	1	1.0	0	40
+1040	HC_eul1	rh	HC	4	eulaminate I	87	37.6	1	1.0	0	40
+41	IA_dys	lh	IA	3	dysgranular	1190	490.16	1	1.0	1	41
+1041	IA_dys	rh	IA	3	dysgranular	1080	451.74	1	1.0	1	41
+42	IA_eul1	lh	IA	4	eulaminate I	549	214.74	1	1.0	0	42
+1042	IA_eul1	rh	IA	4	eulaminate I	619	228.79	1	1.0	0	42
+43	IB_agr	lh	IB	2	agranular	268	96.03	1	1.0	1	43
+1043	IB_agr	rh	IB	2	agranular	238	83.68	1	1.0	1	43
+44	IB_dys	lh	IB	3	dysgranular	447	170.05	1	1.0	0	44
+1044	IB_dys	rh	IB	3	dysgranular	377	147.22	1	1.0	0	44
+45	IB_eul1	lh	IB	4	eulaminate I	364	152.82	3	0.9808	0	45
+1045	IB_eul1	rh	IB	4	eulaminate I	511	195.76	1	1.0	0	45
+46	IB_eul2	lh	IB	5	eulaminate II	250	117.79	1	1.0	0	46
+1046	IB_eul2	rh	IB	5	eulaminate II	454	170.91	1	1.0	0	46
+47	IB_eul3	lh	IB	6	eulaminate III	848	369.43	1	1.0	1	47
+1047	IB_eul3	rh	IB	6	eulaminate III	973	331.45	1	1.0	1	47
+48	LA1_agr	lh	LA1	2	agranular	765	326.25	1	1.0	0	48
+1048	LA1_agr	rh	LA1	2	agranular	878	401.43	1	1.0	0	48
+49	LA1_dys	lh	LA1	3	dysgranular	1612	540.69	1	1.0	0	49
+1049	LA1_dys	rh	LA1	3	dysgranular	2077	749.8	1	1.0	1	49
+50	LA2_agr	lh	LA2	2	agranular	787	342.32	1	1.0	0	50
+1050	LA2_agr	rh	LA2	2	agranular	664	290.74	1	1.0	0	50
+51	LA2_dys	lh	LA2	3	dysgranular	326	116.62	1	1.0	0	51
+1051	LA2_dys	rh	LA2	3	dysgranular	405	172.77	2	0.9951	0	51
+52	LC1_dys	lh	LC1	3	dysgranular	687	247.9	1	1.0	0	52
+1052	LC1_dys	rh	LC1	3	dysgranular	1019	359.38	7	0.9735	0	52
+53	LC1_eul1	lh	LC1	4	eulaminate I	1316	523.6	1	1.0	1	53
+1053	LC1_eul1	rh	LC1	4	eulaminate I	976	341.38	1	1.0	0	53
+54	LC2_dys	lh	LC2	3	dysgranular	1019	356.12	1	1.0	1	54
+1054	LC2_dys	rh	LC2	3	dysgranular	381	147.64	2	0.5932	1	54
+55	LC3_dys	lh	LC3	3	dysgranular	146	47.83	1	1.0	0	55
+1055	LC3_dys	rh	LC3	3	dysgranular	101	44.58	1	1.0	0	55
+56	LD_agr	lh	LD	2	agranular	80	20.28	1	1.0	0	56
+1056	LD_agr	rh	LD	2	agranular	144	34.44	1	1.0	1	56
+57	LD_dys	lh	LD	3	dysgranular	217	66.98	1	1.0	0	57
+1057	LD_dys	rh	LD	3	dysgranular	199	65.88	6	0.8442	0	57
+58	LE_dys	lh	LE	3	dysgranular	574	181.0	1	1.0	1	58
+1058	LE_dys	rh	LE	3	dysgranular	519	164.82	2	0.5819	1	58
+59	OA_eul1	lh	OA	4	eulaminate I	184	88.63	1	1.0	1	59
+1059	OA_eul1	rh	OA	4	eulaminate I	189	97.89	2	0.9735	1	59
+60	OA_eul2	lh	OA	5	eulaminate II	922	394.85	7	0.4208	0	60
+1060	OA_eul2	rh	OA	5	eulaminate II	1225	596.14	4	0.4171	0	60
+61	OA_eul3	lh	OA	6	eulaminate III	6881	3334.81	1	1.0	1	61
+1061	OA_eul3	rh	OA	6	eulaminate III	6227	3094.83	2	0.9916	1	61
+62	OB_eul2	lh	OB	5	eulaminate II	91	29.82	2	0.6593	1	62
+1062	OB_eul2	rh	OB	5	eulaminate II	312	115.8	2	0.6603	1	62
+63	OB_eul3	lh	OB	6	eulaminate III	2192	993.19	3	0.5885	1	63
+1063	OB_eul3	rh	OB	6	eulaminate III	2302	1145.52	2	0.9739	1	63
+64	OB_kon	lh	OB	7	koniocortex	388	175.64	4	0.5644	0	64
+1064	OB_kon	rh	OB	7	koniocortex	260	123.15	12	0.8038	0	64
+65	OC_dys	lh	OC	3	dysgranular	157	68.66	2	0.9745	0	65
+1065	OC_dys	rh	OC	3	dysgranular	197	78.93	1	1.0	1	65
+66	OC_eul1	lh	OC	4	eulaminate I	145	60.61	1	1.0	0	66
+1066	OC_eul1	rh	OC	4	eulaminate I	183	70.06	1	1.0	0	66
+67	OC_eul2	lh	OC	5	eulaminate II	278	100.73	1	1.0	0	67
+1067	OC_eul2	rh	OC	5	eulaminate II	279	111.11	1	1.0	0	67
+68	OC_eul3	lh	OC	6	eulaminate III	631	262.22	3	0.8732	0	68
+1068	OC_eul3	rh	OC	6	eulaminate III	555	234.55	5	0.8847	0	68
+69	OC_kon	lh	OC	7	koniocortex	2601	1176.72	1	1.0	0	69
+1069	OC_kon	rh	OC	7	koniocortex	2420	1257.43	1	1.0	0	69
+70	PA_dys	lh	PA	3	dysgranular	46	17.71	1	1.0	0	70
+1070	PA_dys	rh	PA	3	dysgranular	160	53.35	1	1.0	0	70
+71	PA_eul1	lh	PA	4	eulaminate I	101	36.67	2	0.6535	0	71
+1071	PA_eul1	rh	PA	4	eulaminate I	250	87.69	3	0.988	0	71
+72	PA_eul2	lh	PA	5	eulaminate II	153	55.37	1	1.0	0	72
+1072	PA_eul2	rh	PA	5	eulaminate II	137	43.42	2	0.6058	0	72
+73	PA_eul3	lh	PA	6	eulaminate III	1093	390.65	6	0.8719	0	73
+1073	PA_eul3	rh	PA	6	eulaminate III	875	254.28	5	0.7326	0	73
+74	PA_kon	lh	PA	7	koniocortex	2233	915.02	1	1.0	0	74
+1074	PA_kon	rh	PA	7	koniocortex	2378	860.05	2	0.9424	0	74
+75	PB_eul3	lh	PB	6	eulaminate III	466	188.94	3	0.9292	0	75
+1075	PB_eul3	rh	PB	6	eulaminate III	989	334.54	3	0.9869	1	75
+76	PB_kon	lh	PB	7	koniocortex	1267	609.34	1	1.0	0	76
+1076	PB_kon	rh	PB	7	koniocortex	1905	969.56	4	0.9181	1	76
+77	PC_eul3	lh	PC	6	eulaminate III	3147	1079.52	1	1.0	0	77
+1077	PC_eul3	rh	PC	6	eulaminate III	2480	855.57	1	1.0	0	77
+78	PC_kon	lh	PC	7	koniocortex	623	194.75	4	0.374	0	78
+1078	PC_kon	rh	PC	7	koniocortex	1167	407.16	3	0.8183	0	78
+79	PD_eul2	lh	PD	5	eulaminate II	3375	945.63	1	1.0	0	79
+1079	PD_eul2	rh	PD	5	eulaminate II	5417	1484.5	3	0.9978	1	79
+80	PD_eul3	lh	PD	6	eulaminate III	6270	1870.11	1	1.0	0	80
+1080	PD_eul3	rh	PD	6	eulaminate III	5804	1647.6	1	1.0	0	80
+81	PE_eul1	lh	PE	4	eulaminate I	151	60.66	2	0.8079	0	81
+1081	PE_eul1	rh	PE	4	eulaminate I	199	63.19	4	0.9045	0	81
+82	PE_eul2	lh	PE	5	eulaminate II	7436	2562.25	3	0.9987	0	82
+1082	PE_eul2	rh	PE	5	eulaminate II	6541	2216.95	1	1.0	0	82
+83	PE_eul3	lh	PE	6	eulaminate III	1749	494.74	7	0.9634	0	83
+1083	PE_eul3	rh	PE	6	eulaminate III	1498	396.22	3	0.6996	0	83
+84	PF_eul1	lh	PF	4	eulaminate I	512	140.38	1	1.0	0	84
+1084	PF_eul1	rh	PF	4	eulaminate I	1241	298.52	1	1.0	0	84
+85	PF_eul2	lh	PF	5	eulaminate II	1680	447.76	4	0.9798	0	85
+1085	PF_eul2	rh	PF	5	eulaminate II	1327	342.8	2	0.9344	0	85
+86	PF_eul3	lh	PF	6	eulaminate III	4978	1656.39	1	1.0	1	86
+1086	PF_eul3	rh	PF	6	eulaminate III	5387	1668.52	1	1.0	1	86
+87	PG_eul1	lh	PG	4	eulaminate I	4255	1416.74	1	1.0	0	87
+1087	PG_eul1	rh	PG	4	eulaminate I	3413	1114.32	1	1.0	0	87
+88	PG_eul2	lh	PG	5	eulaminate II	1558	618.52	2	0.8851	1	88
+1088	PG_eul2	rh	PG	5	eulaminate II	1661	658.04	4	0.8868	0	88
+89	PH_eul1	lh	PH	4	eulaminate I	1698	602.34	1	1.0	0	89
+1089	PH_eul1	rh	PH	4	eulaminate I	194	63.95	3	0.8247	0	89
+90	PH_eul2	lh	PH	5	eulaminate II	3197	1239.21	1	1.0	0	90
+1090	PH_eul2	rh	PH	5	eulaminate II	2989	1171.81	3	0.99	0	90
+91	PH_eul3	lh	PH	6	eulaminate III	786	334.93	2	0.9987	0	91
+1091	PH_eul3	rh	PH	6	eulaminate III	1014	481.82	1	1.0	0	91
+92	TA_dys	lh	TA	3	dysgranular	311	148.65	1	1.0	1	92
+1092	TA_dys	rh	TA	3	dysgranular	299	147.78	3	0.9498	1	92
+93	TA_eul1	lh	TA	4	eulaminate I	146	84.61	1	1.0	0	93
+1093	TA_eul1	rh	TA	4	eulaminate I	323	146.38	1	1.0	0	93
+94	TA_eul2	lh	TA	5	eulaminate II	250	132.59	1	1.0	0	94
+1094	TA_eul2	rh	TA	5	eulaminate II	180	80.49	1	1.0	0	94
+95	TA_eul3	lh	TA	6	eulaminate III	1883	754.55	1	1.0	0	95
+1095	TA_eul3	rh	TA	6	eulaminate III	1267	569.22	1	1.0	0	95
+96	TA_kon	lh	TA	7	koniocortex	97	33.85	2	0.7216	0	96
+1096	TA_kon	rh	TA	7	koniocortex	160	67.13	4	0.75	0	96
+97	TB_eul1	lh	TB	4	eulaminate I	164	77.62	1	1.0	1	97
+1097	TB_eul1	rh	TB	4	eulaminate I	171	82.61	1	1.0	1	97
+98	TB_eul2	lh	TB	5	eulaminate II	138	74.69	1	1.0	0	98
+1098	TB_eul2	rh	TB	5	eulaminate II	168	88.37	1	1.0	0	98
+99	TB_eul3	lh	TB	6	eulaminate III	367	186.38	1	1.0	1	99
+1099	TB_eul3	rh	TB	6	eulaminate III	339	174.96	1	1.0	1	99
+100	TC_eul3	lh	TC	6	eulaminate III	212	95.05	2	0.8585	0	100
+1100	TC_eul3	rh	TC	6	eulaminate III	351	144.0	1	1.0	0	100
+101	TC_kon	lh	TC	7	koniocortex	564	248.73	1	1.0	0	101
+1101	TC_kon	rh	TC	7	koniocortex	339	136.06	1	1.0	0	101
+102	TD_kon	lh	TD	7	koniocortex	398	135.89	1	1.0	1	102
+1102	TD_kon	rh	TD	7	koniocortex	457	163.56	1	1.0	1	102
+103	TE_agr	lh	TE	2	agranular	180	87.53	1	1.0	0	103
+1103	TE_agr	rh	TE	2	agranular	70	39.41	1	1.0	0	103
+104	TE_dys	lh	TE	3	dysgranular	535	266.63	1	1.0	0	104
+1104	TE_dys	rh	TE	3	dysgranular	458	236.71	1	1.0	0	104
+105	TE_eul1	lh	TE	4	eulaminate I	4543	2006.15	2	0.9993	0	105
+1105	TE_eul1	rh	TE	4	eulaminate I	5473	2329.29	3	0.9996	0	105
+106	TE_eul2	lh	TE	5	eulaminate II	1754	664.0	1	1.0	0	106
+1106	TE_eul2	rh	TE	5	eulaminate II	2190	716.53	2	0.805	0	106
+107	TE_eul3	lh	TE	6	eulaminate III	5952	2168.97	1	1.0	0	107
+1107	TE_eul3	rh	TE	6	eulaminate III	5702	2236.87	1	1.0	0	107
+108	TF_allo	lh	TF	1	allocortex	109	34.19	1	1.0	0	108
+1108	TF_allo	rh	TF	1	allocortex	164	82.59	1	1.0	0	108
+109	TF_agr	lh	TF	2	agranular	372	134.01	2	0.9973	0	109
+1109	TF_agr	rh	TF	2	agranular	753	321.8	1	1.0	0	109
+110	TF_dys	lh	TF	3	dysgranular	357	158.07	1	1.0	0	110
+1110	TF_dys	rh	TF	3	dysgranular	231	86.47	2	0.9957	0	110
+111	TF_eul1	lh	TF	4	eulaminate I	1729	764.77	1	1.0	0	111
+1111	TF_eul1	rh	TF	4	eulaminate I	2120	952.72	1	1.0	0	111
+112	TF_eul2	lh	TF	5	eulaminate II	105	51.02	1	1.0	0	112
+1112	TF_eul2	rh	TF	5	eulaminate II	189	96.64	2	0.836	0	112
+113	TG_allo	lh	TG	1	allocortex	417	144.54	1	1.0	0	113
+1113	TG_allo	rh	TG	1	allocortex	233	88.4	2	0.6395	0	113
+114	TG_agr	lh	TG	2	agranular	1317	547.15	2	0.9992	1	114
+1114	TG_agr	rh	TG	2	agranular	887	418.17	1	1.0	0	114
+115	TG_dys	lh	TG	3	dysgranular	1371	741.28	1	1.0	1	115
+1115	TG_dys	rh	TG	3	dysgranular	1714	857.49	1	1.0	1	115

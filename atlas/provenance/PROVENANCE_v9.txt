@@ -1,0 +1,28 @@
+cyto7 v9 — L/R entorhinal consistency fix of v8 (CANONICAL)
+========================================================================
+Source: pial.{lh,rh}.cyto7.v8.annot -> pial.{lh,rh}.cyto7.v9.annot
+cyto7 stays 7 labels. v9 is the RELEASED / CANONICAL map (Miguel approved v8; v9 is a
+small L/R consistency fix). v4-v8 retained untouched.
+
+Origin: hand-painted by Ricardo Salvador from v8. Evens up the left-right entorhinal
+painting: moves 543 LH vertices agranular -> allocortex (entorhinal /
+parahippocampal / temporal-pole / fusiform), bringing LH entorhinal allocortex ~64% -> ~98%
+to match RH (~92%). RH is UNTOUCHED (0 changes). Cortex-only; the true medial wall
+(?h.cortex.label) is never painted; medial-wall footprint identical to v8 (3153 LH / 2089 RH).
+Isocortex and the belt/insula are unchanged from v8.
+
+Per-vertex diff (v8_to_v9_changelog.csv):
+  lh: 543 vtx changed; net Allocortex +543, Agranular -543.
+      transitions: Agranular->Allocortex 543; Desikan regions: entorhinal 374, parahippocampal 61, temporalpole 60, fusiform 48
+  rh: 0 vtx changed; net no net change.
+      transitions: (none)
+
+Allocortex surface vertices: LH 3604 -> 4147; RH 3193 -> 3193 (unchanged); total 6797 -> 7340.
+
+Topology: strict R1=0 preserved; allocortex = 1 connected component, beta1=0 (open arc);
+belt = one annulus; EulII 1-comp/3-holes; EulIII/konio 3 islands. Identical structure to v8.
+See figures/v8/topology/topology_audit_v9.* and ring_analysis_v9.csv.
+
+Wiring: resolve_target_map('v9', ...) resolves (allowed-versions tuple includes 'v9');
+v9 is the default map (SPEC_adopt_v9 Step 5). Manuscript text files not edited
+(RS applies manuscript/MANUSCRIPT_CHANGES_v9.md on Overleaf).

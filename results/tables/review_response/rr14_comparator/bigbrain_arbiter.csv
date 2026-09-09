@@ -1,0 +1,3 @@
+test,key,effect,p,q,survives,status_in_table_s5,source
+Added value over the area-level map with BigBrain histology as arbiter,av_bigbrain_global,delta |rho| = +0.0515 (cyto7 +0.209 vs von-Economo +0.158),0.3427,0.3427,no,confirmatory,figures/v9/structure_function/bigbrain_addedvalue/added_value_global.csv
+Win fraction on the disagreement set with BigBrain histology as arbiter,av_bigbrain_localized,win fraction = 0.4990 (chance 0.519),0.7403,,no,confirmatory,figures/v9/structure_function/bigbrain_addedvalue/REPORT_bigbrain_added_value.md

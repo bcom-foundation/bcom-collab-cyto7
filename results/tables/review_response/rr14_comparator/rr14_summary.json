@@ -1,0 +1,61 @@
+{
+  "comparators_built": [
+    "BigBrain Hist-G1 septile",
+    "gradient septile",
+    "myelin septile"
+  ],
+  "rotation_validation": {
+    "validated": true,
+    "n_checked": 20,
+    "n_match": 20
+  },
+  "n_disagreement": 27298,
+  "win_fractions": [
+    {
+      "challenger": "cyto7 (published map)",
+      "win_fraction": 0.6010330427137519,
+      "n_disagreement_vertices": 27298,
+      "win_myelin": 0.6155762326910397,
+      "win_thickness": 0.5681734925635578,
+      "win_gradient": 0.6193494028866584
+    },
+    {
+      "challenger": "myelin septile",
+      "win_fraction": 0.7025545216987813,
+      "n_disagreement_vertices": 27298,
+      "win_myelin": 0.9092973844237673,
+      "win_thickness": 0.5899699611693164,
+      "win_gradient": 0.6083962195032603
+    },
+    {
+      "challenger": "gradient septile",
+      "win_fraction": 0.7138618213788556,
+      "n_disagreement_vertices": 27298,
+      "win_myelin": 0.626089823430288,
+      "win_thickness": 0.5890175104403254,
+      "win_gradient": 0.9264781302659536
+    },
+    {
+      "challenger": "BigBrain Hist-G1 septile",
+      "win_fraction": 0.5015752069748699,
+      "n_disagreement_vertices": 27298,
+      "win_myelin": 0.4957139717195399,
+      "win_thickness": 0.49190416880357535,
+      "win_gradient": 0.5171074804014946
+    }
+  ],
+  "matched_null": {
+    "n": 200,
+    "mean": 0.542168107553667,
+    "sd": 0.02983176925246296,
+    "min": 0.4551981830170708,
+    "max": 0.6214863115734974,
+    "cyto7_observed": 0.6010330427137519,
+    "cyto7_percentile": 98.5,
+    "p_vs_matched_null": 0.01990049751243781,
+    "published_scrambled_chance": 0.46
+  },
+  "frozen_v9_unchanged": true,
+  "frozen_rr10_unchanged": true,
+  "runtime_seconds": 985.8
+}

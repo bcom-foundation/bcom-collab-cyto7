@@ -1,0 +1,54 @@
+cyto7 v6 — hand-painted release (canonical): cingulate rings completed
+======================================================================
+Source: pial.{lh,rh}.cyto7.v5.annot -> pial.{lh,rh}.cyto7.v6.annot
+cyto7 stays 7 labels. v6 is the RELEASED / CANONICAL map.
+
+Origin
+------
+Hand-painted by Ricardo Salvador (RS) in the painting tool, starting from v5. RS
+closed the cingulate DYSGRANULAR outer ring and completed the AGRANULAR inner ring,
+mostly by painting genuinely-unpainted cingulate cortex (cyto7-unknown vertices that
+lie on real cortex per FreeSurfer ?h.cortex.label) as dysgranular / agranular, plus a
+minor right-hemisphere allocortex extension. Isocortex was not touched. The true
+medial wall (outside ?h.cortex.label) was never painted.
+
+Per-vertex manual diff: v5_to_v6_changelog.csv (1,931 vertices: LH 844, RH 1087).
+
+Net changes vs v5 (re-confirmed here)
+-------------------------------------
+  LH: unknown->dysgranular 646, agranular->dysgranular 148, dysgranular->agranular 45,
+      unknown->agranular 5.  Net: dysgranular +749, agranular -98, allocortex +0.
+  RH: unknown->dysgranular 663, agranular->dysgranular 188, unknown->agranular 104,
+      dysgranular->agranular 73, agranular->Allocortex 59.  Net: dysgranular +778,
+      agranular -70, allocortex +59.
+  unknown->painted fills: 651 (LH) / 767 (RH), 100% on real cortex, 0 on medial wall.
+  Isocortex UNCHANGED vs v5: eulaminate I/II/III + koniocortex vertex counts identical.
+
+Formal audit (topology_audit_v6.{json,png}; ring_analysis_v6.csv)
+-----------------------------------------------------------------
+  R1 = 0 skip edges (strict sequential gradient preserved).
+  R2 = allocortex+mesocortex belt is a single connected annulus (0 ring gaps).
+  R3 = eulaminate-II is a single component with exactly 3 enclosed holes (both hemis).
+  R4 = higher-order islands (eulaminate III, koniocortex) non-annular (0 violations).
+  Agranular = 1 component, 100% in main, ENCIRCLES the medial hub -> single INNER ring.
+  Dysgranular = 1 component, 100% in main, ENCIRCLES the medial hub -> single OUTER ring.
+  (v6 completes the agranular ring that v5 left interrupted at the retrosplenial isthmus.)
+
+Speck check (<30-vertex components -> majority neighbour, protecting features)
+------------------------------------------------------------------------------
+  No non-protected component < 30 vertices exists in v6 -> nothing absorbed.
+  Second allocortex component KEPT (genuine piriform/periamygdaloid paleocortex):
+    LH 60 vtx, centroid (-24, +8, -21), ventral lateral-orbitofrontal/insula;
+    RH 20 vtx, centroid (+27, +9, -20), ventral insula; both 100% allocortex already
+    in v5 (pre-existing paleocortex island, not a v6 straggler). See the v6_speck_cleanup
+    note appended to v5_to_v6_changelog.csv.
+
+Canonical wiring
+----------------
+  resolve_target_map("v6", ...) resolves to pial.{hemi}.cyto7.v6.annot
+  (allowed-versions tuple in scripts/cyto7_surface_io.py includes "v6");
+  refresh_figures "latest" and plot_flat_categorical default now resolve to v6;
+  FIGURE_MANIFEST.md and the released figures/v6/ tree regenerated on v6.
+  Full re-run: scripts/rerun_all_v6.py -> figures/v6/REPORT_v6.md (changed-vs-v5).
+
+v4 and v5 retained untouched. Manuscript text files not edited.

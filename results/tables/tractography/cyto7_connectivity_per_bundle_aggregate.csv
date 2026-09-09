@@ -1,0 +1,8 @@
+,Allocortex,Agranular,Dysgranular,Eulaminate-I,Eulaminate-II,Eulaminate-III,Koniocortex
+Allocortex,30,83,19,0,164,0,0
+Agranular,83,88,635,990,644,586,129
+Dysgranular,19,635,900,423,1910,1195,96
+Eulaminate-I,0,990,423,1068,2809,3093,158
+Eulaminate-II,164,644,1910,2809,1517,4455,233
+Eulaminate-III,0,586,1195,3093,4455,2036,249
+Koniocortex,0,129,96,158,233,249,88
