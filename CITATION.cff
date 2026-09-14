@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: If you use cyto7, please cite both the paper and the data DOI.
 title: >-
-  cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex
+  cyto7: an open, vertex-level cortical type atlas of the human cortex
 type: dataset
 license: CC-BY-4.0
 # The Zenodo DOI is minted from a GitHub release, which does not exist yet. This is a
@@ -41,7 +41,7 @@ keywords:
 references:
   - type: article
     title: >-
-      cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex
+      cyto7: an open, vertex-level cortical type atlas of the human cortex
     # The published DOI and the preprint DOI are both pending; neither resolves yet.
     doi: "TODO(DOI)"
     authors:

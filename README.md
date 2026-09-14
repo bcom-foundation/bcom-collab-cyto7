@@ -16,7 +16,7 @@ koniocortex.
 Please cite both the paper and the data.
 
 **Paper.** Salvador R., Mercadal B., Castaldo F., García-Cabezas M. Á., Ruffini G.
-*cyto7: an open, surface-native cytoarchitectural type atlas of the human cortex.*
+*cyto7: an open, vertex-level cortical type atlas of the human cortex.*
 
 - Published version: DOI pending.
 - Preprint, openly downloadable: DOI pending.
@@ -30,7 +30,7 @@ Both DOIs are minted after the paper is final and are shown as pending until the
 @article{cyto7,
   author  = {Salvador, Ricardo and Mercadal, Borja and Castaldo, Francesca and
              Garc{\'\i}a-Cabezas, Miguel {\'A}ngel and Ruffini, Giulio},
-  title   = {cyto7: an open, surface-native cytoarchitectural type atlas of the
+  title   = {cyto7: an open, vertex-level cortical type atlas of the
              human cortex},
   year    = {2026},
   doi     = {TODO},
