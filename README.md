@@ -1,6 +1,6 @@
 # cyto7
 
-**cyto7 is an open, vertex-level, seven-type cytoarchitectural atlas of the human
+**cyto7 is an open, vertex-level, seven-type cortical type atlas of the human
 cerebral cortex**, hand-painted on the FreeSurfer `fsaverage` surface following the
 García-Cabezas protocol and revised by the protocol's authors. Existing digital
 cortical-type maps are area-level: they assign one type per classical area and

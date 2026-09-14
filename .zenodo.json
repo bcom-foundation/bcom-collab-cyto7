@@ -1,7 +1,7 @@
 {
   "title": "cyto7: an open, vertex-level cortical type atlas of the human cortex",
   "upload_type": "dataset",
-  "description": "<p>cyto7 is an open, vertex-level, seven-type cytoarchitectural atlas of the human cerebral cortex, hand-painted on the FreeSurfer fsaverage surface following the Garcia-Cabezas protocol and revised by the protocol's authors. This deposition contains the atlas products only: the released v9 annotation files on fsaverage, nearest-neighbour resamples to fs_LR 32k, the per-vertex support map and its components, the crossed parcellation with per-node tables and colour tables, and the full provenance record (as-painted map, superseded versions, per-vertex change logs).</p><p>No third-party data is redistributed. The analysis code is on GitHub; see the repository README.</p>",
+  "description": "<p>cyto7 is an open, vertex-level, seven-type cortical type atlas of the human cerebral cortex, hand-painted on the FreeSurfer fsaverage surface following the Garcia-Cabezas protocol and revised by the protocol's authors. This deposition contains the atlas products only: the released v9 annotation files on fsaverage, nearest-neighbour resamples to fs_LR 32k, the per-vertex support map and its components, the crossed parcellation with per-node tables and colour tables, and the full provenance record (as-painted map, superseded versions, per-vertex change logs).</p><p>No third-party data is redistributed. The analysis code is on GitHub; see the repository README.</p>",
   "license": "cc-by-4.0",
   "access_right": "open",
   "creators": [
