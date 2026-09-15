@@ -43,7 +43,14 @@ BANDS = [
         ("Gene expression PC1 (AHBA)", "genepc1"),
         ("T1w/T2w myelin", "myelin"),
         ("Ionotropic/metabotropic index", "composite_iono_minus_metabo_index"),
-        ("Evolutionary expansion", "xu2020_evoexp"),
+        # Evolutionary expansion is no longer a row of this panel. The comparison was
+        # still run and its values are in the outcome table (Xu 2020 rho = -0.27,
+        # Hill 2010 rho = -0.11); the paper reports them and declines to build on them,
+        # because the available expansion estimates rest on cross-species alignments
+        # whose phylogenetic assumptions differ from the cortical-type framework.
+        # The analysis itself is untouched: fig9_predictions.py still computes both and
+        # rr2_outcome_table.py still tabulates them.
+        # Expansion was a non-survivor, so the survivor count is unchanged at 10 of 11.
         ("Receptor diversity", "diversity_shannon_entropy_H"),
         ("Cortical thickness", "thickness"),
         ("Functional gradient", "gradient"),
@@ -131,9 +138,11 @@ def main(argv=None):
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.tick_params(axis="y", length=0)
-    ax.text(0.44, 0.05, "rises with type", fontsize=8, style="italic", color="#b2182b",
+    # "increases"/"decreases", not "rises"/"falls": those are the verbs the paper uses
+    # throughout, and these two are baked into the image where no .tex grep finds them.
+    ax.text(0.44, 0.05, "increases with type", fontsize=8, style="italic", color="#b2182b",
             ha="center", va="center")
-    ax.text(-0.44, 0.05, "falls with type", fontsize=8, style="italic", color="#2166ac",
+    ax.text(-0.44, 0.05, "decreases with type", fontsize=8, style="italic", color="#2166ac",
             ha="center", va="center")
     leg = [Line2D([0], [0], marker="o", color="0.35", lw=0, mfc="0.35", mec="0.35", ms=9,
                   label="survives spin + FDR ($q<0.05$)"),

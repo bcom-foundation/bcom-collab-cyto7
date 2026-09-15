@@ -66,11 +66,19 @@ was mirrored across hemispheres.
 | xu2020 evolutionary expansion | **bilateral** | **−0.266** | 0.028 | −0.303 (p=0.010) | 0.069 |
 | hill2010 developmental expansion | RH-only (exploratory) | −0.115 | 0.416 | −0.144 | 0.416 |
 
-**Outcome:** with a proper bilateral map, **evolutionary expansion tracks the type axis in the
-predicted direction** (ρ=−0.27, p=0.028; allo-excluded p=0.010) — greater expansion in
-less-differentiated cortex — a clear improvement over the RH-only parent result (which was
+**Outcome:** with a proper bilateral map, evolutionary expansion runs in the predicted
+direction (ρ=−0.27, p=0.028; allo-excluded p=0.010) — greater expansion in
+less-differentiated cortex — a change from the RH-only parent result (which was
 n.s., p≈0.49). It sits just above the Fig-9 FDR threshold (q=0.069). Developmental expansion
 (RH-only) remains n.s.
+
+> **What the paper does with this (as of 15 Sept 2026).** Both comparisons were run and both
+> are reported: they are rows 81 and 82 of the outcome table (Table S8), and §3.7 gives their
+> values (ρ = −0.27 and −0.11). The paper **does not build on them**, because the available
+> expansion estimates rest on cross-species alignments whose phylogenetic assumptions differ
+> from the cortical-type framework. The comparison was therefore removed from Figure 5 and
+> moved to §4.10 as future work: a direct human-to-macaque comparison in matched types.
+> This report is the record of what was computed, which is why the numbers stay here.
 
 **Fig-9 family (BH-FDR across H + xu2020 evoexp + devexp):** H q=0.069, xu2020 evoexp q=0.069,
 devexp q=0.416 — the two evolutionary/diversity axes are nominally significant and near-FDR;
@@ -143,8 +151,13 @@ cyto7 recovers **several** Fig. 9 axes from independent data, with honestly vary
   OCD, 22q show atrophy concentrated in lower-type cortex; depression and ADHD remain
   significant even after controlling for the functional gradient (cyto7-specific), while OCD
   is carried by the shared gradient; epilepsy is opposite and schizophrenia does not follow.
-- **Evolutionary cortical expansion** (Part C, now bilateral) tracks the type axis in the
-  predicted direction (ρ=−0.27, p=0.028; allo-excluded p=0.010).
+- **Evolutionary cortical expansion** (Part C, now bilateral) runs in the predicted direction
+  (ρ=−0.27, p=0.028; allo-excluded p=0.010), but **the paper does not build on it**. Both
+  expansion comparisons are reported as rows 81 and 82 of the outcome table (Table S8) and
+  their values are given in §3.7; the result was removed from Figure 5 and the direct
+  human-to-macaque comparison in matched types is listed in §4.10 as future work, because the
+  available expansion estimates rest on cross-species alignments whose phylogenetic
+  assumptions differ from the cortical-type framework.
 - **Receptor diversity** (Part A) is directionally correct but weak.
 Together with the ionotropic/metabotropic ratio (Supp Fig S5), cyto7 aligns with **multiple —
 not all — of the molecular/cellular gradients Fig. 9 sketches**, and the disease-vulnerability
