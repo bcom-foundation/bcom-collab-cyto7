@@ -46,6 +46,44 @@ Then the usual tools work unchanged, for example per-type cortical thickness:
 mri_segstats --annot YOUR_SUBJECT lh cyto7.v9   --i $SUBJECTS_DIR/YOUR_SUBJECT/surf/lh.thickness --sum lh.cyto7.thickness.txt
 ```
 
+### A volumetric map for one subject
+
+The atlas is released on the surface only. To get a volumetric parcellation —
+for head modelling, an EEG/MEG or tES source space, or volume-space fMRI —
+build one per subject, after the `mri_surf2surf` step above:
+
+```bash
+mri_aparc2aseg --s YOUR_SUBJECT --annot cyto7.v9 --o cyto7+aseg.mgz
+```
+
+This writes a volume in which cortical voxels carry the cyto7 type and
+subcortical structures come from the standard `aseg`.
+
+**Read this before using the output.** `mri_aparc2aseg` adds the annotation's
+`structure_id` to 1000 (left) or 2000 (right). The released colour tables store
+a *packed RGB value* in that field, because that is what makes the `.annot`
+files round-trip correctly in other viewers. So the command above does **not**
+give labels 1001–1007 and 2001–2007; it gives 1000-plus-packed-RGB, which is
+not a usable label map.
+
+Two ways to clean labels, both in `code/pipeline/compute_tractography_connectivity.py`:
+
+- `make_freesurfer_friendly_ctab()` rewrites the colour table so `structure_id`
+  equals the cyto7 code, giving 1001–1007 and 2001–2007 directly; or
+- `remap_aparc2aseg_volume()` post-processes the volume the naive command
+  produces into labels 1–7, with 0 elsewhere.
+
+This is the path the tractography analysis uses (Annex G of the paper), so it is
+exercised code rather than an untested recipe.
+
+**No fsaverage volume is shipped**, deliberately. fsaverage's volume is a
+template average, so filling its ribbon with cyto7 labels produces something
+that looks usable but is not appropriate for individual analysis; the
+per-subject recipe above gives a better product for free. A volumetric release
+in MNI152 space is under consideration for a future version. It needs its own
+provenance record and a check that the seven types and the map's topology
+survive the ribbon fill and the nonlinear warp, so it is not included here.
+
 ### Connectome Workbench (fs_LR 32k)
 
 The 32k label GIFTIs are already in fs_LR 32k, so subject data in that space needs
