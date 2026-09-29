@@ -1,8 +1,11 @@
 """Per-vertex support map for the cyto7 map (Layer 1.5).
 
 Implements ``docs/REFINE_allocortex.md`` Layer 1.5: a per-vertex support in
-[0,1] for every labelled vertex, combining five independent, separately-saved
-components (so the map is interpretable and source-decomposed):
+[0,1] for every labelled vertex. **The score combines four anatomy components;
+a fifth, C_data, is computed and saved but deliberately kept out of it**, which
+is what lets section 2.4 call the score independent of the modalities used to
+validate the atlas. All five are saved separately, so the map is interpretable
+and source-decomposed:
 
 1. **C_atlas**  - concordance of the cyto7 type with independent parcellations.
    Isocortex: the von-Economo-derived type (``resources/voneconomo``), scored by
@@ -18,17 +21,24 @@ components (so the map is interpretable and source-decomposed):
    ``--medial-buffer-mm`` geodesic mm). Boundaries/medial rim are intrinsically
    less certain (critical for the allocortex ring).
 4. **C_data**   - range-restricted data concordance: agreement of local T1w/T2w
-   myelin with the type's expected median (``figures/functional_summary_table.csv``).
+   myelin with the type's expected median, from
+   ``figures/v9/structure_function/functional_summary_table_v9.csv``.
    ONLY computed for Eulaminate I/II/III outside sensorimotor cortex
    (precentral/postcentral/paracentral); elsewhere it does not contribute
    (myelin proportional to differentiation does not hold there, by design).
+   **NOT part of the combined score** - see ``main()``, which combines only
+   ``["atlas", "topo", "geom", "prior"]``. It ships as
+   ``confidence_data_overlay.shape.gii`` and as the bottom row of the diagnostic
+   ``support_map.png``, both labelled "NOT in score". Its ``--w-data`` weight is
+   therefore never consumed (RR34 Part A).
 5. **C_prior**  - per-class provenance prior (expert-review status): higher for
    the vetted isocortical types, lower for the allocortex/agranular/dysgranular
    zone the painter flagged as uncertain (deck slide 16). See ``PRIOR``.
 
 Combine (weighted geometric mean, weights are CLI flags):
-``support = (prod_i C_i^{w_i})^{1/sum w_i}`` over the components active at
-each vertex. A categorical map (high>=0.66 / medium / low<0.33) is also emitted.
+``support = (prod_i C_i^{w_i})^{1/sum w_i}`` over the **anatomy** components
+active at each vertex. A categorical map (high>=0.66 / medium / low<0.33) is
+also emitted.
 
 Run::
 
@@ -38,10 +48,6 @@ Run::
 """
 
 from __future__ import annotations
-
-import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
-import cyto7_config as cfg
 
 import argparse
 import csv
@@ -59,6 +65,10 @@ import pandas as pd
 from matplotlib import cm
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import dijkstra
+
+import sys as _sys, pathlib as _pathlib
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
+import cyto7_config as cfg
 
 from cyto7_surface_io import REPO_ROOT
 from audit_topology import adjacency, audit_hemi, ordinal
@@ -130,13 +140,41 @@ def desikan_sensorimotor_mask(hemi: str, n: int) -> np.ndarray:
     return np.isin(np.clip(labels, 0, len(names) - 1), idx)
 
 
-def myelin_on_fsaverage(hemi: str) -> np.ndarray | None:
+def myelin_on_fsaverage(hemi: str, allow_missing: bool = False) -> np.ndarray | None:
+    """The T1w/T2w map behind C_data, the overlay that is kept OUT of the score.
+
+    RR34 B2: this used to return None whenever the cache was absent, so the data overlay
+    silently became all-NaN and the run still reported success. Skipping it is legitimate,
+    but it has to be asked for: pass --allow-missing-myelin (or allow_missing=True).
+    """
     p = CACHE / f"myelin_fsaverage_164k_{hemi}.npy"
-    return np.load(p) if p.exists() else None
+    if p.exists():
+        return np.load(p)
+    if allow_missing:
+        print(f"  [{hemi}] {p.name} absent and --allow-missing-myelin was passed: "
+              "the data overlay will be empty. The combined score is unaffected.")
+        return None
+    raise SystemExit(
+        f"{p} is missing, so C_data (the data overlay) cannot be computed. It is not part "
+        "of the combined score, so skipping it is harmless - but say so explicitly with "
+        "--allow-missing-myelin rather than letting the run succeed with an empty overlay.")
 
 
 def myelin_medians(hemi: str) -> dict[int, float]:
-    t = pd.read_csv(REFINE_DIR.parent / "functional_summary_table.csv")
+    # RR33: this used to read REFINE_DIR.parent / "functional_summary_table.csv", i.e.
+    # figures/functional_summary_table.csv -- a pre-v9 summary above the version tree, now in
+    # figures/_superseded_pre_v9/. Because rerun_all_v9.py built the support map *before* the
+    # structure-function step that writes the v9 table, the support map could never see v9
+    # myelin medians; it always consumed the 2026-07-06 file. That ordering is fixed in
+    # rerun_all_v9.py, and this read now fails loudly instead of silently using a stale table.
+    tbl = (REPO_ROOT / "figures" / "v9" / "structure_function"
+           / "functional_summary_table_v9.csv")
+    if not tbl.exists():
+        raise SystemExit(
+            f"{tbl} is missing. The support map needs the v9 per-type myelin medians, so "
+            "summarise_functional_features.py must run before build_support_map.py. Do not "
+            "substitute an untagged summary table: that is the defect RR33 removed.")
+    t = pd.read_csv(tbl)
     t = t[(t.FeatureKey == "myelin") & (t.Hemi == hemi.upper())]
     lower2code = {v.lower(): k for k, v in CODE_NAME.items()}  # CSV type names are lowercase
     out: dict[int, float] = {}
@@ -230,7 +268,7 @@ def compute_components(hemi, lab, coords, faces, A, lookup, args):
     # ---- C_data (range-restricted) ----
     C_data = np.full(n, np.nan)
     w_data = np.zeros(n)
-    myelin = myelin_on_fsaverage(hemi)
+    myelin = myelin_on_fsaverage(hemi, allow_missing=args.allow_missing_myelin)
     if myelin is not None:
         med = myelin_medians(hemi)
         gap = max(med.get(6, 1.37) - med.get(4, 1.25), 1e-3)  # EuIII - EuI spread
@@ -367,6 +405,9 @@ def parse_args(argv=None):
     p.add_argument("--medial-buffer-mm", type=float, default=8.0)
     p.add_argument("--dpi", type=int, default=300)
     p.add_argument("--no-figure", action="store_true")
+    p.add_argument("--allow-missing-myelin", action="store_true",
+                   help="proceed with an empty data overlay if the T1w/T2w cache is absent; "
+                        "without this the run stops rather than falling back silently (RR34)")
     return p.parse_args(argv)
 
 
