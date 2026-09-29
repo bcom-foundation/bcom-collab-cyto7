@@ -118,15 +118,17 @@ def harvest_bigbrain_profiles():
         add(measure=f"BigBrain {r.Feature}", key=key,
             family="bigbrain_profile_panel_5", n_family=len(t),
             status="confirmatory" if key == prereg else "exploratory",
-            predicted_direction="fall (pre-registered)" if key == prereg else "none",
+            predicted_direction="fall (pre-specified)" if key == prereg else "none",
             unit=VERTEX, n_obs=int(r.n), null=SPIN,
             effect=f"Spearman rho = {r.spearman_rho:+.4f}",
             p_raw=r.p_spin, q=r.p_spin_fdr,
             survives="yes" if r.p_spin_fdr < 0.05 else "no",
             source_file="figures/v9/structure_function/bigbrain_profiles/"
                         "profile_features_by_type.csv",
-            notes=("pre-registered differentiation index; its gate failed (|rho| 0.209 "
-                   "against a 0.4 target), so the profile leg is reported as inconclusive"
+            notes=("pre-specified differentiation index; the index and the 0.4 gate were "
+                   "fixed in advance in docs/analysis_plan_bigbrain_profiles.md, released "
+                   "with the atlas. The gate failed (|rho| 0.209 against a 0.4 target), so "
+                   "the profile leg is reported as inconclusive"
                    if key == prereg else
                    "single-specimen BigBrain profiles; reported, not used as an arbiter"))
 
@@ -139,11 +141,11 @@ def harvest_bigbrain_profiles():
 def harvest_meg():
     coded = pd.read_csv(SF / "meg_dynamics_v2_summary.csv").set_index("metric")
     single = pd.read_csv(SF / "meg_dynamics_v2_summary_fdr_singlemember.csv").set_index("metric")
-    label = {"int_area": "Intrinsic timescale (area under the ACF, pre-registered)",
+    label = {"int_area": "Intrinsic timescale (area under the ACF, pre-specified)",
              "int_1e": "Intrinsic timescale (1/e lag)",
              "int_tau": "Intrinsic timescale (exponential decay)",
              "knee_tau": "Intrinsic timescale (knee-derived)",
-             "exponent_fixed": "Aperiodic exponent (fixed, 2-40 Hz, pre-registered)",
+             "exponent_fixed": "Aperiodic exponent (fixed, 2-40 Hz, pre-specified)",
              "exponent_knee": "Aperiodic exponent (knee mode)",
              "exponent_broad": "Aperiodic exponent (broadband 1-100 Hz)",
              "offset": "Spectral offset", "peak_freq": "Peak frequency",
@@ -252,7 +254,7 @@ def harvest_layers():
         add(measure=f"{r.feature} [{r.kind}, layer {r.layer if isinstance(r.layer, str) else '-'}]",
             key=f"layer_{r.feature}", family="layer_markers_8", n_family=len(t),
             status="confirmatory" if isinstance(r.prereg, str) else "exploratory",
-            predicted_direction=("rise (pre-registered)" if isinstance(r.prereg, str)
+            predicted_direction=("rise (pre-specified)" if isinstance(r.prereg, str)
                                  else "none"),
             unit=PARCEL68, n_obs=int(r.n), null=SPIN_PARCEL,
             effect=f"Spearman rho = {r.spearman_rho:+.4f}", p_raw=r.p_spin, q=r.p_spin_fdr,
@@ -369,9 +371,9 @@ def harvest_added_value():
             notes="per-feature win fraction, reported descriptively. The binomial test against "
                   "0.5 previously given here has been withdrawn: the vertices are not "
                   "independent, so the binomial n is not the effective n, and the chance "
-                  "baseline for this comparison is not 0.5 but the spin-null level of about "
-                  "0.52. The aggregate of myelin/thickness/gradient is the reported 60.1% and "
-                  "carries the spin null against that baseline (RR4)")
+                  "baseline is not 0.5 but the level of the relevant empirical null, which "
+                  "differs between comparisons. The aggregate of myelin/thickness/gradient is "
+                  "the reported 60.1% and is tested against its own null distribution (RR4)")
     for subset, win, p in (("all", 0.6010, 0.001), ("off-by-1", 0.5757, 0.002),
                            ("off-by->=2", 0.7433, 0.001)):
         add(measure=f"Aggregate win fraction on the disagreement set ({subset})",
@@ -855,6 +857,10 @@ def main():
 
 def _esc(s) -> str:
     s = "" if s is None else str(s)
+    # Labels inherited from upstream CSVs still say "pre-registered". There is no
+    # registration; the index and threshold were fixed in a written analysis plan.
+    # Normalise here so the rendered table matches the manuscript wording.
+    s = s.replace("pre-registered", "pre-specified")
     # the shipped table breaks long family names, so an escaped underscore carries
     # an \allowbreak with it
     for a, b in (("\\", "\\textbackslash{}"), ("_", "\\_\\allowbreak{}"), ("&", "\\&"),
@@ -923,8 +929,9 @@ def write_tex(df: pd.DataFrame):
          r"applied and why. Rows whose status is \emph{descriptive} carry no null and no test "
          r"and are never asterisked: the per-feature win fractions on the disagreement set are "
          r"reported this way, because the vertices are not independent and the chance baseline "
-         r"for that comparison is the spin-null level of about 0.52 rather than 0.5. The "
-         r"aggregate win fractions are tested against that baseline and are asterisked. "
+         r"for a win fraction is not 0.5 but the level of the relevant empirical null, which "
+         r"differs between comparisons. The aggregate win fractions are tested against their "
+         r"own null distributions and are asterisked. "
          r"Robustness and sensitivity analyses reported in the text are not "
          r"confirmatory tests, sit in no declared family and are therefore not listed here; "
          r"they are disclosed, without FDR, in the robustness listing.}"
