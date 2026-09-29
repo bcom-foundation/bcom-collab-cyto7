@@ -1,4 +1,4 @@
-conf_tertile,n_vertices,win_frac_cyto7,conf_range
+support_tertile,n_vertices,win_frac_cyto7,conf_range
 low,9099,0.5713,[0.67..0.90)
 mid,7378,0.6953,[0.90..0.98)
 high,10821,0.5617,[0.98..0.98]

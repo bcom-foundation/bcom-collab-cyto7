@@ -1,6 +1,8 @@
 # Task — BigBrain histological validation done right (intensity profiles, not the G1 gradient)
 
-**For:** Claude Code, run in `E:\Research\Analysis_Cyto_Types_Paper`.
+**Origin:** the written analysis plan for the BigBrain profile validation, fixing the differentiation
+index and the arbiter-validity gate before the comparison was made. Reproduced from the working
+repository; the local path in its original header has been removed.
 **Why:** the earlier BigBrain test used the Hist-G1 gradient as arbiter, which itself barely tracks the
 type axis (ρ ≈ 0.21, spin p 0.37) — an underpowered referee, so its added-value null (49.9%) is
 uninformative, not evidence against the refinement. Hist-G1 is a *derived* covariance-embedding that

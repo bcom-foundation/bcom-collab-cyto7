@@ -1,4 +1,4 @@
-conf_tertile,n,error_rate_vs_histology
+support_tertile,n,error_rate_vs_histology
 low,170,0.1529
 mid,126,0.0714
 high,213,0.0188

@@ -15,9 +15,9 @@ disease_partial_8,8,8,2,2,yes
 tractography_5,5,5,0,2,no
 tractography_per_type_8 (no FDR applied),8,8,0,5,no
 added_value_global_9,9,9,3,3,yes
-added_value_localized_27 (no FDR applied),27,27,0,25,no
+"added_value_localized_27 (descriptive, not tested)",27,27,0,0,no
 added_value_aggregate_3,3,3,0,3,no
 bigbrain_added_value_2,2,2,0,0,yes
 negative_control_2,2,2,0,0,yes
 benchmark_controls_4,4,4,0,1,no
-TOTAL,147,147,34,70,
+TOTAL,147,147,34,45,
