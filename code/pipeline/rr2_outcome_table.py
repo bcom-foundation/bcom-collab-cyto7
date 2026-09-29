@@ -360,14 +360,18 @@ def harvest_added_value():
     for _, r in loc.iterrows():
         add(measure=f"Win fraction on the disagreement set ({r.subset}): {r.feature}",
             key=f"av_local_{r.feature}_{r.subset}",
-            family="added_value_localized_27 (no FDR applied)", n_family=len(loc),
-            status="confirmatory", predicted_direction="win fraction > 0.5 (fixed in advance)",
-            unit=VERTEX, n_obs=int(r.n), null="binomial test against 0.5",
-            effect=f"win fraction = {r.win_frac_cyto7:.4f}", p_raw=r.binom_p, q=np.nan,
-            survives="yes (raw p)" if r.binom_p < 0.05 else "no",
+            family="added_value_localized_27 (descriptive, not tested)", n_family=len(loc),
+            status="descriptive", predicted_direction="win fraction > 0.5 (fixed in advance)",
+            unit=VERTEX, n_obs=int(r.n), null="none; reported descriptively",
+            effect=f"win fraction = {r.win_frac_cyto7:.4f}", p_raw=np.nan, q=np.nan,
+            survives="not tested",
             source_file="figures/v9/added_value_localized.csv",
-            notes="per-feature win fraction; the aggregate of myelin/thickness/gradient is the "
-                  "reported 60.1% and carries the spin null (RR4)")
+            notes="per-feature win fraction, reported descriptively. The binomial test against "
+                  "0.5 previously given here has been withdrawn: the vertices are not "
+                  "independent, so the binomial n is not the effective n, and the chance "
+                  "baseline for this comparison is not 0.5 but the spin-null level of about "
+                  "0.52. The aggregate of myelin/thickness/gradient is the reported 60.1% and "
+                  "carries the spin null against that baseline (RR4)")
     for subset, win, p in (("all", 0.6010, 0.001), ("off-by-1", 0.5757, 0.002),
                            ("off-by->=2", 0.7433, 0.001)):
         add(measure=f"Aggregate win fraction on the disagreement set ({subset})",
@@ -670,7 +674,7 @@ def apply_convention_corrections(df: pd.DataFrame, log=print) -> tuple:
 
 # Families that declare no FDR (Table S4). A q is not expected for these.
 NO_FDR_FAMILIES = {
-    "added_value_aggregate_3", "added_value_localized_27 (no FDR applied)",
+    "added_value_aggregate_3", "added_value_localized_27 (descriptive, not tested)",
     "tractography_5", "tractography_per_type_8 (no FDR applied)",
     "dynamics_robustness_variants (outside FDR)", "benchmark_controls_4",
     "no FDR family (robustness variant)",
@@ -911,10 +915,17 @@ def write_tex(df: pd.DataFrame):
          r"specified in advance, not whether its result is retained: the connectivity analysis "
          r"of Annex~G was specified in advance but is reported as exploratory there, because it "
          r"does not survive a spin null or a bundle-level model. An asterisk "
-         r"marks tests surviving at $q<0.05$ within their family. Families are never pooled. "
+         r"marks a test that survives the null in its Null column: at $q<0.05$ within its "
+         r"family where Benjamini--Hochberg correction was applied, and at $p<0.05$ where it "
+         r"was not. Families are never pooled. "
          r"Tests reported without a $q$ had no FDR applied within their family and are marked "
          r"accordingly; Table~S4 lists every family with its size, whether correction was "
-         r"applied and why. Robustness and sensitivity analyses reported in the text are not "
+         r"applied and why. Rows whose status is \emph{descriptive} carry no null and no test "
+         r"and are never asterisked: the per-feature win fractions on the disagreement set are "
+         r"reported this way, because the vertices are not independent and the chance baseline "
+         r"for that comparison is the spin-null level of about 0.52 rather than 0.5. The "
+         r"aggregate win fractions are tested against that baseline and are asterisked. "
+         r"Robustness and sensitivity analyses reported in the text are not "
          r"confirmatory tests, sit in no declared family and are therefore not listed here; "
          r"they are disclosed, without FDR, in the robustness listing.}"
          r"\label{tab:outcomes}\\",
