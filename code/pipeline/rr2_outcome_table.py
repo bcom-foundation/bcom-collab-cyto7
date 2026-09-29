@@ -79,20 +79,56 @@ def harvest_structure_function():
 
 
 def harvest_external():
+    """External references. RR32: two members, not three.
+
+    BigBrain profile skewness moved out to the BigBrain profile-feature panel, where
+    its q was computed all along (RR31 showed its 0.4008 is exactly BH within that
+    five-member panel, 0.3207 x 5/4, not BH within this family). With skewness gone
+    the remaining two recompute to q = 0.002 and 0.063.
+    """
     t = pd.read_csv(SF / "external_validation_table.csv")
+    t = t[t.FeatureKey != "bigbrain_profile_skewness"]
     pred = {"genepc1": "rise (fixed in advance)",
-            "receptorpc1": "fall (fixed in advance)",
-            "bigbrain_profile_skewness": "fall (pre-registered)"}
+            "receptorpc1": "fall (fixed in advance)"}
     for _, r in t.iterrows():
-        add(measure=r.Feature, key=r.FeatureKey, family="external_reference_3", n_family=len(t),
+        add(measure=r.Feature, key=r.FeatureKey, family="external_reference_2", n_family=len(t),
             status="confirmatory", predicted_direction=pred.get(r.FeatureKey, "none"),
             unit=VERTEX, n_obs=int(r.n), null=SPIN,
             effect=f"Spearman rho = {r.spearman_rho:+.4f}",
             p_raw=r.p_spin, q=r.p_spin_fdr, survives="yes" if r.p_spin_fdr < 0.05 else "no",
             source_file="figures/v9/structure_function/external_validation_table.csv",
-            notes=("gene PC1 from AHBA (abagen, 6 donors, fsaverage 10k -> 32k); BigBrain is a "
-                   "single specimen" if r.FeatureKey != "receptorpc1" else
+            notes=("gene PC1 from AHBA (abagen, 6 donors, fsaverage 10k -> 32k)"
+                   if r.FeatureKey != "receptorpc1" else
                    "PC1 of the 19 Hansen-2022 PET maps"))
+
+
+def harvest_bigbrain_profiles():
+    """RR32 A1: the BigBrain profile-feature panel, declared as its own family.
+
+    Five features over the raw 50-depth intensity profiles. RR31 established that all
+    five stored q reproduce from BH within these five, so the family was real all
+    along and simply undeclared; the profile-SD test at rho +0.44, q 0.015 was the
+    surviving test sitting outside the census.
+    """
+    p = SF / "bigbrain_profiles" / "profile_features_by_type.csv"
+    t = pd.read_csv(p)
+    prereg = "bigbrain_profile_skewness"
+    for _, r in t.iterrows():
+        key = f"bigbrain_profile_{r.FeatureKey}"
+        add(measure=f"BigBrain {r.Feature}", key=key,
+            family="bigbrain_profile_panel_5", n_family=len(t),
+            status="confirmatory" if key == prereg else "exploratory",
+            predicted_direction="fall (pre-registered)" if key == prereg else "none",
+            unit=VERTEX, n_obs=int(r.n), null=SPIN,
+            effect=f"Spearman rho = {r.spearman_rho:+.4f}",
+            p_raw=r.p_spin, q=r.p_spin_fdr,
+            survives="yes" if r.p_spin_fdr < 0.05 else "no",
+            source_file="figures/v9/structure_function/bigbrain_profiles/"
+                        "profile_features_by_type.csv",
+            notes=("pre-registered differentiation index; its gate failed (|rho| 0.209 "
+                   "against a 0.4 target), so the profile leg is reported as inconclusive"
+                   if key == prereg else
+                   "single-specimen BigBrain profiles; reported, not used as an arbiter"))
 
 
 # --------------------------------------------------------------------------- #
@@ -131,7 +167,7 @@ def harvest_meg():
             fam, nfam, q = "dynamics_robustness_variants (outside FDR)", len(robust), np.nan
             status = "robustness"
         else:
-            fam, nfam, q = "osc_band_as_coded", len(osc_only), float(c["fdr_q"])
+            fam, nfam, q = "osc_band_as_coded_4", len(osc_only), float(c["fdr_q"])
             status = "exploratory"
         pd_ = {"neg": "fall", "pos": "rise", "none": "none"}[c["predicted_sign"]]
         add(measure=label.get(m, m), key=m, family=fam, n_family=nfam, status=status,
@@ -384,9 +420,25 @@ MANUSCRIPT_CLAIMS = [
      "functional_summary_table_v9.csv",
      "manuscript states q ~ 0.009; the released table gives 0.006, which is also what the "
      "abstract's 'all q <~ 0.006' implies"),
+    # RR32: this row used to read "consistent", sourced to "REPORT.md analysis 4 /
+    # sensitivity_exclusions.csv". sensitivity_exclusions.csv holds neither number - it is
+    # the allocortex exclusion, not the agranular one - and no file in the repository holds
+    # the agranular pair at all. Asserting agreement against a file that does not contain
+    # the values is the same class of error this table exists to catch.
+    # RR33 recomputed this on v9 as a first-class test (scripts/rr33_agranular_exclusion.py),
+    # so the record side is now a real pair rather than "not stored anywhere". The prose is
+    # still wrong, and now wrong in a way that is established rather than suspected.
     ("section 3.5", "myelin rho excluding vs including agranular", "0.62 vs 0.60",
-     "0.62 vs 0.60 (dysgranular-to-koniocortex vs agranular included)",
-     "REPORT.md analysis 4 / sensitivity_exclusions.csv", "consistent"),
+     "0.5851 vs 0.6039 (types 3-7 vs types 2-7, both allocortex-excluded)",
+     "figures/v9/review_response/rr33_figures/agranular_exclusion.csv",
+     "WRONG IN VALUE AND IN DIRECTION. Recomputed on v9 through the same validity mask and "
+     "spin null as every other correlation (N=1000, seed 0; the run reproduces the published "
+     "+0.5894 and the released +0.6039 exactly), excluding agranular gives +0.5851 against "
+     "+0.6039 including it: the exclusion LOWERS the correlation by 0.019, where the sentence "
+     "asserts it raises it by 0.02. The robustness claim survives - both arms clear their spin "
+     "null at p = 0.001 and the correlation moves by less than 0.02 - but the printed pair and "
+     "its direction do not. Table S3, which the sentence cites, has no with/without-agranular "
+     "columns; the citable source is the robustness listing"),
     ("section 3.6, Annex F", "int_area q", "0.014", "0.0140 single-member / 0.0280 as coded",
      "meg_dynamics_v2_summary_fdr_singlemember.csv vs meg_dynamics_v2_summary.csv",
      "both exist; the single-member recompute is the operative family per section 2.6 and the "
@@ -612,12 +664,123 @@ def apply_convention_corrections(df: pd.DataFrame, log=print) -> tuple:
     return df, ch
 
 
+# --------------------------------------------------------------------------- #
+# RR32 A5: the defect this generator had, and the guard against it recurring
+# --------------------------------------------------------------------------- #
+
+# Families that declare no FDR (Table S4). A q is not expected for these.
+NO_FDR_FAMILIES = {
+    "added_value_aggregate_3", "added_value_localized_27 (no FDR applied)",
+    "tractography_5", "tractography_per_type_8 (no FDR applied)",
+    "dynamics_robustness_variants (outside FDR)", "benchmark_controls_4",
+    "no FDR family (robustness variant)",
+}
+
+# Rows whose upstream q is knowingly drawn from a different family than the one this
+# table declares. Each needs a reason, and the recomputed value is what gets printed.
+# Anything NOT registered here that disagrees aborts the build: a generator that can
+# print a q inconsistent with its own family label is how RR31's errors happened.
+EXPECTED_UPSTREAM_MISMATCH = {
+    "osc_delta": "upstream q is BH within the seven-member as-coded dynamics family; "
+                 "RR32 A3 makes these four a family in their own right",
+    "osc_theta": "as osc_delta",
+    "osc_alpha": "as osc_delta",
+    "osc_beta": "as osc_delta",
+    "osc_gamma1": "as osc_delta",
+    "av_bigbrain_global": "upstream added_value_global.csv stores q equal to its own raw p, "
+                          "i.e. uncorrected; RR32 A4 makes this a two-member family",
+    "av_bigbrain_localized": "upstream stores no q; RR32 A4 makes this a two-member family",
+    "genepc1": "upstream q is BH within the old three-member external family; RR32 A2 "
+               "drops skewness, so the remaining two recompute",
+    "receptorpc1": "as genepc1",
+}
+
+
+def _bh_q(pvals):
+    """Benjamini-Hochberg step-up over a family, returned in input order."""
+    p = np.asarray(pvals, dtype=float)
+    n = len(p)
+    order = np.argsort(p)
+    q = np.empty(n)
+    prev = 1.0
+    for rank, i in enumerate(reversed(order), start=1):
+        k = n - rank + 1
+        prev = min(prev, p[i] * n / k)
+        q[i] = prev
+    return q
+
+
+def reconcile_family_fdr(df):
+    """Recompute BH inside each declared family and fail loudly on a surprise.
+
+    The defect RR31 found: this generator read q from whichever upstream CSV produced
+    a row, and never checked it against the family it labelled. So a row could carry a
+    q computed over seven tests while the table said four, and nothing noticed.
+
+    Now the declared family plus the stored p is the authority. Every corrected family
+    is recomputed; every disagreement with the upstream value must be registered above
+    with a reason, or the build stops.
+    """
+    df = df.copy()
+    report = []
+    surprises = []
+    for fam, sub in df.groupby("family", sort=False):
+        n_listed = len(sub)
+        declared = sorted({int(v) for v in sub["n_family"].dropna().unique()})
+        if len(declared) > 1:
+            surprises.append(f"family {fam!r} labels its size inconsistently across rows: "
+                             f"{declared}")
+        for d in declared:
+            if d != n_listed:
+                surprises.append(f"family {fam!r} labels n={d} but lists {n_listed} rows")
+        if fam in NO_FDR_FAMILIES:
+            continue
+        ps = pd.to_numeric(sub["p_raw"], errors="coerce")
+        if ps.isna().any():
+            surprises.append(
+                f"family {fam!r} declares FDR but {int(ps.isna().sum())} of {n_listed} "
+                f"rows have no raw p, so q cannot be computed")
+            continue
+        newq = _bh_q(ps.values)
+        for (idx, row), q_new in zip(sub.iterrows(), newq):
+            q_old = pd.to_numeric(pd.Series([row["q"]]), errors="coerce").iloc[0]
+            changed = pd.isna(q_old) or abs(float(q_old) - float(q_new)) > 5e-4
+            if changed:
+                key = row["key"]
+                if key not in EXPECTED_UPSTREAM_MISMATCH:
+                    surprises.append(
+                        f"{fam}/{key}: upstream q={q_old} disagrees with BH within the "
+                        f"declared family ({q_new:.4f}), and is not a registered exception")
+                report.append({"family": fam, "key": key, "p": float(ps.loc[idx]),
+                               "q_upstream": None if pd.isna(q_old) else float(q_old),
+                               "q_recomputed": float(q_new),
+                               "reason": EXPECTED_UPSTREAM_MISMATCH.get(key, "UNREGISTERED")})
+            df.at[idx, "q"] = float(q_new)
+            df.at[idx, "survives"] = "yes" if float(q_new) < 0.05 else "no"
+
+    if surprises:
+        print("\n  FDR RECONCILIATION FAILED:")
+        for s in surprises:
+            print(f"    {s}")
+        raise SystemExit(
+            "Family FDR reconciliation failed: a q disagrees with the family it is "
+            "labelled with, and the disagreement is not registered. Fix the family "
+            "assignment or register the exception with a reason; do not silently "
+            "prefer either value.")
+    if report:
+        print(f"  FDR reconciled: {len(report)} q recomputed within the declared family")
+        for r in report:
+            print(f"    {r['family']}/{r['key']}: {r['q_upstream']} -> {r['q_recomputed']:.4f}")
+    return df, pd.DataFrame(report)
+
+
 def main():
     OUTDIR.mkdir(parents=True, exist_ok=True)
     frozen_before = rc.frozen_hashes()
 
     harvest_structure_function()
     harvest_external()
+    harvest_bigbrain_profiles()
     harvest_meg()
     harvest_receptors()
     harvest_layers()
@@ -640,6 +803,7 @@ def main():
             df[c] = np.nan
     df = df[cols]
     df, corrections = apply_convention_corrections(df)
+    df, reconciliation = reconcile_family_fdr(df)
     if len(corrections):
         corrections.to_csv(OUTDIR / "convention_corrections.csv", index=False)
     df.to_csv(OUTDIR / "outcome_table.csv", index=False)
@@ -741,16 +905,18 @@ def write_tex(df: pd.DataFrame):
          # appearance (they ran S1, S2, S3, S6, S4, S7, S8, S5) and the outcome table is now
          # last. The shipped manuscript copy already carries S8; this string is what regenerates
          # it, so it has to match or a re-run silently reverts the caption.
-         r"\caption{\textbf{Supplementary Table S8. Complete outcome table.} Every statistical "
-         r"test run in this study, with its hypothesis status, statistical unit, null, FDR family, "
+         r"\caption{\textbf{Supplementary Table S8. Outcome table: the declared FDR families.} "
+         r"Every test in the declared FDR families, with its hypothesis status, statistical unit, null, FDR family, "
          r"raw $p$, within-family $q$ and effect size. Status records whether a test was "
          r"specified in advance, not whether its result is retained: the connectivity analysis "
          r"of Annex~G was specified in advance but is reported as exploratory there, because it "
-         r"does not survive a topology-preserving null or a bundle-level model. An asterisk "
+         r"does not survive a spin null or a bundle-level model. An asterisk "
          r"marks tests surviving at $q<0.05$ within their family. Families are never pooled. "
          r"Tests reported without a $q$ had no FDR applied within their family and are marked "
          r"accordingly; Table~S4 lists every family with its size, whether correction was "
-         r"applied and why.}"
+         r"applied and why. Robustness and sensitivity analyses reported in the text are not "
+         r"confirmatory tests, sit in no declared family and are therefore not listed here; "
+         r"they are disclosed, without FDR, in the robustness listing.}"
          r"\label{tab:outcomes}\\",
          r"\hline",
          r"Measure & Family ($n$) & Status & Unit ($n_{\mathrm{obs}}$) & Null & $p_{\mathrm{raw}}$ & "
