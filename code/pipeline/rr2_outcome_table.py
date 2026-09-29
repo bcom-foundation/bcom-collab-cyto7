@@ -590,7 +590,7 @@ def harvest_benchmark_controls():
             continue
         add(measure=f"Win fraction of the {ch} as challenger against the area-level map",
             key="bench_" + ch.replace(" ", "_"), family="benchmark_controls_4", n_family=4,
-            status="robustness", predicted_direction="none (comparator)",
+            status="descriptive", predicted_direction="none (comparator)",
             unit=VERTEX, n_obs=int(w["n_disagreement_vertices"]),
             null="none (descriptive comparator on the same disagreement set)",
             effect=f"win fraction = {w['win_fraction']:.4f}",
@@ -932,9 +932,10 @@ def write_tex(df: pd.DataFrame):
          r"for a win fraction is not 0.5 but the level of the relevant empirical null, which "
          r"differs between comparisons. The aggregate win fractions are tested against their "
          r"own null distributions and are asterisked. "
-         r"Robustness and sensitivity analyses reported in the text are not "
-         r"confirmatory tests, sit in no declared family and are therefore not listed here; "
-         r"they are disclosed, without FDR, in the robustness listing.}"
+         r"A few robustness analyses belong to a declared family and are listed here with the "
+         r"status \emph{robustness}; those that belong to no declared family are disclosed "
+         r"separately in Table~S9, whose caption states the correction policy applied to them "
+         r"and the one exception to it.}"
          r"\label{tab:outcomes}\\",
          r"\hline",
          r"Measure & Family ($n$) & Status & Unit ($n_{\mathrm{obs}}$) & Null & $p_{\mathrm{raw}}$ & "
