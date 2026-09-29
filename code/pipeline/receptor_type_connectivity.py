@@ -24,10 +24,6 @@ Run::  conda activate cyto7 && python scripts/receptor_type_connectivity.py --n-
 """
 from __future__ import annotations
 
-import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
-import cyto7_config as cfg
-
 import argparse
 from pathlib import Path
 
@@ -37,6 +33,10 @@ from scipy import stats
 
 from cyto7_surface_io import REPO_ROOT, resolve_target_map, LABEL_NAMES
 from external_validation import _bh  # identical BH-FDR used for the existing tables
+
+import sys as _sys, pathlib as _pathlib
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
+import cyto7_config as cfg
 
 CACHE = cfg.data_dir() / "neuromaps_cache"
 SF_DIR = cfg.results_dir("tables") / "structure_function"
@@ -82,6 +82,29 @@ QC_ANCHORS = {
     "M1": -0.01, "VAChT": +0.01, "GABA-A": +0.04, "5-HT1b": +0.10,
 }
 QC_TOL = 0.03
+
+
+#: This generator's outputs, under the names the manuscript includes them by. RR38: the three
+#: figures below are `\includegraphics` targets in the supplement, and until now nothing carried
+#: them from this script's own output tree to the folder the manuscript compiles from. That gap
+#: is what RR37 found for Figures 4, S9 and S1, and the fix is the same one: the generator
+#: stages its own output, because a copy step outside the generator is the step that gets
+#: forgotten.
+COMPILE_DIR = REPO_ROOT / "manuscript" / "preprint" / "26th_August_2026" / "figures"
+STAGED_AS = {
+    "receptor_gradients.png": "cyto7_supp_receptor_gradients.png",
+    "receptor_composites_panel.png": "cyto7_supp_receptor_composites.png",
+    "per_type_connectivity.png": "cyto7_supp_per_type_connectivity.png",
+}
+
+
+def stage(path: Path) -> None:
+    """Copy a rendered figure to the compile folder under its manuscript filename."""
+    name = STAGED_AS.get(path.name)
+    if name is None or not COMPILE_DIR.is_dir():
+        return
+    (COMPILE_DIR / name).write_bytes(path.read_bytes())
+    print("  staged", COMPILE_DIR / name)
 
 
 # --------------------------------------------------------------------------- #
@@ -293,7 +316,34 @@ def _fig_dims(w_mm=190.0, ratio=0.62):
     return w_in, w_in * ratio
 
 
+# --------------------------------------------------------------------------- #
+# RR34 Part D: printed statistics come from the record, not from this script's own
+# in-memory results. The values agreed - every row of receptor_type_association.csv,
+# receptor_composites.csv and per_type_connectivity_trends.csv reproduces the outcome
+# table exactly - but agreeing by coincidence is not the same as being the same number.
+# Figures S3, S4 and S5 now read rho, p and the survivor marks from
+# figures/v9/review_response/rr2_table/outcome_table.csv, like Figures 2, 4, 5, S2, S6,
+# S9, S10 and S11.
+# --------------------------------------------------------------------------- #
+
+
+def _pfmt(p):
+    """Print a permutation p, never as a bound.
+
+    The per-type trends use an exhaustive 7! label permutation, so a value below 0.001 is
+    exact rather than censored: 1/2520 = 0.000397 is a number, and "<0.001" throws it away.
+    """
+    import numpy as _np
+    if p is None or not _np.isfinite(float(p)):
+        return "n/a"
+    p = float(p)
+    return f"{p:.4f}" if p < 0.0005 else f"{p:.3f}"
+
+
 def render_receptor_figures(df, cdf, comp_med, labels, maps, null_ci):
+    import rr32_outcome_stats as rs
+    rec = rs.load_outcomes()
+    rs.reset_ledger()
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -313,9 +363,11 @@ def render_receptor_figures(df, cdf, comp_med, labels, maps, null_ci):
     fig.patch.set_facecolor("white")
     im = axh.imshow(Z, cmap="RdBu_r", vmin=-vmax, vmax=vmax, aspect="auto")
     axh.set_xticks(range(7)); axh.set_xticklabels(TYPE_SHORT, rotation=35, ha="right", fontsize=7)
-    sdf = df.set_index("receptor")
-    ylab = [f"{n}{' *' if (np.isfinite(sdf.loc[n,'fdr_q']) and sdf.loc[n,'fdr_q']<0.05) else ''}"
-            for n in order]
+    import rr32_outcome_stats as _rs
+    ylab = []
+    for n in order:
+        _rs.render(f"receptor_{n}", "q", _rs.stat(rec, f"receptor_{n}")["q"])
+        ylab.append(f"{n}{' *' if _rs.survives(rec, f'receptor_{n}') else ''}")
     axh.set_yticks(range(len(order))); axh.set_yticklabels(ylab, fontsize=7)
     axh.set_xlabel("cyto7 type (allo→konio)", fontsize=7.5)
     for i in range(len(order)):
@@ -343,11 +395,18 @@ def render_receptor_figures(df, cdf, comp_med, labels, maps, null_ci):
     axf.set_xlabel("Spearman ρ vs cyto7 type", fontsize=7.5)
     axf.tick_params(axis="x", labelsize=6.5)
     axf.set_xlim(-0.65, 0.55); axf.grid(axis="x", color="0.9", lw=0.6)
-    axf.text(0.0, 1.01, "grey = spin-null 95% CI;  ○ = FDR q<0.05",
+    # RR37: was "grey = spin-null 95% CI". The grey bars are the central 95% of the spin-null
+    # distribution, which is a null interval and not a confidence interval for the observed
+    # rho - the S4 caption now says so, and the artwork has to say the same thing. This is a
+    # label in the image, so it needs the generator, not the caption.
+    axf.text(0.0, 1.01, "grey = central 95% of the spin null;  ○ = FDR q<0.05",
              transform=axf.transAxes, fontsize=6.2)
+    _rs.verify_renders("figure_S4_receptor_gradients")
+    _rs.reset_ledger()
     fig.savefig(SF_DIR / "receptor_gradients.png", dpi=600, facecolor="white", bbox_inches="tight")
     plt.close(fig)
     print("  wrote", SF_DIR / "receptor_gradients.png")
+    stage(SF_DIR / "receptor_gradients.png")
 
     # ---- composites panel: metabotropic vs ionotropic (+ index) along type -- #
     w_in, h_in = _fig_dims(190.0, 0.42)
@@ -366,13 +425,17 @@ def render_receptor_figures(df, cdf, comp_med, labels, maps, null_ci):
     a2.set_xticks(x); a2.set_xticklabels(TYPE_SHORT, rotation=35, ha="right", fontsize=7)
     a2.set_ylabel("ionotropic − metabotropic (z)", fontsize=7.5)
     a2.axhline(0, color="0.7", lw=0.7); a2.tick_params(labelsize=6.5)
-    r_idx = cdf.set_index("composite").loc["iono_minus_metabo_index"]
-    a2.set_title(f"Iono/metabo index (ρ={r_idx.spearman_rho:+.2f}, "
-                 f"spin p={r_idx.spin_p:.3f})", fontsize=8)
+    _k = "composite_iono_minus_metabo_index"
+    _row = _rs.stat(rec, _k)
+    _rho, _p = float(_row["effect_value"]), _rs.p_display(_row["p_raw"])
+    _rs.render(_k, "rho", _rho); _rs.render(_k, "p", _p)
+    a2.set_title(f"Iono/metabo index (ρ={_rho:+.2f}, spin p={_rs.fmt_p(_p)})", fontsize=8)
+    _rs.verify_renders("figure_S5_receptor_composites")
     fig2.savefig(SF_DIR / "receptor_composites_panel.png", dpi=600, facecolor="white",
                  bbox_inches="tight")
     plt.close(fig2)
     print("  wrote", SF_DIR / "receptor_composites_panel.png")
+    stage(SF_DIR / "receptor_composites_panel.png")
 
 
 # =========================================================================== #
@@ -477,6 +540,8 @@ def part_b(n_perm=5040):
 
 
 def render_connectivity_figure(df, trend_df):
+    import rr32_outcome_stats as _rsr
+    _rsr.reset_ledger()
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -493,9 +558,19 @@ def render_connectivity_figure(df, trend_df):
     a1.set_xticks(x); a1.set_xticklabels(TYPE_SHORT, rotation=35, ha="right", fontsize=7)
     a1.set_ylabel("streamlines per vertex (degree/size)", fontsize=7.5)
     a1.legend(fontsize=6.5, frameon=False); a1.tick_params(labelsize=6.5)
+    import rr32_outcome_stats as _rs
+    _rec = _rs.load_outcomes()
+
+    def _t(summary):
+        r = _rs.stat(_rec, f"tract_{summary}")
+        rho, pv = float(r["effect_value"]), float(r["p_raw"])
+        _rs.render(f"tract_{summary}", "rho", rho)
+        _rs.render(f"tract_{summary}", "p", _rs.p_display(pv))
+        return rho, pv
+
+    _rho_dv, _p_dv = _t("degree_per_vertex")
     a1.set_title("Degree (size-norm.):  "
-                 f"deg/vtx ρ={tr.loc['degree_per_vertex','spearman_rho_vs_type']:+.2f}, "
-                 f"p={_pf(tr.loc['degree_per_vertex','perm_p'])}", fontsize=7.5)
+                 f"deg/vtx ρ={_rho_dv:+.2f}, p={_pfmt(_p_dv)}", fontsize=7.5)
     # length + tortuosity markers now carry count-weighted SD (per-bundle dispersion), NOT SEM
     a2.errorbar(x, df.mean_length_mm, yerr=df.mean_length_sd, color="#1b7837", lw=1.6,
                 marker="o", ms=4, capsize=2, elinewidth=0.9, label="mean length (mm)")
@@ -506,21 +581,26 @@ def render_connectivity_figure(df, trend_df):
     a2.set_ylabel("mean bundle length (mm) ± SD", fontsize=7.5, color="#1b7837")
     a2b.set_ylabel("mean tortuosity ± SD", fontsize=7.5, color="#762a83")
     a2.tick_params(labelsize=6.5); a2b.tick_params(labelsize=6.5)
+    _rho_len, _p_len = _t("mean_length_mm")
+    _rho_tort, _p_tort = _t("mean_tortuosity")
     a2.set_title(f"Length/tortuosity:  "
-                 f"len ρ={tr.loc['mean_length_mm','spearman_rho_vs_type']:+.2f}, "
-                 f"p={_pf(tr.loc['mean_length_mm','perm_p'])};  "
-                 f"tort ρ={tr.loc['mean_tortuosity','spearman_rho_vs_type']:+.2f}, "
-                 f"p={_pf(tr.loc['mean_tortuosity','perm_p'])}", fontsize=7.5)
+                 f"len ρ={_rho_len:+.2f}, p={_pfmt(_p_len)};  "
+                 f"tort ρ={_rho_tort:+.2f}, p={_pfmt(_p_tort)}", fontsize=7.5)
+    _rs.verify_renders("figure_S3_per_type_connectivity")
     fig.savefig(TR_DIR / "per_type_connectivity.png", dpi=600, facecolor="white",
                 bbox_inches="tight")
     plt.close(fig)
     print("  wrote", TR_DIR / "per_type_connectivity.png")
-    # Part D: restage into the LaTeX search path as the supplementary figure
+    # Part D: restage into the LaTeX search path as the supplementary figure.
+    # RR38: this used to write only manuscript/preprint/figures/, which is a *sibling* of the
+    # folder the manuscript compiles from - the same mis-staging RR37 found behind Figures 4,
+    # S9 and S1. Both are written now, the compile folder via stage().
     import shutil
-    stage = REPO_ROOT / "manuscript" / "preprint" / "figures" / "cyto7_supp_per_type_connectivity.png"
-    stage.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(TR_DIR / "per_type_connectivity.png", stage)
-    print("  staged", stage)
+    sibling = REPO_ROOT / "manuscript" / "preprint" / "figures" / "cyto7_supp_per_type_connectivity.png"
+    sibling.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(TR_DIR / "per_type_connectivity.png", sibling)
+    print("  staged", sibling)
+    stage(TR_DIR / "per_type_connectivity.png")
 
 
 # =========================================================================== #

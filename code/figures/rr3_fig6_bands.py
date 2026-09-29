@@ -17,9 +17,7 @@ Nothing is hard-coded, so the panel cannot disagree with the outcome table.
 """
 from __future__ import annotations
 
-import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
-import cyto7_config as cfg  # noqa: F401  (puts sibling code dirs on sys.path)
+import shutil
 
 import matplotlib
 matplotlib.use("Agg")
@@ -32,8 +30,13 @@ from matplotlib.patches import Rectangle
 
 import rr_common as rc
 
+import sys as _sys, pathlib as _pathlib
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
+import cyto7_config as cfg  # noqa: F401  (puts sibling code dirs on sys.path)
+
 OUTDIR = rc.OUT / "rr3_fig6"
 TABLE = rc.OUT / "rr2_table" / "outcome_table.csv"
+MANUSCRIPT_FIGS = (rc.REPO_ROOT / "manuscript" / "preprint" / "26th_August_2026" / "figures")
 FIGNAME = "cyto7_structural_model_gradients.png"
 DPI = 600
 
@@ -43,14 +46,11 @@ BANDS = [
         ("Gene expression PC1 (AHBA)", "genepc1"),
         ("T1w/T2w myelin", "myelin"),
         ("Ionotropic/metabotropic index", "composite_iono_minus_metabo_index"),
-        # Evolutionary expansion is no longer a row of this panel. The comparison was
-        # still run and its values are in the outcome table (Xu 2020 rho = -0.27,
-        # Hill 2010 rho = -0.11); the paper reports them and declines to build on them,
-        # because the available expansion estimates rest on cross-species alignments
-        # whose phylogenetic assumptions differ from the cortical-type framework.
-        # The analysis itself is untouched: fig9_predictions.py still computes both and
-        # rr2_outcome_table.py still tabulates them.
-        # Expansion was a non-survivor, so the survivor count is unchanged at 10 of 11.
+        # Evolutionary expansion removed by RR29. The comparison is no longer reported:
+        # the available expansion estimates rest on cross-species alignments whose
+        # phylogenetic assumptions differ from the cortical-type framework, so it moves
+        # to future work as a direct human-to-macaque comparison in matched types.
+        # It was a non-survivor, so the survivor count is unchanged at 10 of now 11.
         ("Receptor diversity", "diversity_shannon_entropy_H"),
         ("Cortical thickness", "thickness"),
         ("Functional gradient", "gradient"),
@@ -66,6 +66,12 @@ BANDS = [
     ]),
 ]
 
+# No count and no table number here, on purpose. Text baked into a rendered image cannot be
+# grepped and does not recompile, so anything that can change underneath it silently falsifies
+# the figure. That already happened twice: the test count went stale when the outcome table grew
+# (RR16), and the table number went stale when the supplement was renumbered (RR19). Both live in
+# the tex caption, which is one grep from the generator that produces them. The table is named,
+# not numbered, because there is only one outcome table and its own caption identifies it.
 RULE = ("Headline panel, not a census: one measure per construct, from data independent of the atlas.\n"
         "Individual receptor maps in Fig. S4, disease maps in Fig. S7, the complete outcome table in "
         "the supplement.")
@@ -89,6 +95,16 @@ def main(argv=None):
         rowsrc.extend(got)
     df = pd.DataFrame(rowsrc)
     df.to_csv(OUTDIR / "fig6_source_values.csv", index=False)
+
+    # RR34 Part D. This figure has read the outcome table since RR3, which is why it never
+    # drifted, but nothing checked that per run. Logging each value it is about to draw puts
+    # it under the same guard as Figures 2, 4, S2, S6, S9, S10 and S11.
+    import rr32_outcome_stats as rs
+    rs.reset_ledger()
+    for r in df.itertuples():
+        rs.render(r.key, "rho", r.rho)
+        rs.render(r.key, "q", r.q)
+    rs.verify_renders("figure_5_structural_model_gradients")
 
     # ---- layout: one row per measure, a header row above each band ---- #
     ypos, band_extent = [], []
@@ -138,8 +154,8 @@ def main(argv=None):
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.tick_params(axis="y", length=0)
-    # "increases"/"decreases", not "rises"/"falls": those are the verbs the paper uses
-    # throughout, and these two are baked into the image where no .tex grep finds them.
+    # "increases"/"decreases", not "rises"/"falls": the co-author asked for those verbs
+    # throughout, and these two are baked into the image where no .tex grep can find them.
     ax.text(0.44, 0.05, "increases with type", fontsize=8, style="italic", color="#b2182b",
             ha="center", va="center")
     ax.text(-0.44, 0.05, "decreases with type", fontsize=8, style="italic", color="#2166ac",
@@ -159,6 +175,10 @@ def main(argv=None):
     out = OUTDIR / FIGNAME
     fig.savefig(str(out), dpi=DPI, facecolor="white")
     plt.close(fig)
+    # Write the shipped copy in the same pass. Staging it by hand is how the manuscript copy
+    # and the generator's copy drift apart; the same failure produced the stale table in RR16.
+    shutil.copy2(out, MANUSCRIPT_FIGS / FIGNAME)
+    print(f"staged   {MANUSCRIPT_FIGS / FIGNAME}")
     n_surv = int(df.survives.sum())
     print(f"saved {out} ({len(df)} measures, {n_surv} survivors)")
     for _, r in df.iterrows():

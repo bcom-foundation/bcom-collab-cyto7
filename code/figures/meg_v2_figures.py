@@ -18,10 +18,6 @@ meg_v2_maps/. Released tables are not touched.
 """
 from __future__ import annotations
 
-import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
-import cyto7_config as cfg  # noqa: F401  (puts sibling code dirs on sys.path)
-
 import sys
 from pathlib import Path
 
@@ -41,6 +37,10 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from cyto7_surface_io import surface_path  # noqa: E402
 from feature_gallery import precompute, VIEWS, NAMES  # reuse the renderer  # noqa: E402
+
+import sys as _sys, pathlib as _pathlib
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
+import cyto7_config as cfg  # noqa: F401  (puts sibling code dirs on sys.path)
 
 MAPS = REPO / "figures" / "v9" / "structure_function" / "meg_v2_maps"
 CACHE = REPO / "resources" / "cyto7_derived" / "cache"
@@ -69,17 +69,33 @@ def load_map(mapkey):
 
 
 def load_stats():
-    """group ρ + spin p from the summary; FDR q from the SINGLE-MEMBER family
-    (§2.6: one committed member per construct) so the panels show timescale/centroid
-    q=0.014, slow-fast/β q=0.021, not the old over-split 0.028."""
-    df = pd.read_csv(SUMMARY).set_index("metric")
-    if SUMMARY_SINGLE.exists():
-        q1 = pd.read_csv(SUMMARY_SINGLE).set_index("metric")["fdr_q_singlemember"]
-        df["fdr_q"] = q1.reindex(df.index).combine_first(df["fdr_q"])
-    return df
+    """Every printed rho, p and q comes from the outcome table, keyed by metric.
+
+    RR34 Part D. This used to read meg_dynamics_v2_summary.csv and then override `fdr_q`
+    from meg_dynamics_v2_summary_fdr_singlemember.csv - that is, it decided which FDR family
+    was operative inside a plotting script. The decision belongs in the record, which already
+    declares `dynamics_singlemember_7` as the operative family (Table S4); reading it from
+    there means that when the record's families change, as they did in RR32, this figure
+    changes with them instead of silently going stale.
+
+    The outcome-table key equals the summary metric key throughout, except that the panel
+    labelled "exponent" is the test `exponent_fixed`.
+    """
+    import rr32_outcome_stats as rs
+    rec = rs.load_outcomes()
+    rows = {}
+    for _mapkey, metric, _label, _unit in FEATS.values():
+        r = rs.stat(rec, metric)
+        rows[metric] = dict(group_mean_rho=float(r["effect_value"]),
+                            spin_p=rs.p_display(r["p_raw"]),
+                            fdr_q=float(r["q"]) if pd.notna(r["q"]) else float("nan"),
+                            family=r["family"])
+    return pd.DataFrame(rows).T
 
 
 def render(feat_keys, out, dpi=600):
+    import rr32_outcome_stats as _rs
+    _rs.reset_ledger()
     lab = {H: np.load(CACHE / f"v9_labels_fsLR32k_hemi-{H}.npy") for H in ("L", "R")}
     geo = {H: (lambda g: (np.asarray(g.darrays[0].data, float), np.asarray(g.darrays[1].data, int)))(
         nib.load(str(surface_path("Validation210", H, "inflated")))) for H in ("L", "R")}
@@ -134,6 +150,9 @@ def render(feat_keys, out, dpi=600):
                                 boxprops=dict(facecolor=fc, edgecolor="0.3"), medianprops=dict(color=mc),
                                 whiskerprops=dict(color=fc), capprops=dict(color=fc))
         s = stats.loc[metric]; sig = "*" if s.fdr_q < 0.05 else ""
+        _rs.render(metric, "rho", s.group_mean_rho)
+        _rs.render(metric, "p", s.spin_p)
+        _rs.render(metric, "q", s.fdr_q)
         axb.set_xticks(range(1, 8)); axb.set_xticklabels([NAMES[t] for t in range(1, 8)], rotation=30, ha="right", fontsize=7.5)
         axb.set_xlim(0.4, 7.6); axb.grid(axis="y", ls=":", alpha=0.4)
         axb.tick_params(axis="y", labelsize=7)  # metric + unit named by the gutter label / colorbar
@@ -146,7 +165,14 @@ def render(feat_keys, out, dpi=600):
             axb.legend(handles=[Patch(facecolor="0.35", label="LH"), Patch(facecolor="0.78", label="RH")],
                        loc="upper right", fontsize=7.5, frameon=False)
     OUTDIR.mkdir(parents=True, exist_ok=True)
+    _rs.verify_renders(f"figure_S1_{out.stem}")
     fig.savefig(str(out), dpi=dpi, facecolor="white")
+    # RR37: also write into the folder the manuscript compiles from. Without this the
+    # gallery was refreshed here and the page kept an August render; nothing compared them.
+    compile_dir = REPO / "manuscript" / "preprint" / "26th_August_2026" / "figures"
+    if compile_dir.is_dir():
+        fig.savefig(str(compile_dir / out.name), dpi=dpi, facecolor="white")
+        print(f"staged {compile_dir / out.name}")
     plt.close(fig)
     print(f"saved {out}")
 

@@ -10,10 +10,10 @@ structure-function gradient). Heavy (1000-perm spins). Tractography on v9's own 
 Run::  conda activate cyto7 && python scripts/rerun_all_v9.py --n-spin 1000
 """
 from __future__ import annotations
-
 import sys as _sys, pathlib as _pathlib
 _sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
 import cyto7_config as cfg
+
 import argparse
 from pathlib import Path
 import numpy as np
@@ -30,6 +30,27 @@ ANNOT = str(DER / "pial.{hemi}.cyto7.v9.annot")
 TRACTO = cfg.data_dir() / "tractography" / "v9"   # v9's own tractogram
 PFX = "cyto7.v9"
 
+def require(step: str, *paths) -> None:
+    """Every step declares its inputs, and a missing one stops the run.
+
+    RR34 B2. The support step consumed a July 2026 summary table on every v9 run and
+    reported success, because the code that read it fell back silently when the v9 table
+    was absent - which, under the old step order, it always was. Silent fallback is the
+    mechanism behind that whole class of defect: the run is green and the product is wrong.
+    A step that cannot find an input must stop, name the input and name itself.
+    """
+    missing = [str(p) for p in paths if not Path(p).exists()]
+    if missing:
+        lines = "\n    ".join(missing)
+        raise SystemExit(
+            f"\n  PREFLIGHT FAILED for step '{step}': {len(missing)} expected input(s) "
+            f"absent.\n    {lines}\n"
+            "  The step is not run. Produce the input, or fix the step order in "
+            "rerun_all_v9.main();\n  do not let a step fall back to whatever else it can "
+            "find - that is how the support map\n  came to be built from a pre-v9 table "
+            "(RR33, RR34).")
+
+
 # v8 reference numbers (from figures/v9/REPORT_v8.md) for the changed-vs diff.
 REF = {"kappa_w": 0.699, "cohen_k": 0.361, "ari": 0.188, "agree": 0.524,
        "conf_auc": 0.5778, "av_win": 0.601, "av_n": 27351,
@@ -41,6 +62,35 @@ REF = {"kappa_w": 0.699, "cohen_k": 0.361, "ari": 0.188, "agree": 0.524,
        "allo_lh": 3604, "allo_rh": 3193, "allo_conf": 0.316,
        # v7 (two-versions-back) for the extra note column
        "v7_kappa_w": 0.702, "v7_allo_lh": 2131, "v7_allo_rh": 1828}
+
+
+def _promote_to_top_level(cache_dir: Path) -> dict:
+    """Copy this version's support products from the cache to resources/cyto7_derived/.
+
+    The cache keeps the historical ``confidence`` spelling so old caches stay readable;
+    the promoted public copies carry the current ``support`` name. Returns the names
+    written, so the run report can state what the release actually contains.
+    """
+    import os
+    import shutil
+    written = []
+    for hemi in ("lh", "rh"):
+        names = [(f"pial.{hemi}.cyto7.confidence{sfx}.shape.gii",
+                  f"pial.{hemi}.cyto7.support{sfx}.shape.gii")
+                 for sfx in ("", "_atlas", "_geom", "_prior", "_topo", "_data_overlay")]
+        names.append((f"pial.{hemi}.cyto7.confidence_categorical.annot",
+                      f"pial.{hemi}.cyto7.support_categorical.annot"))
+        for old, new in names:
+            src, dst = cache_dir / old, DER / new
+            if not src.exists():
+                continue
+            if dst.exists():
+                os.chmod(dst, 0o666)
+                dst.unlink()
+            shutil.copy2(src, dst)
+            written.append(new)
+    print(f"  promoted {len(written)} support products to {DER}")
+    return {"n": len(written), "files": written}
 
 
 def _allo_conf_median(cache_dir: Path, version: str) -> dict:
@@ -68,6 +118,8 @@ def main(argv=None):
     SF.mkdir(parents=True, exist_ok=True)
     R = {}
 
+    require("benchmark", *[Path(ANNOT.format(hemi=h)) for h in ("lh", "rh")],
+            REPO_ROOT / "resources" / "voneconomo" / "von_economo_cortical_types.csv")
     print("== benchmark ==")
     import compare_cyto7_vs_voneconomo as cmp
     cmp.main(["--annot-version", V, "--output-dir", str(FIG / "vs_voneconomo")])
@@ -75,15 +127,6 @@ def main(argv=None):
     R["bench"] = agg[agg["set"] == "pooled"].iloc[0].to_dict()
 
     core = rr.load_core(args.dataset, V); core["dataset"] = args.dataset
-
-    print("== support ==")
-    import build_support_map as bcm
-    conf_cache = DER / "cache_conf_v9"
-    bcm.main(["--annot", ANNOT, "--out-derived", str(conf_cache),
-              "--out-fig", str(FIG / "support")])
-    R["cal"] = rr.analysis2(core, args.n_spin)
-    R["allo_conf"] = {"v8": _allo_conf_median(DER / "cache_conf_v8", "v8"),
-                      "v9": _allo_conf_median(conf_cache, "v9")}
 
     print("== structure-function ==")
     import summarise_functional_features as sff
@@ -104,9 +147,40 @@ def main(argv=None):
     esf.fig_summary_single(one, metrics, SF / "spectral_freq_summary.png", 300, V)
     R["spec"] = {n: one["trend"][n] for n in metrics}
 
+    # RR33: structure-function now runs BEFORE support. build_support_map reads the
+    # per-type myelin medians from functional_summary_table_v9.csv, and under the old
+    # order that file did not exist yet, so the support map silently consumed a pre-v9
+    # summary left at figures/functional_summary_table.csv on every run. Reordering is
+    # safe: the two blocks share only `core`, which is loaded above, and each writes its
+    # own keys into R.
+    # The support step needs the v9 per-type myelin medians that the structure-function
+    # step above writes. Under the pre-RR33 order this file did not exist yet and the read
+    # fell back to figures/functional_summary_table.csv, so the preflight is the guard that
+    # makes the ordering requirement enforced rather than merely documented.
+    require("support", SF / "functional_summary_table_v9.csv",
+            *[Path(ANNOT.format(hemi=h)) for h in ("lh", "rh")],
+            *[REPO_ROOT / "resources" / "neuromaps_cache" / f"myelin_fsaverage_164k_{h}.npy"
+              for h in ("lh", "rh")])
+    print("== support ==")
+    import build_support_map as bcm
+    conf_cache = DER / "cache_conf_v9"
+    bcm.main(["--annot", ANNOT, "--out-derived", str(conf_cache),
+              "--out-fig", str(FIG / "support")])
+    # --out-derived sends the build into this version's cache, so without the step below
+    # the top-level products in resources/cyto7_derived/ are never refreshed. They were
+    # left at v3 from v4 through v9 because nothing in the analysis pipeline reads them --
+    # every reader is version-parameterised onto cache_conf_<version> -- while the public
+    # release copies them. Promotion is now part of the run, not a manual afterthought.
+    R["promoted"] = _promote_to_top_level(conf_cache)
+    R["cal"] = rr.analysis2(core, args.n_spin)
+    R["allo_conf"] = {"v8": _allo_conf_median(DER / "cache_conf_v8", "v8"),
+                      "v9": _allo_conf_median(conf_cache, "v9")}
+
     print("== added value ==")
     R["av"] = rr.analysis1(core, args.n_spin)
 
+    require("tractography", TRACTO / f"{PFX}_tract_geometry_per_bundle.csv",
+            TRACTO / f"{PFX}_in_reference.nii.gz")
     print("== tractography (v9 own tractogram) ==")
     R["tract"] = rr.analysis3(args.n_spin,
                               geom_csv=TRACTO / f"{PFX}_tract_geometry_per_bundle.csv",

@@ -38,10 +38,6 @@ Usage
 
 from __future__ import annotations
 
-import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
-import cyto7_config as cfg
-
 import argparse
 import sys
 from pathlib import Path
@@ -50,6 +46,10 @@ from typing import Optional, Tuple
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+import sys as _sys, pathlib as _pathlib
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parent.parent))
+import cyto7_config as cfg
 
 # Some summaries contain non-ASCII characters (e.g. the Spearman rho symbol).
 # The Windows console defaults to cp1252 and would crash on them; force UTF-8.
@@ -611,19 +611,28 @@ def plot_tortuosity_by_type_distance(
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    # RR33: these four defaults pointed at the untagged 2026-06-19 files that sat directly in
+    # resources/tractography/, one level above the per-version directories, so running this
+    # script with no arguments analysed a v1-era tractogram. They are now in
+    # resources/tractography/_superseded_pre_v9/ and the defaults name v9 explicitly. Every
+    # other reader (rr7_tracto_controls.py, rr28_annexg_reproduce.py, rerun_all_v9.py) already
+    # named the v9 files, so no released number depends on the old defaults.
     parser.add_argument("--conn-bundle", type=Path,
-                        default=TRACTO_DIR / "cyto7_connectivity_per_bundle.csv")
+                        default=TRACTO_DIR / "v9" / "cyto7.v9_connectivity_per_bundle.csv")
     parser.add_argument("--conn-aggregate", type=Path,
-                        default=TRACTO_DIR / "cyto7_connectivity_per_bundle_aggregate.csv")
+                        default=TRACTO_DIR / "v9" / "cyto7.v9_connectivity_per_bundle_aggregate.csv")
     parser.add_argument("--geometry", type=Path,
-                        default=TRACTO_DIR / "cyto7_tract_geometry_per_bundle.csv")
+                        default=TRACTO_DIR / "v9" / "cyto7.v9_tract_geometry_per_bundle.csv")
     parser.add_argument("--labels-nifti", type=Path,
-                        default=TRACTO_DIR / "cyto7_in_reference.nii.gz",
+                        default=TRACTO_DIR / "v9" / "cyto7.v9_in_reference.nii.gz",
                         help="cyto7 label volume for the boundary-surface analysis; "
                              "pass a non-existent path to skip it.")
     parser.add_argument("--short-cutoff", type=float,
                         default=DEFAULT_SHORT_CUTOFF_MM)
     parser.add_argument("--out-dir", type=Path,
+                        # RR33: was figures/tractography, above the version tree; the released
+                        # panels live in figures/v9/tractography and that is where a v9 input
+                        # must write, so an output cannot be mistaken for a different run's.
                         default=cfg.figures_dir() / "tractography")
     args = parser.parse_args()
 

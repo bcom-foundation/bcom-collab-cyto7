@@ -87,7 +87,17 @@ def main(argv=None):
     ap.add_argument("--dpi", type=int, default=200)
     args = ap.parse_args(argv)
     feats = SETS[args.setname]
-    stats = pd.read_csv(REPO / "figures" / "functional_summary_table.csv").groupby("FeatureKey").first()
+    # RR33: this used to read REPO/"figures"/"functional_summary_table.csv", a pre-v9 summary
+    # sitting one directory above the version tree. It held myelin 0.5820, thickness p 0.002997
+    # and q 0.008991, which is exactly what Figure 4 printed for three map revisions. That file
+    # is now in figures/_superseded_pre_v9/. Figure 4 itself is built by
+    # rr32_fig4_feature_fingerprint_map.py, which reads the outcome table; this gallery keeps its
+    # own path but on the v9 summary, and fails loudly rather than falling back.
+    tbl = REPO / "figures" / "v9" / "structure_function" / "functional_summary_table_v9.csv"
+    if not tbl.exists():
+        raise SystemExit(f"{tbl} is missing. Run summarise_functional_features.py (or "
+                         "rerun_all_v9.py) first; do not substitute an untagged summary table.")
+    stats = pd.read_csv(tbl).groupby("FeatureKey").first()
     lab = {H: np.load(CACHE / f"v9_labels_fsLR32k_hemi-{H}.npy") for H in ("L", "R")}
     geo = {H: (lambda g: (np.asarray(g.darrays[0].data, float), np.asarray(g.darrays[1].data, int)))(
         nib.load(str(surface_path("Validation210", H, "inflated")))) for H in ("L", "R")}
