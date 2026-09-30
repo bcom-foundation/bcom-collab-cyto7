@@ -1,6 +1,6 @@
 # cyto7 atlas files
 
-TODO(DOI): Zenodo DOI for this atlas release.
+Zenodo DOI for this atlas release: [10.5281/zenodo.23063166](https://doi.org/10.5281/zenodo.23063166).
 
 Cite the paper and the data DOI together; see the repository `README.md`.
 

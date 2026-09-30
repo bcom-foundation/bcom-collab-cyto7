@@ -4,10 +4,10 @@ title: >-
   cyto7: an open, vertex-level cortical type atlas of the human cortex
 type: dataset
 license: CC-BY-4.0
-# The Zenodo DOI is minted from a GitHub release, which does not exist yet. This is a
-# placeholder, not an identifier: it will not resolve until the release is made.
-doi: "TODO(DOI)"
-# Names are final and match AUTHORS. ORCIDs are still being collected.
+# Version DOI of the Zenodo deposition holding this release. It resolves to this exact
+# snapshot -- the one dist/SHA256SUMS.txt describes -- not to "the latest version".
+doi: "10.5281/zenodo.23063166"
+# Names are final and match AUTHORS; ORCIDs are complete.
 authors:
   - given-names: "Ricardo"
     family-names: "Salvador"

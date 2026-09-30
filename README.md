@@ -21,10 +21,13 @@ Please cite both the paper and the data.
 - Published version: DOI pending.
 - Preprint, openly downloadable: DOI pending.
 
-**Data.** The atlas release is archived on Zenodo: DOI pending.
+**Data.** The atlas release is archived on Zenodo:
+[10.5281/zenodo.23063166](https://doi.org/10.5281/zenodo.23063166).
 
-Both DOIs are minted after the paper is final and are shown as pending until then.
-`CITATION.cff` carries the machine-readable form and will be updated in the same pass.
+That is a *version* DOI: it resolves to this exact release, which is what the
+checksums in `dist/SHA256SUMS.txt` describe. The paper DOIs are minted when the
+article is posted and accepted, and are shown as pending until then.
+`CITATION.cff` carries the machine-readable form.
 
 ```bibtex
 @article{cyto7,
@@ -33,8 +36,17 @@ Both DOIs are minted after the paper is final and are shown as pending until the
   title   = {cyto7: an open, vertex-level cortical type atlas of the
              human cortex},
   year    = {2026},
-  doi     = {TODO},
-  note    = {Atlas release archived on Zenodo, DOI pending}
+  note    = {DOI pending}
+}
+
+@dataset{cyto7_data,
+  author    = {Salvador, Ricardo and Mercadal, Borja and Castaldo, Francesca and
+               Garc{\'\i}a-Cabezas, Miguel {\'A}ngel and Ruffini, Giulio},
+  title     = {cyto7: an open, vertex-level cortical type atlas of the
+               human cortex},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23063166}
 }
 ```
 
@@ -141,6 +153,12 @@ institutions.
 
 The atlas is defined on the FreeSurfer `fsaverage` mesh. No FreeSurfer geometry is
 redistributed here, only per-vertex labels on that mesh.
+
+## Funding
+
+R.S., B.M., F.C. and G.R. have received funding from the European Research Council
+(ERC) under the European Union's Horizon 2020 research and innovation programme
+(grant agreement No 855109, GALVANI).
 
 ## Quick start
 
