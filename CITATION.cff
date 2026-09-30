@@ -7,6 +7,13 @@ license: CC-BY-4.0
 # Version DOI of the Zenodo deposition holding this release. It resolves to this exact
 # snapshot -- the one dist/SHA256SUMS.txt describes -- not to "the latest version".
 doi: "10.5281/zenodo.23063166"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23063166"
+    description: Version DOI - this release (v1.0.0) exactly.
+  - type: doi
+    value: "10.5281/zenodo.23063165"
+    description: Concept DOI - always resolves to the most recent version.
 # Names are final and match AUTHORS; ORCIDs are complete.
 authors:
   - given-names: "Ricardo"

@@ -21,13 +21,19 @@ Please cite both the paper and the data.
 - Published version: DOI pending.
 - Preprint, openly downloadable: DOI pending.
 
-**Data.** The atlas release is archived on Zenodo:
-[10.5281/zenodo.23063166](https://doi.org/10.5281/zenodo.23063166).
+**Data.** The atlas release is archived on Zenodo under two DOIs:
 
-That is a *version* DOI: it resolves to this exact release, which is what the
-checksums in `dist/SHA256SUMS.txt` describe. The paper DOIs are minted when the
-article is posted and accepted, and are shown as pending until then.
-`CITATION.cff` carries the machine-readable form.
+- **This release (v1.0.0):**
+  [10.5281/zenodo.23063166](https://doi.org/10.5281/zenodo.23063166)
+- **All versions**, always resolving to the most recent:
+  [10.5281/zenodo.23063165](https://doi.org/10.5281/zenodo.23063165)
+
+Cite the first when you need the exact snapshot that `dist/SHA256SUMS.txt`
+describes — a reproduction of a published analysis, for instance. Cite the second
+when you mean the atlas as an ongoing resource.
+
+The paper DOIs are minted when the article is posted and accepted, and are shown as
+pending until then. `CITATION.cff` carries the machine-readable form.
 
 ```bibtex
 @article{cyto7,
