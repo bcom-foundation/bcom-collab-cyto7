@@ -2,6 +2,27 @@
 
 Notable changes to the released atlas.
 
+## Two version numbers, and which is which
+
+This project carries two independent version axes, and they will both appear as "v1".
+
+- **Map versions — `v1` … `v9`.** These number the *atlas itself*: successive states of the
+  hand-painted map. `v9` is the released map. `v1`–`v8` are superseded and ship under
+  `atlas/provenance/` as an audit trail, not as products. This changelog is organised by
+  these, and they are what `PROVENANCE_v*.txt` and the per-vertex change logs refer to.
+- **Repository releases — `v1.0.0`, …** These number the *published snapshot*: a Git tag and
+  the corresponding Zenodo deposition. `v1.0.0` is the first public release and contains map
+  v9. A later release might ship the same map with corrected documentation, or a new map
+  without changing the major version.
+
+So "v1" alone is ambiguous: `atlas/provenance/` v1 is the earliest painting, while release
+v1.0.0 is the current public snapshot. Say "map v9" or "release v1.0.0" and the ambiguity
+disappears.
+
+The Zenodo deposition is **not** created from a GitHub release webhook — it is a manual
+deposition. Enabling the GitHub–Zenodo integration and cutting a release would mint a second,
+separate DOI for the same work. Do not enable it; see `README.md` for the two DOIs in use.
+
 ## v9 (current release)
 
 The released map. v9 is v8 plus a 543-vertex left/right entorhinal evening-up; the
