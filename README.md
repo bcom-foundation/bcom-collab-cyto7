@@ -19,7 +19,8 @@ Please cite both the paper and the data.
 *cyto7: an open, vertex-level cortical type atlas of the human cortex.*
 
 - Published version: DOI pending.
-- Preprint, openly downloadable: DOI pending.
+- Preprint (bioRxiv), openly downloadable:
+  [10.64898/2026.10.01.755866](https://doi.org/10.64898/2026.10.01.755866)
 
 **Data.** The atlas release is archived on Zenodo under two DOIs:
 
@@ -32,8 +33,8 @@ Cite the first when you need the exact snapshot that `dist/SHA256SUMS.txt`
 describes — a reproduction of a published analysis, for instance. Cite the second
 when you mean the atlas as an ongoing resource.
 
-The paper DOIs are minted when the article is posted and accepted, and are shown as
-pending until then. `CITATION.cff` carries the machine-readable form.
+Until the paper is published, cite the preprint; the published version's DOI is
+added here on acceptance. `CITATION.cff` carries the machine-readable form.
 
 ```bibtex
 @article{cyto7,
@@ -41,8 +42,10 @@ pending until then. `CITATION.cff` carries the machine-readable form.
              Garc{\'\i}a-Cabezas, Miguel {\'A}ngel and Ruffini, Giulio},
   title   = {cyto7: an open, vertex-level cortical type atlas of the
              human cortex},
+  journal = {bioRxiv},
   year    = {2026},
-  note    = {DOI pending}
+  doi     = {10.64898/2026.10.01.755866},
+  note    = {Preprint}
 }
 
 @dataset{cyto7_data,

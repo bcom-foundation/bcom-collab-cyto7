@@ -49,8 +49,11 @@ references:
   - type: article
     title: >-
       cyto7: an open, vertex-level cortical type atlas of the human cortex
-    # The published DOI and the preprint DOI are both pending; neither resolves yet.
-    doi: "TODO(DOI)"
+    # The bioRxiv preprint, posted 8 Oct 2026. Replace with the journal DOI on publication.
+    journal: "bioRxiv"
+    year: 2026
+    doi: "10.64898/2026.10.01.755866"
+    url: "https://www.biorxiv.org/content/10.64898/2026.10.01.755866v1"
     authors:
       - given-names: "Ricardo"
         family-names: "Salvador"

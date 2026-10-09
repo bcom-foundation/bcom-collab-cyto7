@@ -44,6 +44,10 @@ use v9.
 
 ## Unreleased
 
+### Added
+
+- The bioRxiv preprint DOI, [10.64898/2026.10.01.755866](https://doi.org/10.64898/2026.10.01.755866), in `README.md` (text and BibTeX), `CITATION.cff` and `.zenodo.json`. Documentation only: no atlas file changed, so the Zenodo snapshot of release v1.0.0 still holds the map shipped here.
+
 ### Fixed
 
 - The per-vertex anatomical support products shipped in `atlas/fsaverage/support/` were the v3 build. They had never been refreshed when the atlas moved to v9, because the release pipeline wrote each version into its own cache directory and no step promoted the current one to the published location. All fourteen files are now the v9 build. The v9 per-type medians they reproduce are unchanged from those already reported, since every analysis read the cache directly; only the published copies were stale.
