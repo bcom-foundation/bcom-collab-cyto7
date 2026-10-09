@@ -49,10 +49,10 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "TODO(DOI)",
+      "identifier": "10.64898/2026.10.01.755866",
       "relation": "isSupplementTo",
-      "resource_type": "publication-article"
+      "resource_type": "publication-preprint"
     }
   ],
-  "notes": "This release was deposited manually, so Zenodo did not read this file. It is kept as the machine-readable record of the deposition's metadata and as the source for any future GitHub-Zenodo release. The grant identifier is the one Zenodo resolves for GALVANI (European Commission, ROR 00k4n6c32, award 855109). TODO(DOI): the related_identifiers entry takes the paper DOI, which does not exist yet; fill it in a later version of this deposition."
+  "notes": "This release was deposited manually, so Zenodo did not read this file. It is kept as the machine-readable record of the deposition's metadata and as the source for any future GitHub-Zenodo release. The grant identifier is the one Zenodo resolves for GALVANI (European Commission, ROR 00k4n6c32, award 855109). The related_identifiers entry is the bioRxiv preprint (posted 8 October 2026); it was added to the published record by a metadata edit, which needs no new version. Add the journal article as a second entry on publication."
 }
